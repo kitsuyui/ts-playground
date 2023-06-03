@@ -4,7 +4,6 @@ Playground for TypeScript
 
 ## Usage
 
-
 ### Build
 
 ```sh
