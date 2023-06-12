@@ -8,10 +8,24 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
     continue-on-error: true
-
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - cmd: build:standalone:macos-arm64
+            os: macos-latest
+          - cmd: build:standalone:macos-x64
+            os: macos-latest
+          - cmd: build:standalone:win-arm64
+            os: windows-latest
+          - cmd: build:standalone:win-x64
+            os: windows-latest
+          - cmd: build:standalone:linux-arm64
+            os: ubuntu-latest
+          - cmd: build:standalone:linux-x64
+            os: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
 
@@ -22,10 +36,29 @@ jobs:
           cache: yarn
           cache-dependency-path: yarn.lock
 
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pkg_cache
+          key: ${{ runner.os }}-pkg-cache-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pkg-cache-
+
       - name: install and build
+        env:
+          PKG_CACHE_PATH: ~/.pkg_cache
         run: |
-          yarn install
-          yarn build
+          # os is macos-latest
+          if [ "${{ matrix.os }}" = "macos-latest" ]; then
+            arch -arm64 yarn install
+            arch -arm64 yarn build:lib
+            arch -arm64 yarn build:bin
+            arch -arm64 yarn "${{ matrix.cmd }}" 
+          else
+            yarn install
+            yarn build:lib
+            yarn build:bin
+            yarn "${{ matrix.cmd }}"
+          fi
 
       - if: startsWith(github.ref, 'refs/tags/')
         name: Archive artifact
