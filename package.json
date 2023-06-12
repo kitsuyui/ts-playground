@@ -5,11 +5,24 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "A playground for TypeScript",
   "scripts": {
-    "build": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap",
-    "dev": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/index.js'",
+    "build": "yarn build:all",
+    "build:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap",
+    "build:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap",
+    "build:standalone:macos-arm64": "pkg dist/main.js -o build/ts-playground-macos-arm64 -t node18-macos-arm64", 
+    "build:standalone:macos-x64": "pkg dist/main.js -o build/ts-playground-macos-x64 -t node18-macos-x64",
+    "build:standalone:win-arm64": "pkg dist/main.js -o build/ts-playground-win-arm64 -t node18-win-arm64",
+    "build:standalone:win-x64": "pkg dist/main.js -o build/ts-playground-win-x64 -t node18-win-x64",
+    "build:standalone:linux-arm64": "pkg dist/main.js -o build/ts-playground-linux-arm64 -t node18-linux-arm64",
+    "build:standalone:linux-x64": "pkg dist/main.js -o build/ts-playground-linux-x64 -t node18-linux-x64",
+    "build:all": "yarn build:lib && yarn build:bin && yarn build:standalone:macos-arm64 && yarn build:standalone:macos-x64 && yarn build:standalone:win-arm64 && yarn build:standalone:win-x64 && yarn build:standalone:linux-arm64 && yarn build:standalone:linux-x64",
+    "dev:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/index.js'",
+    "dev:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/main.js'",
     "test": "jest --coverage",
     "lint": "eslint --ext .ts src",
     "format": "prettier --write ."
+  },
+  "bin": {
+    "ts-playground-main": "./dist/main.js"
   },
   "exports": {
     ".": {
@@ -36,6 +49,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-unused-imports": "^2.0.0",
     "jest": "^29.5.0",
+    "pkg": "^5.8.1",
     "prettier": "^2.8.8",
     "typescript": "^5.1.3"
   },
