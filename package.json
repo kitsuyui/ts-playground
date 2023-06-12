@@ -5,11 +5,16 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "A playground for TypeScript",
   "scripts": {
-    "build": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap",
-    "dev": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/index.js'",
+    "build:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap",
+    "dev:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/index.js'",
+    "build:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap",
+    "dev:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/main.js'",
     "test": "jest --coverage",
     "lint": "eslint --ext .ts src",
     "format": "prettier --write ."
+  },
+  "bin": {
+    "ts-playground-main": "./dist/main.js"
   },
   "exports": {
     ".": {
