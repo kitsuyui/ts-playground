@@ -8,7 +8,7 @@
     "build": "yarn build:all",
     "build:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap",
     "build:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap",
-    "build:standalone:macos-arm64": "pkg dist/main.js -o build/ts-playground-macos-arm64 -t node18-macos-arm64 --no-signature", 
+    "build:standalone:macos-arm64": "pkg dist/main.js -o build/ts-playground-macos-arm64 -t node18-macos-arm64 --no-signature",
     "build:standalone:macos-x64": "pkg dist/main.js -o build/ts-playground-macos-x64 -t node18-macos-x64 --no-signature",
     "build:standalone:win-arm64": "pkg dist/main.js -o build/ts-playground-win-arm64 -t node18-win-arm64 --no-signature",
     "build:standalone:win-x64": "pkg dist/main.js -o build/ts-playground-win-x64 -t node18-win-x64 --no-signature",
