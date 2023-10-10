@@ -14,6 +14,11 @@ Playground for TypeScript
   - [x] coverage with codecov
   - [x] lint with eslint
   - [x] format with prettier
+  - [x] Add TypeDoc for documentation
+
+## Docs
+
+- TypeDoc: https://ts-playground.typedoc.kitsuyui.com/
 
 ## Usage
 
