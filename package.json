@@ -5,7 +5,7 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "A playground for TypeScript",
   "scripts": {
-    "build": "yarn build:all",
+    "build": "pnpm build:all",
     "build:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap",
     "build:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap",
     "build:standalone:macos-arm64": "pkg dist/main.js -o build/ts-playground-macos-arm64 -t node18-macos-arm64 --no-signature",
@@ -14,7 +14,7 @@
     "build:standalone:win-x64": "pkg dist/main.js -o build/ts-playground-win-x64 -t node18-win-x64 --no-signature",
     "build:standalone:linux-arm64": "pkg dist/main.js -o build/ts-playground-linux-arm64 -t node18-linux-arm64 --no-signature",
     "build:standalone:linux-x64": "pkg dist/main.js -o build/ts-playground-linux-x64 -t node18-linux-x64 --no-signature",
-    "build:all": "yarn build:lib && yarn build:bin && yarn build:standalone:macos-arm64 && yarn build:standalone:macos-x64 && yarn build:standalone:win-arm64 && yarn build:standalone:win-x64 && yarn build:standalone:linux-arm64 && yarn build:standalone:linux-x64",
+    "build:all": "pnpm build:lib && pnpm build:bin && pnpm build:standalone:macos-arm64 && pnpm build:standalone:macos-x64 && pnpm build:standalone:win-arm64 && pnpm build:standalone:win-x64 && pnpm build:standalone:linux-arm64 && pnpm build:standalone:linux-x64",
     "dev:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/index.js'",
     "dev:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/main.js'",
     "test": "jest --coverage",
