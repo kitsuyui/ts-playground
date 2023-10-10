@@ -4,24 +4,41 @@
 
 Playground for TypeScript
 
+## Features
+
+- [x] Binary release with vercel/pkg
+- [x] Library release for npm (pnpm publish)
+- [x] CLI release for npm (pnpm publish)
+- [x] Basis
+  - [x] test with jest
+  - [x] coverage with codecov
+  - [x] lint with eslint
+  - [x] format with prettier
+
 ## Usage
+
+### Install
+
+```sh
+pnpm install
+```
 
 ### Build
 
 ```sh
-yarn build
+pnpm build
 ```
 
 ### Run with development mode (watch mode)
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 ## Test
 
 ```sh
-yarn test
+pnpm test
 ```
 
 ## License
