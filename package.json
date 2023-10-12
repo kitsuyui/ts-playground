@@ -19,6 +19,8 @@
     "dev:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/main.js'",
     "test": "jest --coverage",
     "lint": "eslint --ext .ts src",
+    "lint:type": "tsc --noEmit --project .",
+    "lint:format": "prettier --check .",
     "format": "prettier --write .",
     "typedoc": "typedoc"
   },
