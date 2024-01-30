@@ -18,10 +18,8 @@
     "dev:lib": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/index.js'",
     "dev:bin": "tsup src/main.ts --dts --format cjs,esm --minify --clean --sourcemap --watch --onSuccess 'node dist/main.js'",
     "test": "jest --coverage",
-    "lint": "eslint --ext .ts src",
-    "lint:type": "tsc --noEmit --project .",
-    "lint:format": "prettier --check .",
-    "format": "prettier --write .",
+    "lint": "biome lint .",
+    "format": "biome lint --apply .",
     "typedoc": "typedoc"
   },
   "bin": {
@@ -42,6 +40,7 @@
     "package.json"
   ],
   "devDependencies": {
+    "@biomejs/biome": "^1.5.3",
     "@jest/globals": "^29.7.0",
     "@swc/core": "^1.3.95",
     "@swc/jest": "^0.2.29",

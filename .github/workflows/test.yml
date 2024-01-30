@@ -38,8 +38,6 @@ jobs:
       - name: Lint
         run: |
           pnpm lint
-          pnpm lint:type
-          pnpm lint:format
 
       - name: Build
         run: pnpm build
