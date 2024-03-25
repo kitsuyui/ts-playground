@@ -1,0 +1,1 @@
+export { sigmoid } from './sigmoid'

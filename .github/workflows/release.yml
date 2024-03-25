@@ -17,7 +17,9 @@ jobs:
       matrix:
         package_name:
           [
-            standalone
+            standalone,
+            hello,
+            mymath
           ]
 
     steps:
