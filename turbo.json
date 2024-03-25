@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "dev": {
+      "dependsOn": [
+        "^dev"
+      ]
+    },
+    "@kitsuyui/standalone#build": {
+      "outputs": [
+        "dist"
+      ]
+    },
+    "@kitsuyui/standalone#dev": {},
+    "build": {
+      "dependsOn": [
+        "^build",
+        "typedoc"
+      ]
+    },
+    "typedoc": {}
+  }
+}

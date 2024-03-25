@@ -12,6 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        package_name:
+          [
+            standalone
+          ]
 
     steps:
       - uses: actions/checkout@v4
@@ -33,17 +40,18 @@ jobs:
           pnpm build
 
       - name: update version
+        working-directory: packages/${{ matrix.package_name }}
         if: github.event_name == 'release'
         run: |
           git config user.email "dummy@dummy"
           git config user.name "dummy"
-          npm version from-git --allow-same-version --no-git-tag-version
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          pnpm version from-git --allow-same-version --no-git-tag-version || true
 
-      - run: pnpm pack
+      - working-directory: packages/${{ matrix.package_name }}
+        run: pnpm pack
 
       - name: Test installation
+        working-directory: packages/${{ matrix.package_name }}
         run: |
           set -eu
           built_dir=$(pwd)
@@ -53,7 +61,8 @@ jobs:
           cd $built_dir
           rm -rf $tempdir
 
-      - run: npm publish --access=public
+      - run: pnpm publish --access=public --no-git-checks
+        working-directory: packages/${{ matrix.package_name }}
         if: github.event_name == 'release' && !github.event.release.prerelease
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -38,7 +38,7 @@ jobs:
         with:
           name: result
           path: |
-            ./build
+            ./packages/standalone/build
 
   upload:
     if: startsWith(github.ref, 'refs/tags/')
@@ -49,10 +49,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: result
-          path: ./build
+          path: ./packages/standalone/build
       - name: List
-        run: find ./build -type f -not -path ./build/.gitignore
+        run: find ./packages/standalone/build -type f -not -path ./packages/standalone/build.gitignore
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ./build/ts-playground-*
+          files: ./packages/standalone/build/ts-playground-*

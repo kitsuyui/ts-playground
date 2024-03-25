@@ -40,8 +40,10 @@
       "**/dist/**",
       "**/build/**",
       "**/coverage/**",
+      "**/.turbo/**",
       "**/*.md",
       "**/*.yml",
+      "**/docs/**",
       "pnpm-lock.yaml"
     ]
   }
