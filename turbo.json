@@ -14,10 +14,8 @@
     "@kitsuyui/standalone#dev": {},
     "build": {
       "dependsOn": [
-        "^build",
-        "typedoc"
+        "^build"
       ]
-    },
-    "typedoc": {}
+    }
   }
 }
