@@ -5,7 +5,7 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "Hello world package",
   "scripts": {
-    "build": "tsup src/index.ts --dts --format cjs,esm --minify --clean --sourcemap",
+    "build": "tsup src/index.ts --clean",
     "dev": "pnpm build --watch"
   },
   "bin": {
