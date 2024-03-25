@@ -13,7 +13,8 @@ Playground for TypeScript
   - [x] Add TypeDoc for documentation
   - [x] Publish NPM package
 
-- `@kitsuyu/standalone` ... make a standalone binary from TypeScript
+- [x] `@kitsuyui/hello` ... simple hello world package
+- [x] `@kitsuyu/standalone` ... make a standalone binary from TypeScript
   - [x] Binary application
   - [x] NPM package
   - [x] CLI

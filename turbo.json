@@ -6,6 +6,11 @@
         "^dev"
       ]
     },
+    "@kitsuyui/hello#build": {
+      "outputs": [
+        "dist"
+      ]
+    },
     "@kitsuyui/standalone#build": {
       "outputs": [
         "dist"
