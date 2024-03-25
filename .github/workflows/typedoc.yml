@@ -24,7 +24,9 @@ jobs:
 
       - run: pnpm install
 
-      - run: pnpm build
+      - run: |
+          pnpm build
+          pnpm typedoc
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
