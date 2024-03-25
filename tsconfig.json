@@ -14,5 +14,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true
-  }
+  },
+  "exclude": ["**/*.test.ts"]
 }
