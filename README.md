@@ -6,15 +6,17 @@ Playground for TypeScript
 
 ## Features
 
-- [x] Binary release with vercel/pkg
-- [x] Library release for npm (pnpm publish)
-- [x] CLI release for npm (pnpm publish)
 - [x] Basis
   - [x] test with jest
   - [x] coverage with codecov
-  - [x] lint with eslint
-  - [x] format with prettier
+  - [x] lint / format with biomejs
   - [x] Add TypeDoc for documentation
+  - [x] Publish NPM package
+
+- `@kitsuyu/standalone` ... make a standalone binary from TypeScript
+  - [x] Binary application
+  - [x] NPM package
+  - [x] CLI
 
 ## Docs
 

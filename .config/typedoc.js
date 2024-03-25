@@ -1,6 +1,6 @@
 /** @type {import('typedoc').TypeDocOptions} */
 module.exports = {
-  entryPoints: ['../src/**/*.ts'],
-  exclude: ['../src/**/*+(.test).ts'],
+  entryPoints: ['../packages/**/src/*.ts'],
+  exclude: ['../packages/**/src/*+(.test|.spec).ts'],
   out: '../build/typedocs',
 }
