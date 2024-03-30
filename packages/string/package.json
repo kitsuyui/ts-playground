@@ -1,0 +1,29 @@
+{
+  "name": "@kitsuyui/string",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
+  "description": "A simple additional library for String",
+  "scripts": {
+    "build": "tsup src/index.ts --clean",
+    "dev": "pnpm build --watch"
+  },
+  "bin": {
+    "ts-playground-main": "./dist/main.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "devDependencies": {}
+}
