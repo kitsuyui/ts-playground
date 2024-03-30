@@ -36,8 +36,6 @@ export const joinWords = (words: string[], toCase: Case): string => {
       return intoFlatCase(words)
     case 'ALL CAPS':
       return intoAllCaps(words)
-    default:
-      throw new Error(`Invalid Case: ${toCase}`)
   }
 }
 
