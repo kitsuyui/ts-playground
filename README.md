@@ -16,6 +16,7 @@ Playground for TypeScript
 - [x] `@kitsuyui/hello` ... simple hello world package
 - [x] `@kitsuyui/string` ... simple string package
 - [x] `@kitsuyui/mymath` ... simple math package
+- [x] `@kitsuyui/luxon-ext` ... extension for [luxon](https://moment.github.io/luxon/)
 - [x] `@kitsuyu/standalone` ... make a standalone binary from TypeScript
   - [x] Binary application
   - [x] NPM package
