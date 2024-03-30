@@ -19,7 +19,8 @@ jobs:
           [
             standalone,
             hello,
-            mymath
+            mymath,
+            string,
           ]
 
     steps:

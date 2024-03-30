@@ -14,6 +14,7 @@ Playground for TypeScript
   - [x] Publish NPM package
 
 - [x] `@kitsuyui/hello` ... simple hello world package
+- [x] `@kitsuyui/string` ... simple string package
 - [x] `@kitsuyui/mymath` ... simple math package
 - [x] `@kitsuyu/standalone` ... make a standalone binary from TypeScript
   - [x] Binary application
