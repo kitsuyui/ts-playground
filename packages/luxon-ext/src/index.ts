@@ -10,7 +10,7 @@ interface ExtendedToHumanDurationOptions {
 }
 
 interface TemporalToHumanDurationOptions extends ExtendedToHumanDurationOptions {
-  formatter: Formatter
+  formatter?: Formatter
 }
 
 type Temporal = 'past' | 'future'
