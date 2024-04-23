@@ -22,6 +22,7 @@ jobs:
             mymath,
             string,
             luxon-ext,
+            intended-rollback
           ]
 
     steps:

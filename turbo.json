@@ -16,6 +16,11 @@
         "dist"
       ]
     },
+    "@kitsuyui/intended-rollback#build": {
+      "outputs": [
+        "dist"
+      ]
+    },
     "@kitsuyui/standalone#dev": {},
     "build": {
       "dependsOn": [
