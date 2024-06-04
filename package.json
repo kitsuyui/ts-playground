@@ -24,7 +24,7 @@
     "concurrently": "^8.2.2",
     "jest": "^29.7.0",
     "tsup": "^8.0.2",
-    "turbo": "^1.13.2",
+    "turbo": "^2.0.0",
     "typedoc": "^0.25.13",
     "typescript": "^5.4.5"
   }
