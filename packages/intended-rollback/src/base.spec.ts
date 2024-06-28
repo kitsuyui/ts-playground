@@ -1,17 +1,20 @@
-import { describe, it, expect, jest } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 import { wrapWithRollback } from './base'
 import type { Result } from './types'
 
-
 class DummyClient {
-  async transaction<T>(callback: (tran: DummyClientTransaction) => Promise<T>): Promise<T> {
+  async transaction<T>(
+    callback: (tran: DummyClientTransaction) => Promise<T>
+  ): Promise<T> {
     const tran = new DummyClientTransaction()
     return await tran.run(callback)
   }
 }
 
 class DummyClientTransaction {
-  async run<T>(callback: (client: DummyClientTransaction) => Promise<T>): Promise<T> {
+  async run<T>(
+    callback: (client: DummyClientTransaction) => Promise<T>
+  ): Promise<T> {
     try {
       const result = await callback(this)
       await this.commit()
@@ -25,14 +28,13 @@ class DummyClientTransaction {
   async rollback() {}
 }
 
-
 const dummyClientIntendedRollback = async <T>(
   dummyClient: DummyClient,
   rollback: boolean,
-  innerBlock: (tran: DummyClientTransaction) => Promise<T>,
+  innerBlock: (tran: DummyClientTransaction) => Promise<T>
 ): Promise<Result<T>> => {
   const wrapped = wrapWithRollback<DummyClient, DummyClientTransaction, T>(
-    async (dummyClient, callback) => await dummyClient.transaction(callback),
+    async (dummyClient, callback) => await dummyClient.transaction(callback)
   )
   return await wrapped(dummyClient, rollback, innerBlock)
 }
@@ -40,9 +42,13 @@ const dummyClientIntendedRollback = async <T>(
 describe('dummyClientIntendedRollback', () => {
   it('should return success with rollback', async () => {
     const dummyClient = new DummyClient()
-    const result = await dummyClientIntendedRollback(dummyClient, true, async (tran) => {
-      return 'result'
-    })
+    const result = await dummyClientIntendedRollback(
+      dummyClient,
+      true,
+      async (tran) => {
+        return 'result'
+      }
+    )
     expect(result).toEqual({
       success: true,
       content: 'result',
@@ -54,9 +60,13 @@ describe('dummyClientIntendedRollback', () => {
   })
   it('should return success without rollback', async () => {
     const dummyClient = new DummyClient()
-    const result = await dummyClientIntendedRollback(dummyClient, false, async (tran) => {
-      return 'result'
-    })
+    const result = await dummyClientIntendedRollback(
+      dummyClient,
+      false,
+      async (tran) => {
+        return 'result'
+      }
+    )
     expect(result).toEqual({
       success: true,
       content: 'result',
@@ -68,9 +78,13 @@ describe('dummyClientIntendedRollback', () => {
   })
   it('should return failure with rollback', async () => {
     const dummyClient = new DummyClient()
-    const result = await dummyClientIntendedRollback(dummyClient, true, async (tran) => {
-      throw new Error('error')
-    })
+    const result = await dummyClientIntendedRollback(
+      dummyClient,
+      true,
+      async (tran) => {
+        throw new Error('error')
+      }
+    )
     expect(result).toEqual({
       success: false,
       error: new Error('error'),
@@ -82,9 +96,13 @@ describe('dummyClientIntendedRollback', () => {
   })
   it('should return failure without rollback', async () => {
     const dummyClient = new DummyClient()
-    const result = await dummyClientIntendedRollback(dummyClient, false, async (tran) => {
-      throw new Error('error')
-    })
+    const result = await dummyClientIntendedRollback(
+      dummyClient,
+      false,
+      async (tran) => {
+        throw new Error('error')
+      }
+    )
     expect(result).toEqual({
       success: false,
       error: new Error('error'),

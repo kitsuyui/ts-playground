@@ -2,14 +2,19 @@
 // c.f. https://github.com/moment/luxon/issues/1134
 
 import type { DateTime, Duration, ToHumanDurationOptions } from 'luxon'
-import { cleanDuration, roundDuration, type PartialRoundingOptions } from './rounding'
+import {
+  type PartialRoundingOptions,
+  cleanDuration,
+  roundDuration,
+} from './rounding'
 
 interface ExtendedToHumanDurationOptions {
   rounding?: PartialRoundingOptions
   human?: ToHumanDurationOptions
 }
 
-interface TemporalToHumanDurationOptions extends ExtendedToHumanDurationOptions {
+interface TemporalToHumanDurationOptions
+  extends ExtendedToHumanDurationOptions {
   formatter?: Formatter
 }
 
@@ -19,20 +24,19 @@ type Formatter = (baseText: string, temporal: Temporal) => string
 
 export const toHumanDurationExtended = (
   duration: Duration,
-  opts?: ExtendedToHumanDurationOptions,
+  opts?: ExtendedToHumanDurationOptions
 ): string => {
   const locale = duration.locale ?? undefined
   const cleaned = cleanDuration(duration)
-  return roundDuration(
-    cleaned,
-    opts?.rounding,
-  ).reconfigure({ locale }).toHuman(opts?.human)
+  return roundDuration(cleaned, opts?.rounding)
+    .reconfigure({ locale })
+    .toHuman(opts?.human)
 }
 
 export const toHumanDurationWithTemporal = (
   duration: Duration,
   temporal: Temporal,
-  opts?: TemporalToHumanDurationOptions,
+  opts?: TemporalToHumanDurationOptions
 ): string => {
   const formatter = opts?.formatter ?? defaultFormatter
   const human = toHumanDurationExtended(duration, opts)
@@ -41,15 +45,15 @@ export const toHumanDurationWithTemporal = (
 
 /**
  * Convert the duration between two DateTimes to a human readable format
- * @param start 
- * @param end 
- * @param opts 
- * @returns 
+ * @param start
+ * @param end
+ * @param opts
+ * @returns
  */
 export const toHumanDurationWithDiff = (
   begin: DateTime,
   end: DateTime,
-  opts?: TemporalToHumanDurationOptions,
+  opts?: TemporalToHumanDurationOptions
 ): string => {
   const temporal = end > begin ? 'future' : 'past'
   const locale = end.locale ?? undefined
@@ -59,11 +63,14 @@ export const toHumanDurationWithDiff = (
 
 /**
  * Default formatter
- * @param baseText 
- * @param temporal 
+ * @param baseText
+ * @param temporal
  * @returns
  */
-const defaultFormatter: Formatter = (baseText: string, temporal: Temporal): string => {
+const defaultFormatter: Formatter = (
+  baseText: string,
+  temporal: Temporal
+): string => {
   if (temporal === 'future') {
     return `in ${baseText}`
   }

@@ -1,9 +1,10 @@
+import { IntendedRollback, Unreachable } from './errors'
 import type {
-  Result, TranInnerFn, TranOuterFn, WrappedTransactionalFn
+  Result,
+  TranInnerFn,
+  TranOuterFn,
+  WrappedTransactionalFn,
 } from './types'
-import {
-  IntendedRollback, Unreachable
-} from './errors'
 
 /**
  * Perform intended rollback (used when you want to rollback without actually changing data, such as in tests)
@@ -11,12 +12,12 @@ import {
  * @returns {WrappedTransactionalFn<TClient, TClientTran, TContent>} Function that wrapped the transaction with rollback handling
  */
 export const wrapWithRollback = <TClient, TClientTran, TContent>(
-  outer: TranOuterFn<TClient, TClientTran, TContent>,
+  outer: TranOuterFn<TClient, TClientTran, TContent>
 ): WrappedTransactionalFn<TClient, TClientTran, TContent> => {
   const wrapped = async (
     client: TClient,
     rollback: boolean,
-    func: TranInnerFn<TClientTran, TContent>,
+    func: TranInnerFn<TClientTran, TContent>
   ): Promise<Result<TContent>> =>
     await handleRollback(client, outer, func, rollback)
   return wrapped
@@ -34,7 +35,7 @@ const handleRollback = async <TClient, TClientTran, TContent>(
   client: TClient,
   outer: TranOuterFn<TClient, TClientTran, TContent>,
   func: TranInnerFn<TClientTran, TContent>,
-  rollback: boolean,
+  rollback: boolean
 ): Promise<Result<TContent>> => {
   let content: TContent | null = null
   try {

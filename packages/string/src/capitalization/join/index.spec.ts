@@ -1,18 +1,18 @@
-import { describe, it, expect, jest } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 
+import type { Case } from '../cases'
 import {
-  joinWords,
   intoAllCaps,
+  intoDotSeparated,
   intoFlatCase,
   intoKebabCase,
+  intoLowerCamelCase,
   intoScreamingSnakeCase,
   intoSnakeCase,
   intoSpaceSeparated,
   intoTrainCase,
-  intoLowerCamelCase,
-  intoDotSeparated,
+  joinWords,
 } from './index'
-import type { Case } from '../cases'
 
 describe('joinWords', () => {
   it('should join words into the specified case', () => {
@@ -23,8 +23,12 @@ describe('joinWords', () => {
 
   it('should throw an error for invalid case', () => {
     const words = ['join', 'words']
-    expect(() => joinWords(words, 'invalid' as Case)).toThrowError('Invalid Case: invalid')
-    expect(() => joinWords(words, undefined as unknown as Case)).toThrowError('Case is required')
+    expect(() => joinWords(words, 'invalid' as Case)).toThrowError(
+      'Invalid Case: invalid'
+    )
+    expect(() => joinWords(words, undefined as unknown as Case)).toThrowError(
+      'Case is required'
+    )
   })
 })
 

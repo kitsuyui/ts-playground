@@ -16,7 +16,7 @@ export type PartialRoundingOptions = Partial<RoundingOptions>
  * @returns
  */
 const roundingOptionsFromPartial = (
-  opts?: PartialRoundingOptions,
+  opts?: PartialRoundingOptions
 ): RoundingOptions => {
   const {
     numOfUnits = 2,
@@ -48,10 +48,10 @@ export const cleanDuration = (duration: Duration): Duration => {
  */
 export const roundDuration = (
   duration: Duration, // required to be clean
-  opts?: PartialRoundingOptions,
+  opts?: PartialRoundingOptions
 ): Duration => {
   const { numOfUnits, minUnit, roundingMethod } = roundingOptionsFromPartial(
-    opts ?? {},
+    opts ?? {}
   )
   const base = duration.shiftToAll().toObject()
   const rounded: DurationObjectUnits = {}
