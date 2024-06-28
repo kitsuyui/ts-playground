@@ -1,4 +1,4 @@
-import { describe, it, expect, jest } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 
 import { convertCase } from '.'
 import { ALL_CASES, type Case } from '../cases'
@@ -13,7 +13,9 @@ describe('convertCase', () => {
     expect(convertCase('hello-world', 'PascalCase')).toBe('HelloWorld')
     expect(convertCase('hello-world', 'lowerCamelCase')).toBe('helloWorld')
     expect(convertCase('hello-world', 'lowerPascalCase')).toBe('helloWorld')
-    expect(convertCase('hello-world', 'SCREAMING_SNAKE_CASE')).toBe('HELLO_WORLD')
+    expect(convertCase('hello-world', 'SCREAMING_SNAKE_CASE')).toBe(
+      'HELLO_WORLD'
+    )
     expect(convertCase('hello-world', 'MACRO_CASE')).toBe('HELLO_WORLD')
     expect(convertCase('hello-world', 'Train-Case')).toBe('Hello-World')
     expect(convertCase('hello-world', 'dot.separated')).toBe('hello.world')
@@ -32,6 +34,8 @@ describe('convertCase', () => {
   it('should throw an error for invalid case', () => {
     const text = 'convert this text to all cases'
     const toCase = 'invalid'
-    expect(() => convertCase(text, 'invalid' as Case)).toThrowError('Invalid Case: invalid')
+    expect(() => convertCase(text, 'invalid' as Case)).toThrowError(
+      'Invalid Case: invalid'
+    )
   })
 })

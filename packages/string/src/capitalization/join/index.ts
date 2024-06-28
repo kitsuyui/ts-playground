@@ -41,8 +41,8 @@ export const joinWords = (words: string[], toCase: Case): string => {
 
 /**
  * Join words into a single string with kebab case
- * @param words 
- * @returns 
+ * @param words
+ * @returns
  */
 export const intoKebabCase = (words: string[]): string => {
   const kebab = words.join('-')
@@ -51,8 +51,8 @@ export const intoKebabCase = (words: string[]): string => {
 
 /**
  * Join words into a single string with snake case
- * @param words 
- * @returns 
+ * @param words
+ * @returns
  */
 export const intoSnakeCase = (words: string[]): string => {
   const snake = words.join('_')
@@ -123,14 +123,16 @@ export const intoUpperCamelCase = (words: string[]): string => {
  * @returns
  */
 export const intoLowerCamelCase = (words: string[]): string => {
-  const camel = words.map((word, index) => index === 0 ? word : capitalize(word)).join('')
+  const camel = words
+    .map((word, index) => (index === 0 ? word : capitalize(word)))
+    .join('')
   return camel
 }
 
 /**
  * Capitalize a word
- * @param word 
- * @returns 
+ * @param word
+ * @returns
  */
 const capitalize = (word: string): string => {
   return word.charAt(0).toUpperCase() + word.slice(1)

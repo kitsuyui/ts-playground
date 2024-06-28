@@ -31,14 +31,14 @@ export type Result<T> =
   | ResultSuccessAndIntendedRollback<T>
 
 export type TranInnerFn<TClientTran, TContent> = (
-  client: TClientTran,
+  client: TClientTran
 ) => Promise<TContent>
 export type TranOuterFn<TClient, TClientTran, TContent> = (
   client: TClient,
-  callback: TranInnerFn<TClientTran, TContent>,
+  callback: TranInnerFn<TClientTran, TContent>
 ) => Promise<TContent>
 export type WrappedTransactionalFn<TClient, TClientTran, TContent> = (
   client: TClient,
   rollback: boolean,
-  func: TranInnerFn<TClientTran, TContent>,
+  func: TranInnerFn<TClientTran, TContent>
 ) => Promise<Result<TContent>>

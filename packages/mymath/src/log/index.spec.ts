@@ -1,6 +1,6 @@
-import { describe, it, expect, jest } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 
-import { logOfBase, logFnOfBase } from './index'
+import { logFnOfBase, logOfBase } from './index'
 
 describe('logOfBase', () => {
   it('should return 1 for 10 and 10', () => {

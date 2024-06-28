@@ -1,12 +1,21 @@
-import { describe, it, expect, jest } from '@jest/globals'
+import { describe, expect, it, jest } from '@jest/globals'
 
-import { splitToWords, splitCamelCase, splitBySeparator } from './index'
+import { splitBySeparator, splitCamelCase, splitToWords } from './index'
 
 describe('splitToWords', () => {
   it('should split text into words', () => {
     const text = 'kebab-case snake_case camelCase PascalCase'
     const tokens = splitToWords(text)
-    expect(tokens).toEqual(['kebab', 'case', 'snake', 'case', 'camel', 'case', 'pascal', 'case'])
+    expect(tokens).toEqual([
+      'kebab',
+      'case',
+      'snake',
+      'case',
+      'camel',
+      'case',
+      'pascal',
+      'case',
+    ])
   })
 })
 
@@ -22,6 +31,13 @@ describe('splitBySeparator', () => {
   it('should split text into words by separator', () => {
     const text = 'kebab-case snake_case camelCase PascalCase'
     const words = splitBySeparator(text, /[-_ ]/)
-    expect(words).toEqual(['kebab', 'case', 'snake', 'case', 'camelCase', 'PascalCase'])
+    expect(words).toEqual([
+      'kebab',
+      'case',
+      'snake',
+      'case',
+      'camelCase',
+      'PascalCase',
+    ])
   })
 })

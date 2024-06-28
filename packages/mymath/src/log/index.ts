@@ -8,7 +8,6 @@ export const logOfBase = (base: number, x: number) => {
   return Math.log(x) / Math.log(base)
 }
 
-
 type NumberToNumberFunction = (x: number) => number
 
 /**
@@ -16,6 +15,7 @@ type NumberToNumberFunction = (x: number) => number
  * @param base base of the logarithm
  * @returns a function that computes the logarithm of a number with the specified base
  */
-export const logFnOfBase: (base: number) => NumberToNumberFunction = (base: number) => (x: number) => {
-  return Math.log(x) / Math.log(base)
-}
+export const logFnOfBase: (base: number) => NumberToNumberFunction =
+  (base: number) => (x: number) => {
+    return Math.log(x) / Math.log(base)
+  }
