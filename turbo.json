@@ -7,9 +7,6 @@
     "@kitsuyui/hello#build": {
       "outputs": ["dist"]
     },
-    "@kitsuyui/standalone#build": {
-      "outputs": ["dist"]
-    },
     "@kitsuyui/intended-rollback#build": {
       "outputs": ["dist"]
     },

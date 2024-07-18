@@ -9,9 +9,6 @@
     "dev": "pnpm build --watch",
     "example": "tsx example.ts"
   },
-  "bin": {
-    "ts-playground-main": "./dist/main.js"
-  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",

@@ -17,10 +17,8 @@ Playground for TypeScript
 - [x] `@kitsuyui/string` ... simple string package
 - [x] `@kitsuyui/mymath` ... simple math package
 - [x] `@kitsuyui/luxon-ext` ... extension for [luxon](https://moment.github.io/luxon/)
-- [x] `@kitsuyu/standalone` ... make a standalone binary from TypeScript
-  - [x] Binary application
-  - [x] NPM package
-  - [x] CLI
+- [x] `@kitsuyui/intended-rollback` ... intended transaction rollback for prisma
+- [x] `@kitsuyui/incremental-color-palette` ... incremental color palette generator
 
 ## Docs
 
