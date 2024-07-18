@@ -8,9 +8,6 @@
     "build": "tsup src/index.ts --clean",
     "dev": "pnpm build --watch"
   },
-  "bin": {
-    "ts-playground-main": "./dist/main.js"
-  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
