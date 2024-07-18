@@ -22,7 +22,8 @@ jobs:
             mymath,
             string,
             luxon-ext,
-            intended-rollback
+            intended-rollback,
+            incremental-color-palette
           ]
 
     steps:
