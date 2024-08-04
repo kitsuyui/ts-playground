@@ -56,7 +56,7 @@ importers:
         version: 3.4.2
       luxon:
         specifier: ^3.4.4
-        version: 3.4.4
+        version: 3.5.0
 
   packages/mymath: {}
 
@@ -1571,8 +1571,8 @@ packages:
   lunr@2.3.9:
     resolution: {integrity: sha512-zTU3DaZaF3Rt9rhN3uBMGQD3dD2/vFQqnvZCDv4dl5iOzq2IZQqTxu90r4E5J+nP70J3ilqVCrbho2eWaeW8Ow==}
 
-  luxon@3.4.4:
-    resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
+  luxon@3.5.0:
+    resolution: {integrity: sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==}
     engines: {node: '>=12'}
 
   make-dir@4.0.0:
@@ -3744,7 +3744,7 @@ snapshots:
 
   lunr@2.3.9: {}
 
-  luxon@3.4.4: {}
+  luxon@3.5.0: {}
 
   make-dir@4.0.0:
     dependencies:
