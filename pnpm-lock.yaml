@@ -34,7 +34,7 @@ importers:
         version: 2.3.3
       typedoc:
         specifier: ^0.27.0
-        version: 0.27.4(typescript@5.7.2)
+        version: 0.27.5(typescript@5.7.2)
       typescript:
         specifier: ^5.5.3
         version: 5.7.2
@@ -570,8 +570,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@gerrit0/mini-shiki@1.24.1':
-    resolution: {integrity: sha512-PNP/Gjv3VqU7z7DjRgO3F9Ok5frTKqtpV+LJW1RzMcr2zpRk0ulhEWnbcNGXzPC7BZyWMIHrkfQX2GZRfxrn6Q==}
+  '@gerrit0/mini-shiki@1.24.4':
+    resolution: {integrity: sha512-YEHW1QeAg6UmxEmswiQbOVEg1CW22b1XUD/lNTliOsu0LD0wqoyleFMnmbTp697QE0pcadQiR5cVtbbAPncvpw==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -772,14 +772,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@shikijs/engine-oniguruma@1.24.1':
-    resolution: {integrity: sha512-KdrTIBIONWd+Xs61eh8HdIpfigtrseat9dpARvaOe2x0g/FNTbwbkGr3y92VSOVD1XotzEskh3v/nCzyWjkf7g==}
+  '@shikijs/engine-oniguruma@1.24.2':
+    resolution: {integrity: sha512-ZN6k//aDNWRJs1uKB12pturKHh7GejKugowOFGAuG7TxDRLod1Bd5JhpOikOiFqPmKjKEPtEA6mRCf7q3ulDyQ==}
 
-  '@shikijs/types@1.24.1':
-    resolution: {integrity: sha512-ZwZFbShFY/APfKNt3s9Gv8rhTm29GodSKsOW66X6N+HGsZuaHalE1VUEX4fv93UXHTZTLjb3uxn63F96RhGfXw==}
+  '@shikijs/types@1.24.2':
+    resolution: {integrity: sha512-bdeWZiDtajGLG9BudI0AHet0b6e7FbR0EsE4jpGaI0YwHm/XJunI9+3uZnzFtX65gsyJ6ngCIWUfA4NWRPnBkQ==}
 
-  '@shikijs/vscode-textmate@9.3.0':
-    resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
+  '@shikijs/vscode-textmate@9.3.1':
+    resolution: {integrity: sha512-79QfK1393x9Ho60QFyLti+QfdJzRQCVLFb97kOIV7Eo9vQU/roINgk7m24uv0a7AUvN//RDH36FLjjK48v0s9g==}
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -1950,8 +1950,8 @@ packages:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
 
-  typedoc@0.27.4:
-    resolution: {integrity: sha512-wXPQs1AYC2Crk+1XFpNuutLIkNWleokZf1UNf/X8w9KsMnirkvT+LzxTXDvfF6ug3TSLf3Xu5ZXRKGfoXPX7IA==}
+  typedoc@0.27.5:
+    resolution: {integrity: sha512-x+fhKJtTg4ozXwKayh/ek4wxZQI/+2hmZUdO2i2NGDBRUflDble70z+ewHod3d4gRpXSO6fnlnjbDTnJk7HlkQ==}
     engines: {node: '>= 18'}
     hasBin: true
     peerDependencies:
@@ -2404,11 +2404,11 @@ snapshots:
   '@esbuild/win32-x64@0.24.0':
     optional: true
 
-  '@gerrit0/mini-shiki@1.24.1':
+  '@gerrit0/mini-shiki@1.24.4':
     dependencies:
-      '@shikijs/engine-oniguruma': 1.24.1
-      '@shikijs/types': 1.24.1
-      '@shikijs/vscode-textmate': 9.3.0
+      '@shikijs/engine-oniguruma': 1.24.2
+      '@shikijs/types': 1.24.2
+      '@shikijs/vscode-textmate': 9.3.1
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2672,17 +2672,17 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.28.1':
     optional: true
 
-  '@shikijs/engine-oniguruma@1.24.1':
+  '@shikijs/engine-oniguruma@1.24.2':
     dependencies:
-      '@shikijs/types': 1.24.1
-      '@shikijs/vscode-textmate': 9.3.0
+      '@shikijs/types': 1.24.2
+      '@shikijs/vscode-textmate': 9.3.1
 
-  '@shikijs/types@1.24.1':
+  '@shikijs/types@1.24.2':
     dependencies:
-      '@shikijs/vscode-textmate': 9.3.0
+      '@shikijs/vscode-textmate': 9.3.1
       '@types/hast': 3.0.4
 
-  '@shikijs/vscode-textmate@9.3.0': {}
+  '@shikijs/vscode-textmate@9.3.1': {}
 
   '@sinclair/typebox@0.27.8': {}
 
@@ -4007,9 +4007,9 @@ snapshots:
 
   type-fest@0.21.3: {}
 
-  typedoc@0.27.4(typescript@5.7.2):
+  typedoc@0.27.5(typescript@5.7.2):
     dependencies:
-      '@gerrit0/mini-shiki': 1.24.1
+      '@gerrit0/mini-shiki': 1.24.4
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
