@@ -21,7 +21,7 @@
   "files": ["dist", "package.json"],
   "devDependencies": {
     "@types/luxon": "^3.4.2",
-    "luxon": "^3.4.4"
+    "luxon": "^3.5.0"
   },
   "peerDependencies": {
     "luxon": "^3"

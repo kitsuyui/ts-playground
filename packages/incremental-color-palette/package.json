@@ -21,6 +21,6 @@
   "types": "dist/index.d.ts",
   "files": ["dist", "package.json"],
   "devDependencies": {
-    "tsx": "^4.16.2"
+    "tsx": "^4.19.2"
   }
 }
