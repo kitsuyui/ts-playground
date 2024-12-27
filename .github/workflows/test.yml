@@ -15,7 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [18.x, 20.x, 21.x]
+        # https://nodejs.org/en/about/previous-releases
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -47,7 +48,8 @@ jobs:
         run: pnpm pack
 
       - name: Upload coverage to Codecov
-        if: matrix.node-version == '20.x'
+        # https://nodejs.org/en/about/previous-releases
+        if: matrix.node-version == '22.x'
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
