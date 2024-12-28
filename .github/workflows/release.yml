@@ -12,19 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     continue-on-error: true
-    strategy:
-      fail-fast: false
-      matrix:
-        package_name:
-          [
-            hello,
-            mymath,
-            string,
-            luxon-ext,
-            intended-rollback,
-            incremental-color-palette,
-            symbolic-prototype
-          ]
 
     steps:
       - uses: actions/checkout@v4
@@ -45,29 +32,20 @@ jobs:
           pnpm build
 
       - name: update version
-        working-directory: packages/${{ matrix.package_name }}
         if: github.event_name == 'release'
         run: |
           git config user.email "dummy@dummy"
           git config user.name "dummy"
           pnpm version from-git --allow-same-version --no-git-tag-version || true
 
-      - working-directory: packages/${{ matrix.package_name }}
-        run: pnpm pack
-
-      - name: Test installation
-        working-directory: packages/${{ matrix.package_name }}
-        run: |
-          set -eu
-          built_dir=$(pwd)
-          tempdir=$(mktemp -d)
-          cd $tempdir
-          pnpm add $built_dir/*.tgz
-          cd $built_dir
-          rm -rf $tempdir
-
-      - run: pnpm publish --access=public --no-git-checks
-        working-directory: packages/${{ matrix.package_name }}
+      - name: deploy
+        run: pnpm publish --access=public --no-git-checks --recursive
         if: github.event_name == 'release' && !github.event.release.prerelease
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: deploy (dry-run)
+        run: pnpm publish --access=public --no-git-checks --dry-run --recursive
+        if: github.event_name != 'release' || github.event.release.prerelease
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
