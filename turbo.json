@@ -1,5 +1,6 @@
 {
   "$schema": "https://turborepo.org/schema.json",
+  "daemon": false,
   "tasks": {
     "dev": {
       "dependsOn": ["^dev"]
@@ -7,10 +8,24 @@
     "@kitsuyui/hello#build": {
       "outputs": ["dist"]
     },
+    "@kitsuyui/incremental-color-palette#build": {
+      "outputs": ["dist"]
+    },
     "@kitsuyui/intended-rollback#build": {
       "outputs": ["dist"]
     },
-    "@kitsuyui/standalone#dev": {},
+    "@kitsuyui/luxon-ext#build": {
+      "outputs": ["dist"]
+    },
+    "@kitsuyui/mymath#build": {
+      "outputs": ["dist"]
+    },
+    "@kitsuyui/string#build": {
+      "outputs": ["dist"]
+    },
+    "@kitsuyui/symbolic-prototype#build": {
+      "outputs": ["dist"]
+    },
     "build": {
       "dependsOn": ["^build"]
     }
