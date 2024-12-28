@@ -19,6 +19,12 @@ export type Case = (typeof ALL_CASES)[number]
 
 /**
  * Check if a string is a valid Case Name
+ * @example
+ * ```ts
+ * import { isValidCaseName } from 'string'
+ * isValidCaseName('kebab-case') // => true
+ * isValidCaseName('kebab_case') // => false
+ * ```
  * @param caseText
  * @returns
  */

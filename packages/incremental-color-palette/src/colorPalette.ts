@@ -65,10 +65,9 @@ export const uintToBrightness = (
 /**
  * Return a value between min and max by using sin wave.
  * @param rad
- * @param min
- * @param max
- * @param frequency
- * @param phase
+ * @param waveParameter.range [min, max] of the return value
+ * @param waveParameter.frequency
+ * @param waveParameter.phase
  * @returns min <= return value <= max
  */
 export const waveInRange = (

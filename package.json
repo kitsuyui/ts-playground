@@ -12,7 +12,8 @@
     "format": "biome check --write ./",
     "lint": "biome check ./",
     "test": "jest --coverage",
-    "typedoc": "typedoc"
+    "typedoc": "turbo run typedoc",
+    "typedoc:server": "python3 -m http.server --directory build/typedocs"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

@@ -1,7 +1,11 @@
 /**
  * Sum of all values in the array
- * Example: sum([1, 2, 3, 4]) => 10
  * If the array is empty, it returns 0 (0 is identity element for addition)
+ * @example
+ * ```ts
+ * import { sum } from '@kitsuyui/mymath'
+ * sum([1, 2, 3, 4]) // => 10
+ * ```
  * @param values
  * @returns sum of all values
  */
@@ -15,8 +19,12 @@ export const sum = (values: number[]): number => {
 
 /**
  * Product of all values in the array
- * Example: product([1, 2, 3, 4]) => 24
  * If the array is empty, it returns 1 (1 is identity element for multiplication)
+ * @example
+ * ```ts
+ * import { product } from '@kitsuyui/mymath'
+ * product([1, 2, 3, 4]) // => 24
+ * ```
  * @param values
  * @returns product of all values
  */
@@ -30,8 +38,12 @@ export const product = (values: number[]): number => {
 
 /**
  * Average of all values in the array
- * Example: average([1, 2, 3, 4]) => 2.5
  * If the array is empty, it returns 0 or the defaultValue
+ * @example
+ * ```ts
+ * import { average } from '@kitsuyui/mymath'
+ * average([1, 2, 3, 4]) // => 2.5
+ * ```
  * @param values
  * @param defaultValue
  * @returns average of all values

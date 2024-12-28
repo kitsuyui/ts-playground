@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { type WaveParameter, uintToRGB } from './src/'
+import { type WaveParameter, uintToRGB } from '../src/'
 
 const main = () => {
   const satuationParameter = {
