@@ -28,6 +28,9 @@
     },
     "build": {
       "dependsOn": ["^build"]
+    },
+    "typedoc": {
+      "dependsOn": ["build"]
     }
   }
 }

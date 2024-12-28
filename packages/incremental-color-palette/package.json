@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsup src/index.ts --clean",
     "dev": "pnpm build --watch",
-    "example": "tsx example.ts"
+    "example": "tsx examples/example.ts"
   },
   "exports": {
     ".": {

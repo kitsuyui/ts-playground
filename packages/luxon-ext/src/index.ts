@@ -45,8 +45,8 @@ export const toHumanDurationWithTemporal = (
 
 /**
  * Convert the duration between two DateTimes to a human readable format
- * @param start
- * @param end
+ * @param begin The beginning DateTime
+ * @param end The ending DateTime
  * @param opts
  * @returns
  */
