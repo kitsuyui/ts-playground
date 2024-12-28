@@ -1,0 +1,23 @@
+{
+  "name": "@kitsuyui/symbolic-prototype",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
+  "description": "Modern prototype extension with Symbol",
+  "scripts": {
+    "build": "tsup src/index.ts --clean",
+    "dev": "pnpm build --watch"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "package.json"],
+  "devDependencies": {}
+}
