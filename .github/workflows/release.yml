@@ -22,7 +22,8 @@ jobs:
             string,
             luxon-ext,
             intended-rollback,
-            incremental-color-palette
+            incremental-color-palette,
+            symbolic-prototype
           ]
 
     steps:
