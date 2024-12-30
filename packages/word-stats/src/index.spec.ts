@@ -66,7 +66,7 @@ describe('computeInverseDocumentFrequency', () => {
   })
 })
 
-describe('uniqueWords', () => {
+describe('extractUniqueWords', () => {
   it('should return unique words', () => {
     const document = ['a', 'b', 'c', 'a', 'c']
     const result = extractUniqueWords(document)
