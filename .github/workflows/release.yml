@@ -13,10 +13,6 @@ jobs:
 
     continue-on-error: true
 
-    permissions:
-      contents: read
-      id-token: write
-
     steps:
       - uses: actions/checkout@v4
 
@@ -37,9 +33,6 @@ jobs:
 
       - name: set git tag version
         run: |
-          # https://docs.npmjs.com/generating-provenance-statements
-          # This may not work properly. dynamic versioning may cause a problem.
-          export NPM_CONFIG_PROVENANCE=true
           git config user.email "dummy@dummy"
           git config user.name "dummy"
           pnpm version from-git --allow-same-version --no-git-tag-version -ws || true
