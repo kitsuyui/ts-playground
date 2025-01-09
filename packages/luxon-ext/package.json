@@ -9,6 +9,10 @@
     "build": "tsup src/index.ts --clean",
     "dev": "pnpm build --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitsuyui/ts-playground.git"
+  },
   "exports": {
     ".": {
       "require": {

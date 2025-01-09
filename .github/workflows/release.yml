@@ -35,6 +35,13 @@ jobs:
           pnpm install
           pnpm build
 
+      - name: Set tag rc
+        if: github.event_name == 'pull_request'
+        run: |
+          git config user.email "dummy@dummy"
+          git config user.name "dummy"
+          git tag v999.999.999-rc.$GITHUB_RUN_NUMBER
+
       - name: set git tag version
         run: |
           # https://docs.npmjs.com/generating-provenance-statements

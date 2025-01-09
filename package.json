@@ -1,7 +1,7 @@
 {
   "name": "@kitsuyui/ts-playground",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.11",
   "license": "MIT",
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "A playground for TypeScript",
