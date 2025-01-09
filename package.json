@@ -12,7 +12,7 @@
     "format": "biome check --write ./",
     "lint": "biome check ./",
     "test": "jest --coverage",
-    "typedoc": "turbo run typedoc",
+    "typedoc": "turbo build && typedoc",
     "typedoc:server": "python3 -m http.server --directory build/typedocs"
   },
   "devDependencies": {
