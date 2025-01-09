@@ -1,5 +1,6 @@
 {
   "name": "@kitsuyui/hello",
+  "type": "module",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
@@ -15,8 +16,8 @@
         "default": "./dist/index.cjs"
       },
       "import": {
-        "type": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
+        "type": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
