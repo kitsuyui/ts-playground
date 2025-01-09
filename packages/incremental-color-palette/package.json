@@ -10,6 +10,10 @@
     "dev": "pnpm build --watch",
     "example": "tsx examples/example.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitsuyui/ts-playground.git"
+  },
   "exports": {
     ".": {
       "require": {
