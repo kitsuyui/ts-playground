@@ -31,12 +31,12 @@ jobs:
           pnpm install
           pnpm build
 
-      - name: update version
-        if: github.event_name == 'release'
+      - name: set git tag version
         run: |
           git config user.email "dummy@dummy"
           git config user.name "dummy"
-          pnpm version from-git --allow-same-version --no-git-tag-version || true
+          pnpm version from-git --allow-same-version --no-git-tag-version -ws || true
+          pnpm format
 
       - name: deploy
         run: pnpm publish --access=public --no-git-checks --recursive
