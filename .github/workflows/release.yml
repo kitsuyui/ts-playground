@@ -40,18 +40,18 @@ jobs:
         run: |
           git config user.email "dummy@dummy"
           git config user.name "dummy"
+          # dummy tag for dry-run
           git tag v999.999.999-rc.$GITHUB_RUN_NUMBER
 
       - name: set git tag version
         run: |
-          # https://docs.npmjs.com/generating-provenance-statements
-          # This may not work properly. dynamic versioning may cause a problem.
           git config user.email "dummy@dummy"
           git config user.name "dummy"
           pnpm version from-git --allow-same-version --no-git-tag-version -ws || true
           pnpm format
 
       - name: deploy
+        # https://docs.npmjs.com/generating-provenance-statements
         run: NPM_CONFIG_PROVENANCE=true pnpm publish --access=public --no-git-checks --recursive
         if: github.event_name == 'release' && !github.event.release.prerelease
         env:
