@@ -26,6 +26,9 @@
     "@kitsuyui/symbolic-prototype#build": {
       "outputs": ["dist"]
     },
+    "@kitsuyui/try-automerge#build": {
+      "outputs": ["dist"]
+    },
     "build": {
       "dependsOn": ["^build"]
     },
