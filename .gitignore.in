@@ -2,6 +2,5 @@ gibo dump Linux
 gibo dump Windows
 gibo dump macOS
 gibo dump Node
-gi turbo
 echo packages/*/build/*
 echo build/
