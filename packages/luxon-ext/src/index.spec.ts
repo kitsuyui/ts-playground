@@ -1,6 +1,6 @@
-import { describe, expect, it, jest } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
-import luxon, { Duration, DateTime } from 'luxon'
+import { DateTime, Duration } from 'luxon'
 import {
   toHumanDurationExtended,
   toHumanDurationWithDiff,

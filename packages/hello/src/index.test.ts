@@ -1,4 +1,4 @@
-import { describe, expect, it, jest } from '@jest/globals'
+import { describe, expect, it, vi } from 'vitest'
 
 import { hello, printHello } from '.'
 
@@ -14,7 +14,7 @@ describe('printHello', () => {
   })
 
   it('prints "Hello, world!"', () => {
-    const spy = jest.spyOn(console, 'log').mockImplementation()
+    const spy = vi.spyOn(console, 'log').mockImplementation()
     printHello()
     expect(spy).toHaveBeenCalledWith('Hello, world!')
     spy.mockRestore()

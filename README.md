@@ -7,7 +7,7 @@ Playground for TypeScript
 ## Features
 
 - [x] Basis
-  - [x] test with jest
+  - [x] test with vitest
   - [x] coverage with codecov
   - [x] lint / format with biomejs
   - [x] Add TypeDoc for documentation
