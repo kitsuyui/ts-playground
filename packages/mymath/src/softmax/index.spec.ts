@@ -1,4 +1,4 @@
-import { describe, expect, it, jest } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 import { sum } from '../array'
 import { softmax, softmaxWithTemperature } from './index'
