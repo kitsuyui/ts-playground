@@ -7,7 +7,7 @@
   "description": "A playground for TypeScript",
   "workspaces": ["packages/*"],
   "scripts": {
-    "build": "pnpm -r build",
+    "build": "pnpm -r --parallel build",
     "dev": "pnpm --parallel dev",
     "format": "biome check --write ./",
     "lint": "biome check ./",
