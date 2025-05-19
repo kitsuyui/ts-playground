@@ -30,8 +30,8 @@
   "types": "dist/index.d.ts",
   "files": ["dist", "package.json"],
   "devDependencies": {
-    "@types/luxon": "^3.4.2",
-    "luxon": "^3.5.0"
+    "@types/luxon": "^3.6.2",
+    "luxon": "^3.6.1"
   },
   "peerDependencies": {
     "luxon": "^3"
