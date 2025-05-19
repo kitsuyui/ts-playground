@@ -12,22 +12,22 @@ importers:
         specifier: ^1.9.4
         version: 1.9.4
       '@swc/core':
-        specifier: ^1.10.18
+        specifier: ^1.11.24
         version: 1.11.24
       '@vitest/coverage-v8':
         specifier: 3.1.3
         version: 3.1.3(vitest@3.1.3(tsx@4.19.4)(yaml@2.8.0))
       tsup:
-        specifier: ^8.3.6
+        specifier: ^8.5.0
         version: 8.5.0(@swc/core@1.11.24)(postcss@8.5.3)(tsx@4.19.4)(typescript@5.8.3)(yaml@2.8.0)
       typedoc:
-        specifier: ^0.28.0
+        specifier: ^0.28.4
         version: 0.28.4(typescript@5.8.3)
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.8.3
         version: 5.8.3
       vitest:
-        specifier: ^3.0.6
+        specifier: ^3.1.3
         version: 3.1.3(tsx@4.19.4)(yaml@2.8.0)
 
   packages/hello: {}
@@ -35,7 +35,7 @@ importers:
   packages/incremental-color-palette:
     devDependencies:
       tsx:
-        specifier: ^4.19.3
+        specifier: ^4.19.4
         version: 4.19.4
 
   packages/intended-rollback: {}
@@ -43,10 +43,10 @@ importers:
   packages/luxon-ext:
     devDependencies:
       '@types/luxon':
-        specifier: ^3.4.2
+        specifier: ^3.6.2
         version: 3.6.2
       luxon:
-        specifier: ^3.5.0
+        specifier: ^3.6.1
         version: 3.6.1
 
   packages/mymath: {}
@@ -58,7 +58,7 @@ importers:
   packages/try-automerge:
     dependencies:
       '@automerge/automerge':
-        specifier: ^2.2.8
+        specifier: ^2.2.9
         version: 2.2.9
 
   packages/word-stats: {}

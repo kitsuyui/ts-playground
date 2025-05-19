@@ -31,6 +31,6 @@
   "types": "dist/index.d.ts",
   "files": ["dist", "package.json"],
   "dependencies": {
-    "@automerge/automerge": "^2.2.8"
+    "@automerge/automerge": "^2.2.9"
   }
 }
