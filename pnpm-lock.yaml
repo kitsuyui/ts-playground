@@ -64,8 +64,8 @@ importers:
         specifier: ^22.13.4
         version: 22.15.23
       jsondiffpatch:
-        specifier: ^0.6.0
-        version: 0.6.2
+        specifier: ^0.7.0
+        version: 0.7.3
 
   packages/string: {}
 
@@ -161,6 +161,9 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
+
+  '@dmsnell/diff-match-patch@1.1.0':
+    resolution: {integrity: sha512-yejLPmM5pjsGvxS9gXablUSbInW7H976c/FJ4iQxWIm7/38xBySRemTPDe34lhg1gVLbJntX0+sH0jYfU+PN9A==}
 
   '@esbuild/aix-ppc64@0.25.4':
     resolution: {integrity: sha512-1VCICWypeQKhVbE9oW/sJaAmjLxhVqacdkvPLEjwlttjfwENRSClS8EjBz0KzRyFSCPDIkuXW34Je/vk7zdB7Q==}
@@ -535,9 +538,6 @@ packages:
   '@swc/types@0.1.21':
     resolution: {integrity: sha512-2YEtj5HJVbKivud9N4bpPBAyZhj4S2Ipe5LkUG94alTpr7in/GU/EARgPAd3BwU+YOmFVJC2+kjqhGRi3r0ZpQ==}
 
-  '@types/diff-match-patch@1.0.36':
-    resolution: {integrity: sha512-xFdR6tkm0MWvBfO8xXCSsinYxHcqkQUlcHeSpMC2ukzOb6lwQAfDmW+Qt0AvlGd8HpsS28qKsB+oPeJn9I39jg==}
-
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
@@ -685,9 +685,6 @@ packages:
     resolution: {integrity: sha512-h5k/5U50IJJFpzfL6nO9jaaumfjO/f2NjK/oYB2Djzm4p9L+3T9qWpZqZ2hAbLPuuYq9wrU08WQyBTL5GbPk5Q==}
     engines: {node: '>=6'}
 
-  diff-match-patch@1.0.5:
-    resolution: {integrity: sha512-IayShXAgj/QMXgB0IWmKx+rOPuGMhqm5w6jvFxmVenXKIzRqTAAsbBPT3kWQeGANj3jGgvcvv4yK6SxqYmikgw==}
-
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
@@ -783,8 +780,8 @@ packages:
   js-sha256@0.11.1:
     resolution: {integrity: sha512-o6WSo/LUvY2uC4j7mO50a2ms7E/EAdbP0swigLV+nzHKTTaYnaLIWJ02VdXrsJX0vGedDESQnLsOekr94ryfjg==}
 
-  jsondiffpatch@0.6.2:
-    resolution: {integrity: sha512-c4RkbPb6RXWjkhirwcKK87PuZCITdGRN1usrW4pXKEkwp7Gqf+0pSwQHoh/LtlYNHcxzoF6kok2/EFe6KL0qqQ==}
+  jsondiffpatch@0.7.3:
+    resolution: {integrity: sha512-zd4dqFiXSYyant2WgSXAZ9+yYqilNVvragVNkNRn2IFZKgjyULNrKRznqN4Zon0MkLueCg+3QaPVCnDAVP20OQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
@@ -1253,6 +1250,8 @@ snapshots:
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
 
+  '@dmsnell/diff-match-patch@1.1.0': {}
+
   '@esbuild/aix-ppc64@0.25.4':
     optional: true
 
@@ -1499,8 +1498,6 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
 
-  '@types/diff-match-patch@1.0.36': {}
-
   '@types/estree@1.0.7': {}
 
   '@types/hast@3.0.4':
@@ -1642,8 +1639,6 @@ snapshots:
 
   deep-eql@5.0.2: {}
 
-  diff-match-patch@1.0.5: {}
-
   eastasianwidth@0.2.0: {}
 
   emoji-regex@8.0.0: {}
@@ -1758,10 +1753,9 @@ snapshots:
 
   js-sha256@0.11.1: {}
 
-  jsondiffpatch@0.6.2:
+  jsondiffpatch@0.7.3:
     dependencies:
-      '@types/diff-match-patch': 1.0.36
-      diff-match-patch: 1.0.5
+      '@dmsnell/diff-match-patch': 1.1.0
 
   lilconfig@3.1.3: {}
 
