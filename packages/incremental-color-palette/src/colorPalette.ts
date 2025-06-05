@@ -11,26 +11,26 @@ import type {
 
 export const uintToRGB = (
   n: uint0toInf,
-  satuationParameter: WaveParameter,
+  saturationParameter: WaveParameter,
   brightnessParameter: WaveParameter
 ): RGB0to256 => {
-  const [hue, satuation, brightness] = uintToHSV(
+  const [hue, saturation, brightness] = uintToHSV(
     n,
-    satuationParameter,
+    saturationParameter,
     brightnessParameter
   )
-  return hsvToRgb(hue, satuation, brightness)
+  return hsvToRgb(hue, saturation, brightness)
 }
 
 export const uintToHSV = (
   n: uint0toInf,
-  satuationParameter: WaveParameter,
+  saturationParameter: WaveParameter,
   brightnessParameter: WaveParameter
 ): HSV0to1 => {
   const hue = uintToHue(n)
-  const satuation = uintToSatuation(n, satuationParameter)
+  const saturation = uintToSaturation(n, saturationParameter)
   const brightness = uintToBrightness(n, brightnessParameter)
-  return [hue, satuation, brightness]
+  return [hue, saturation, brightness]
 }
 
 /**
@@ -43,7 +43,7 @@ const uintToHue = (n: uint0toInf): number => {
 /**
  * Convert a given number to a saturation value in this color palette.
  */
-export const uintToSatuation = (
+export const uintToSaturation = (
   n: uint0toInf,
   parameter: WaveParameter
 ): number0to1 => {

@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import { type WaveParameter, uintToRGB } from '../src/'
 
 const main = () => {
-  const satuationParameter = {
+  const saturationParameter = {
     range: [0.5, 0.8],
     frequency: 1 / 17,
     phase: 0,
@@ -13,7 +13,7 @@ const main = () => {
     phase: 0,
   } as WaveParameter
   const colors = Array.from({ length: 4096 }, (_, i) =>
-    uintToRGB(i, satuationParameter, brightnessParameter)
+    uintToRGB(i, saturationParameter, brightnessParameter)
   )
   const html = colorsToHtml(colors)
 

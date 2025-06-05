@@ -5,7 +5,7 @@ import type { WaveParameter } from './types'
 
 describe('uintToRGB', () => {
   it('should convert a given number to a color', () => {
-    const satuationParameter = {
+    const saturationParameter = {
       range: [1.0, 1.0],
       frequency: 1,
       phase: 0,
@@ -15,19 +15,19 @@ describe('uintToRGB', () => {
       frequency: 1,
       phase: 0,
     } as WaveParameter
-    expect(uintToRGB(0, satuationParameter, brightnessParameter)).toEqual([
+    expect(uintToRGB(0, saturationParameter, brightnessParameter)).toEqual([
       255, 0, 0,
     ]) // red
-    expect(uintToRGB(1, satuationParameter, brightnessParameter)).toEqual([
+    expect(uintToRGB(1, saturationParameter, brightnessParameter)).toEqual([
       0, 255, 255,
     ]) // cyan
-    expect(uintToRGB(2, satuationParameter, brightnessParameter)).toEqual([
+    expect(uintToRGB(2, saturationParameter, brightnessParameter)).toEqual([
       128, 255, 0,
     ])
   })
 
   it('generate many colors in a loop', () => {
-    const satuationParameter = {
+    const saturationParameter = {
       range: [0.5, 1.0],
       frequency: 1,
       phase: 0,
@@ -38,7 +38,7 @@ describe('uintToRGB', () => {
       phase: 0,
     } as WaveParameter
     const colors = Array.from({ length: 256 }, (_, i) =>
-      uintToRGB(i, satuationParameter, brightnessParameter)
+      uintToRGB(i, saturationParameter, brightnessParameter)
     )
     expect(colors).toHaveLength(256)
   })
