@@ -72,6 +72,25 @@ describe('map0InfTo01WithArctan', () => {
       5
     )
   })
+  it('should handle edge cases', () => {
+    expect(() => module.map0InfTo01WithArctan(-1)).toThrow(
+      'Value must be in the range [0, +∞)'
+    )
+  })
+})
+
+describe('map0InfTo10WithFraction', () => {
+  it('should map values from [0, +∞) to [0, 1] using fraction scaling', () => {
+    expect(module.map0InfTo10WithFraction(0)).toBeCloseTo(1, 5)
+    expect(
+      module.map0InfTo10WithFraction(Number.POSITIVE_INFINITY)
+    ).toBeCloseTo(0, 5)
+  })
+  it('should handle edge cases', () => {
+    expect(() => module.map0InfTo10WithFraction(-1)).toThrow(
+      'Value must be in the range [0, +∞)'
+    )
+  })
 })
 
 describe('map0InfTo01WithExp', () => {
@@ -80,6 +99,11 @@ describe('map0InfTo01WithExp', () => {
     expect(module.map0InfTo01WithExp(Number.POSITIVE_INFINITY)).toBeCloseTo(
       1,
       5
+    )
+  })
+  it('should handle edge cases', () => {
+    expect(() => module.map0InfTo01WithExp(-1)).toThrow(
+      'Value must be in the range [0, +∞)'
     )
   })
 })
