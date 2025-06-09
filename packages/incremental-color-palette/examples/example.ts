@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+import { writeFileSync } from 'node:fs'
 import { type WaveParameter, uintToRGB } from '../src/'
 
 const main = () => {
@@ -17,7 +17,7 @@ const main = () => {
   )
   const html = colorsToHtml(colors)
 
-  fs.writeFileSync('example.html', html)
+  writeFileSync('example.html', html)
 }
 
 const colorsToHtml = (colors: [number, number, number][]) => {

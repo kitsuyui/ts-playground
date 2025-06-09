@@ -32,6 +32,7 @@
   "types": "dist/index.d.ts",
   "files": ["dist", "package.json"],
   "dependencies": {
+    "jsondiffpatch": "^0.7.0",
     "js-sha256": "^0.11.0"
   },
   "devDependencies": {
