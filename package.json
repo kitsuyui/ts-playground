@@ -12,6 +12,7 @@
     "format": "biome check --write ./",
     "lint": "biome check ./",
     "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit packages/*/**/*.ts --skipLibCheck --downlevelIteration",
     "typedoc": "pnpm build && typedoc",
     "typedoc:server": "python3 -m http.server --directory build/typedocs"
   },

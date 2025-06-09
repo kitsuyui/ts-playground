@@ -34,6 +34,9 @@ importers:
 
   packages/incremental-color-palette:
     devDependencies:
+      '@types/node':
+        specifier: ^22.15.30
+        version: 22.15.30
       tsx:
         specifier: ^4.19.4
         version: 4.19.4
@@ -56,6 +59,9 @@ importers:
       js-sha256:
         specifier: ^0.11.0
         version: 0.11.1
+      jsondiffpatch:
+        specifier: ^0.7.0
+        version: 0.7.3
     devDependencies:
       '@automerge/automerge':
         specifier: ^2.2.8
@@ -63,9 +69,6 @@ importers:
       '@types/node':
         specifier: ^22.13.4
         version: 22.15.30
-      jsondiffpatch:
-        specifier: ^0.7.0
-        version: 0.7.3
 
   packages/string: {}
 

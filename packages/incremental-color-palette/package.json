@@ -31,6 +31,7 @@
   "types": "dist/index.d.ts",
   "files": ["dist", "package.json"],
   "devDependencies": {
+    "@types/node": "^22.15.30",
     "tsx": "^4.19.4"
   }
 }
