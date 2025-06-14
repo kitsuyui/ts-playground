@@ -42,12 +42,12 @@ jobs:
 
       - name: Build
         run: pnpm build
+      
+      - name: Validate package exports
+        run: pnpm validate
 
       - name: Test
         run: pnpm test
-
-      - name: Test packaging
-        run: pnpm pack
 
       - name: Upload coverage to Codecov
         # https://nodejs.org/en/about/previous-releases

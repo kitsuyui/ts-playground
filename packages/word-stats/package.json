@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsup --clean",
     "dev": "tsup --watch",
-    "test": "vitest run"
+    "test": "vitest run",
+    "validate": "validate-package-exports --check --verify"
   },
   "repository": {
     "type": "git",
