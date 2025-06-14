@@ -6,10 +6,9 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "example",
   "scripts": {
-    "build": "tsup --clean src/index.ts",
-    "test": "vitest run",
-    "dev:build": "tsup --watch src/index.ts",
-    "dev:test": "vitest dev"
+    "build": "tsup --clean",
+    "dev": "tsup --watch",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",

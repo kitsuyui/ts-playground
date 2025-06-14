@@ -6,8 +6,9 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "Incremental color palette generator",
   "scripts": {
-    "build": "tsup src/index.ts --clean",
-    "dev": "pnpm build --watch",
+    "build": "tsup --clean",
+    "dev": "tsup --watch",
+    "test": "vitest run",
     "example": "tsx examples/example.ts"
   },
   "repository": {

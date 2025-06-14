@@ -6,8 +6,9 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "Hello world package",
   "scripts": {
-    "build": "tsup src/index.ts --clean",
-    "dev": "pnpm build --watch"
+    "build": "tsup --clean",
+    "dev": "tsup --watch",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",

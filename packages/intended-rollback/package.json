@@ -6,8 +6,9 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "Provide rollback for transactional operations",
   "scripts": {
-    "build": "tsup src/index.ts --clean",
-    "dev": "pnpm build --watch"
+    "build": "tsup --clean",
+    "dev": "tsup --watch",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",

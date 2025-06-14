@@ -7,6 +7,14 @@ export default defineConfig({
      * It is better to import them explicitly to avoid future liabilities, so it is not set to globals: true
      */
     globals: false,
+    coverage: {
+      include: ['**/src', '**/src/**.spec.ts'],
+      exclude: [
+        '**/src/**/*.test.ts',
+        '**/src/**/test.ts',
+        '**/src/**/*.spec.ts',
+      ],
+    },
   },
   /**
    * clearScreen: true clears the screen when running tests. The default is true
