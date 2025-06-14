@@ -12,6 +12,7 @@
     "format": "biome check --write ./",
     "lint": "biome check ./",
     "test": "vitest run --coverage",
+    "validate": "pnpm -r validate",
     "typecheck": "tsc --noEmit packages/*/**/*.ts --skipLibCheck --downlevelIteration",
     "typedoc": "pnpm build && typedoc",
     "typedoc:server": "python3 -m http.server --directory build/typedocs"
@@ -23,6 +24,7 @@
     "tsup": "^8.5.0",
     "typedoc": "^0.28.4",
     "typescript": "^5.8.3",
+    "validate-package-exports": "^0.11.0",
     "vitest": "^3.1.3"
   },
   "packageManager": "pnpm@10.12.1"

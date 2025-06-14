@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { clamp, clampMinAndMax, clampMinAndMaxInt, errorToNaN } from './clamp'
+import { clamp, clampMinAndMax, clampMinAndMaxInt, errorToNaN } from '.'
 
 describe('clamp', () => {
   it('should return min for value < min', () => {

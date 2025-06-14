@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsup --clean",
     "dev": "tsup --watch",
-    "test": "vitest run"
+    "test": "vitest run",
+    "validate": "validate-package-exports --check --verify"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,52 @@
   "exports": {
     ".": {
       "require": {
-        "type": "./dist/index.d.mts",
+        "type": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       },
       "import": {
         "type": "./dist/index.d.ts",
         "default": "./dist/index.js"
+      }
+    },
+    "./capitalization/cases": {
+      "require": {
+        "type": "./dist/capitalization/cases/index.d.cts",
+        "default": "./dist/capitalization/cases/index.cjs"
+      },
+      "import": {
+        "type": "./dist/capitalization/cases/index.d.ts",
+        "default": "./dist/capitalization/cases/index.js"
+      }
+    },
+    "./capitalization/convert": {
+      "require": {
+        "type": "./dist/capitalization/convert/index.d.cts",
+        "default": "./dist/capitalization/convert/index.cjs"
+      },
+      "import": {
+        "type": "./dist/capitalization/convert/index.d.ts",
+        "default": "./dist/capitalization/convert/index.js"
+      }
+    },
+    "./capitalization/join": {
+      "require": {
+        "type": "./dist/capitalization/join/index.d.cts",
+        "default": "./dist/capitalization/join/index.cjs"
+      },
+      "import": {
+        "type": "./dist/capitalization/join/index.d.ts",
+        "default": "./dist/capitalization/join/index.js"
+      }
+    },
+    "./capitalization/split": {
+      "require": {
+        "type": "./dist/capitalization/split/index.d.cts",
+        "default": "./dist/capitalization/split/index.cjs"
+      },
+      "import": {
+        "type": "./dist/capitalization/split/index.d.ts",
+        "default": "./dist/capitalization/split/index.js"
       }
     }
   },
