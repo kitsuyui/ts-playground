@@ -14,7 +14,7 @@
     "test": "vitest run --coverage",
     "validate": "pnpm -r validate",
     "typecheck": "tsc --noEmit packages/*/**/*.ts --skipLibCheck --downlevelIteration",
-    "typedoc": "pnpm build && typedoc",
+    "typedoc": "typedoc --treatValidationWarningsAsErrors --treatWarningsAsErrors",
     "typedoc:server": "python3 -m http.server --directory build/typedocs"
   },
   "devDependencies": {

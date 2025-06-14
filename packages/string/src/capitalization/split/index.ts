@@ -7,7 +7,7 @@
  * - PascalCase -> pascal case
  * - etc.
  *
- * @param str
+ * @param text
  * @returns
  */
 export const splitToWords = (text: string): string[] => {

@@ -1,11 +1,7 @@
 /** @type {import('typedoc').TypeDocOptions} */
 module.exports = {
-  entryPoints: ['../packages/**/dist/index.d.ts'],
+  name: 'ts-playground',
+  entryPoints: ['../packages/*/src/**/*.ts'],
   out: '../build/typedocs',
-  exclude: [
-    '**/node_modules/**',
-    '**/*.spec.ts',
-    '**/*.test.ts',
-    '**/examples/**',
-  ],
+  exclude: ['**/node_modules/**', '**/*.spec.ts', '**/examples/**'],
 }
