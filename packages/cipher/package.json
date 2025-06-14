@@ -1,0 +1,33 @@
+{
+  "name": "@kitsuyui/cipher",
+  "type": "module",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
+  "description": "Cipher utilities for encryption and decryption",
+  "scripts": {
+    "build": "tsup src/index.ts --clean",
+    "dev": "pnpm build --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitsuyui/ts-playground.git"
+  },
+  "exports": {
+    ".": {
+      "require": {
+        "type": "./dist/index.d.mts",
+        "default": "./dist/index.cjs"
+      },
+      "import": {
+        "type": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "package.json"],
+  "devDependencies": {}
+}
