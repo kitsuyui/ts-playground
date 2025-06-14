@@ -10,6 +10,8 @@ export default defineConfig({
     '!./src/**/spec.ts',
     '!./src/**/test.ts',
   ],
+  splitting: true,
+  treeshake: true,
   sourcemap: true,
   minify: true,
   dts: true,
