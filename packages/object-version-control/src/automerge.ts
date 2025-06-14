@@ -6,7 +6,7 @@ import { deepCopy } from './utils'
 
 /**
  * create AutomergeResolver with given jsondiffpatch options
- * @param jsonpdiffpatchOptions jsondiffpatch options
+ * @param jsondiffpatchOptions jsondiffpatch options
  * @returns AutomergeResolver
  */
 export const createAutomergeResolver = <T extends Record<string, unknown>>(

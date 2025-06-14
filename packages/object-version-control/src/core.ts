@@ -70,7 +70,7 @@ export class Core<T> {
   /**
    * Create a commit with the given targets and data
    * This method creates a commit with multiple parents. In most cases, it is easier to use the commit() method.
-   * @param targets The hashes of the parent commits
+   * @param parents The hashes of the parent commits
    * @param data The data to commit
    * @returns The hash value of the commit
    */
@@ -159,7 +159,6 @@ export class Core<T> {
 
   /**
    * Find commits for the given hashes
-   * @param remote Array of hash values
    * @param hashes Array of commits
    */
   findCommitsForHashes(hashes: HashValue[]): Commit[] {
