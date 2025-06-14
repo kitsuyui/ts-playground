@@ -17,12 +17,82 @@
   "exports": {
     ".": {
       "require": {
-        "type": "./dist/index.d.mts",
+        "type": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       },
       "import": {
         "type": "./dist/index.d.ts",
         "default": "./dist/index.js"
+      }
+    },
+    "./array": {
+      "require": {
+        "type": "./dist/array/index.d.cts",
+        "default": "./dist/array/index.cjs"
+      },
+      "import": {
+        "type": "./dist/array/index.d.ts",
+        "default": "./dist/array/index.js"
+      }
+    },
+    "./intervalMapper": {
+      "require": {
+        "type": "./dist/intervalMapper/index.d.cts",
+        "default": "./dist/intervalMapper/index.cjs"
+      },
+      "import": {
+        "type": "./dist/intervalMapper/index.d.ts",
+        "default": "./dist/intervalMapper/index.js"
+      }
+    },
+    "./log": {
+      "require": {
+        "type": "./dist/log/index.d.cts",
+        "default": "./dist/log/index.cjs"
+      },
+      "import": {
+        "type": "./dist/log/index.d.ts",
+        "default": "./dist/log/index.js"
+      }
+    },
+    "./polar": {
+      "require": {
+        "type": "./dist/polar/index.d.cts",
+        "default": "./dist/polar/index.cjs"
+      },
+      "import": {
+        "type": "./dist/polar/index.d.ts",
+        "default": "./dist/polar/index.js"
+      }
+    },
+    "./sigmoid": {
+      "require": {
+        "type": "./dist/sigmoid/index.d.cts",
+        "default": "./dist/sigmoid/index.cjs"
+      },
+      "import": {
+        "type": "./dist/sigmoid/index.d.ts",
+        "default": "./dist/sigmoid/index.js"
+      }
+    },
+    "./softmax": {
+      "require": {
+        "type": "./dist/softmax/index.d.cts",
+        "default": "./dist/softmax/index.cjs"
+      },
+      "import": {
+        "type": "./dist/softmax/index.d.ts",
+        "default": "./dist/softmax/index.js"
+      }
+    },
+    "./clamp": {
+      "require": {
+        "type": "./dist/clamp/index.d.cts",
+        "default": "./dist/clamp/index.cjs"
+      },
+      "import": {
+        "type": "./dist/clamp/index.d.ts",
+        "default": "./dist/clamp/index.js"
       }
     }
   },

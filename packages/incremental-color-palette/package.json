@@ -18,7 +18,7 @@
   "exports": {
     ".": {
       "require": {
-        "type": "./dist/index.d.mts",
+        "type": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       },
       "import": {

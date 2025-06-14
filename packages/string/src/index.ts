@@ -1,1 +1,0 @@
-export { convertCase } from './capitalization'
