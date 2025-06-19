@@ -9,6 +9,8 @@ export const Symbols = {
 } as const
 
 declare global {
+  // FIXME
+  // biome-ignore lint/correctness/noUnusedVariables: Hack
   interface Array<T> {
     [Sum](this: Array<number>): number
     [Scale](this: Array<number>, scaler: number): number[]

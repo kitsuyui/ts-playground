@@ -1,6 +1,6 @@
 import { Duration, type DurationObjectUnits } from 'luxon'
 import { HALF_OF_TIME_UNITS } from '../constants'
-import { type TimeUnit, computeTopUnit, computeUseUnits } from '../units'
+import { computeTopUnit, computeUseUnits, type TimeUnit } from '../units'
 
 type RoundingMethod = 'floor' | 'ceil' | 'round'
 

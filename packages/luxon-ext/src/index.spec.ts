@@ -1,6 +1,5 @@
-import { describe, expect, it } from 'vitest'
-
 import { DateTime, Duration } from 'luxon'
+import { describe, expect, it } from 'vitest'
 import {
   toHumanDurationExtended,
   toHumanDurationWithDiff,

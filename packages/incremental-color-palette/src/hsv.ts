@@ -1,4 +1,4 @@
-import type { RGB0to1, RGB0to256, number0to1 } from './types'
+import type { number0to1, RGB0to1, RGB0to256 } from './types'
 
 /**
  * Generate a color palette with a given number of colors.

@@ -3,8 +3,8 @@
 
 import type { DateTime, Duration, ToHumanDurationOptions } from 'luxon'
 import {
-  type PartialRoundingOptions,
   cleanDuration,
+  type PartialRoundingOptions,
   roundDuration,
 } from './rounding'
 

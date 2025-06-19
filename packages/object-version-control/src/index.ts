@@ -1,2 +1,2 @@
-export { ObjectVersionControl } from './ovc'
 export { mergeResolvers } from './merge'
+export { ObjectVersionControl } from './ovc'

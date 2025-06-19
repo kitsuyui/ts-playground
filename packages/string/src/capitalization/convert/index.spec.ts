@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
-
-import { convertCase } from '.'
 import { ALL_CASES, type Case } from '../cases'
+import { convertCase } from '.'
 
 describe('convertCase', () => {
   it('should work some simple examples', () => {
@@ -33,7 +32,6 @@ describe('convertCase', () => {
 
   it('should throw an error for invalid case', () => {
     const text = 'convert this text to all cases'
-    const toCase = 'invalid'
     expect(() => convertCase(text, 'invalid' as Case)).toThrowError(
       'Invalid Case: invalid'
     )

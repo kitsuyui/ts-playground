@@ -11,7 +11,7 @@ import type { ObjectVersionControl } from './ovc'
 const LWWMergeResolver = <T>(
   ovc: ObjectVersionControl<T>,
   targets: HashValue[],
-  base: HashValue | null
+  _base: HashValue | null
 ): T => {
   if (targets.length === 0) throw new Error('No targets to merge')
   const commits = targets.map((hash) => ovc.getCommit(hash))

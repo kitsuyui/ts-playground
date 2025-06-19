@@ -23,7 +23,7 @@ export const bindThisAsFirstArgument = <T, A extends unknown[], R>(
  * @param symbol
  * @param fn
  */
-export const extend = <T, A extends unknown[], R>(
+export const extend = <T, A extends unknown[], _R>(
   Target: { prototype: T },
   symbol: symbol,
   fn: BaseFunction<T, A>
