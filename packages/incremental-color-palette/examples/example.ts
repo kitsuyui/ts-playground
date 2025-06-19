@@ -1,5 +1,5 @@
 import { writeFileSync } from 'node:fs'
-import { type WaveParameter, uintToRGB } from '../src/'
+import { uintToRGB, type WaveParameter } from '../src/'
 
 const main = () => {
   const saturationParameter = {

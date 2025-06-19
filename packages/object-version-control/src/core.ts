@@ -76,7 +76,7 @@ export class Core<T> {
    */
   createCommit(parents: HashValue[], data: T): HashValue {
     const snapshotHash = this.createSnapshot(data)
-    const timestamp = new Date().getTime()
+    const timestamp = Date.now()
     const commitInfo: CommitInfo = {
       parents,
       snapshotHash,

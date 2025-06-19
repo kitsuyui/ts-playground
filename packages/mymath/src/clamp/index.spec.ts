@@ -46,7 +46,7 @@ describe('clampMinAndMaxInt', () => {
 
 describe('errorToNaN', () => {
   it('should return NaN if the function throws an error', () => {
-    const faultyFunction = (value: number) => {
+    const faultyFunction = (_value: number) => {
       throw new Error('Test error')
     }
     const wrappedFunction = errorToNaN(faultyFunction)

@@ -51,7 +51,7 @@ export const errorToNaN = (fn: NumericFunction): NumericFunction => {
   return (value: number): number => {
     try {
       return fn(value)
-    } catch (error) {
+    } catch (_error) {
       return Number.NaN
     }
   }

@@ -1,6 +1,5 @@
-import { describe, expect, it } from 'vitest'
-
 import { Duration } from 'luxon'
+import { describe, expect, it } from 'vitest'
 import { computeTopUnit, computeUseUnits } from '.'
 
 describe('computeTopUnit', () => {

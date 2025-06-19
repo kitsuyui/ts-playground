@@ -45,7 +45,7 @@ describe('dummyClientIntendedRollback', () => {
     const result = await dummyClientIntendedRollback(
       dummyClient,
       true,
-      async (tran) => {
+      async (_tran) => {
         return 'result'
       }
     )
@@ -63,7 +63,7 @@ describe('dummyClientIntendedRollback', () => {
     const result = await dummyClientIntendedRollback(
       dummyClient,
       false,
-      async (tran) => {
+      async (_tran) => {
         return 'result'
       }
     )
@@ -81,7 +81,7 @@ describe('dummyClientIntendedRollback', () => {
     const result = await dummyClientIntendedRollback(
       dummyClient,
       true,
-      async (tran) => {
+      async (_tran) => {
         throw new Error('error')
       }
     )
@@ -99,7 +99,7 @@ describe('dummyClientIntendedRollback', () => {
     const result = await dummyClientIntendedRollback(
       dummyClient,
       false,
-      async (tran) => {
+      async (_tran) => {
         throw new Error('error')
       }
     )

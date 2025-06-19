@@ -1,12 +1,11 @@
-import { hsvToRgb } from './hsv'
-
 import { a_n, uintToRadians } from './circularPut'
+import { hsvToRgb } from './hsv'
 import type {
   HSV0to1,
-  RGB0to256,
-  WaveParameter,
   number0to1,
+  RGB0to256,
   uint0toInf,
+  WaveParameter,
 } from './types'
 
 export const uintToRGB = (
