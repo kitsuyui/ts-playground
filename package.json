@@ -5,7 +5,9 @@
   "license": "MIT",
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "A playground for TypeScript",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "build": "pnpm -r build",
     "dev": "pnpm --parallel dev",
@@ -18,7 +20,7 @@
     "typedoc:server": "python3 -m http.server --directory build/typedocs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.0.0",
     "@swc/core": "^1.11.24",
     "@vitest/coverage-v8": "3.2.4",
     "tsup": "^8.5.0",
