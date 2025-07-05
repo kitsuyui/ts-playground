@@ -27,8 +27,8 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
       validate-package-exports:
-        specifier: ^0.11.0
-        version: 0.11.0
+        specifier: ^0.12.0
+        version: 0.12.0
       vitest:
         specifier: ^3.1.3
         version: 3.2.4(@types/node@22.16.0)(tsx@4.20.3)(yaml@2.8.0)
@@ -704,8 +704,8 @@ packages:
   '@vitest/utils@3.2.4':
     resolution: {integrity: sha512-fB2V0JFrQSMsCo9HiSq3Ezpdv4iYaXRG1Sx8edX3MwxfyNn83mKiGzOcH+Fkxt4MHxr3y42fQi1oeAInqgX2QA==}
 
-  '@webdeveric/utils@0.61.0':
-    resolution: {integrity: sha512-cydbxTzOhYomSYy7x1jJkzoLGU4tJwK40vYY8BqjDqAJ+ln2tzUc7tGoivFouLZkTaeR/7rsL6ww5vkvPSRcow==}
+  '@webdeveric/utils@0.67.0':
+    resolution: {integrity: sha512-MxbrBx4dqCRnLR40Q8J7gjm5hN/UzoqaOVBTBqVsu2ZVHoOvAE1VuWvEj6V8lHNMh3p73QNtGbeWr00jqjKtHw==}
     engines: {node: '>=18.0.0'}
 
   abbrev@3.0.1:
@@ -1543,8 +1543,8 @@ packages:
     resolution: {integrity: sha512-OaI//3H0J7ZkR1OqlhGA8cA+Cbk/2xFOQpJOt5+s27/ta9eZwpeervh4Mxh4w0im/kdgktowaqVNR7QOrUd7Yg==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
-  validate-package-exports@0.11.0:
-    resolution: {integrity: sha512-KnNBW08MhY6lYapvkuPoCXyVKD8kj9YuJWzFU8RxQnabQd5A7qsNFWgVFUTKzq/ETnI8/Opld2Fvp2YUDpQT3Q==}
+  validate-package-exports@0.12.0:
+    resolution: {integrity: sha512-DLt3lE0epCvmJUlmP+eSfvNyhQMGy53yDAQAsv436nL0IHD6epBSszRyY1VBBFk/72YYsy23s/aFwOJeK4VLkw==}
     engines: {node: '>=20.17.0'}
     hasBin: true
 
@@ -2226,7 +2226,7 @@ snapshots:
       loupe: 3.1.4
       tinyrainbow: 2.0.0
 
-  '@webdeveric/utils@0.61.0': {}
+  '@webdeveric/utils@0.67.0': {}
 
   abbrev@3.0.1: {}
 
@@ -3102,10 +3102,10 @@ snapshots:
 
   validate-npm-package-name@6.0.1: {}
 
-  validate-package-exports@0.11.0:
+  validate-package-exports@0.12.0:
     dependencies:
       '@npmcli/arborist': 9.1.2
-      '@webdeveric/utils': 0.61.0
+      '@webdeveric/utils': 0.67.0
       npm-packlist: 10.0.0
     transitivePeerDependencies:
       - supports-color
