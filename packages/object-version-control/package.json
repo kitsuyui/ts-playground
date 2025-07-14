@@ -39,12 +39,12 @@
     "js-sha256": "^0.11.0"
   },
   "devDependencies": {
-    "@automerge/automerge": "^2.2.8",
+    "@automerge/automerge": "^3.0.0",
     "@types/node": "^22.13.4",
     "jsondiffpatch": "^0.7.0"
   },
   "peerDependencies": {
-    "@automerge/automerge": "^2.0.0",
+    "@automerge/automerge": "^2.0.0 || ^3.0.0",
     "jsondiffpatch": "^0.6.0 || ^0.7.0"
   }
 }
