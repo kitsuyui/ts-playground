@@ -40,6 +40,9 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
+      - name: Check module isolation
+        run: pnpm check-module-isolation
+
       - name: Build
         run: pnpm build
       
