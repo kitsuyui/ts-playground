@@ -13,7 +13,7 @@ describe('XOR Shuffle Operation', () => {
   })
 
   it('is idempotent after multiple iterations', () => {
-    let output = input
+    let output: Uint8Array = input
     const iterations = input.length
     for (let i = 0; i < iterations; i++) {
       output = xorShuffle(output)
@@ -32,7 +32,7 @@ describe('XOR Shuffle Operation', () => {
       const randomInput = new Uint8Array(size).map(() =>
         Math.floor(Math.random() * 256)
       )
-      let output = randomInput
+      let output: Uint8Array = randomInput
       for (let j = 0; j < iterations; j++) {
         output = xorShuffle(output)
       }
