@@ -38,6 +38,8 @@ importers:
 
   packages/cipher: {}
 
+  packages/debug: {}
+
   packages/hello: {}
 
   packages/incremental-color-palette:
