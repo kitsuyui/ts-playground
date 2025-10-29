@@ -37,7 +37,7 @@
     "package.json"
   ],
   "devDependencies": {
-    "@types/node": "^24.0.0",
-    "tsx": "^4.19.4"
+    "@types/node": "^24.9.2",
+    "tsx": "^4.20.6"
   }
 }

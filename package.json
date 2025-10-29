@@ -16,20 +16,20 @@
     "check-module-isolation": "find packages -type d -name src -print -exec pnpm ts-module-isolation -- {} +",
     "test": "vitest run --coverage",
     "validate": "pnpm -r validate",
-    "typecheck": "tsc --noEmit packages/*/**/*.ts --skipLibCheck --downlevelIteration",
+    "typecheck": "tsc --strict -p tsconfig.json --noEmit --skipLibCheck --downlevelIteration",
     "typedoc": "typedoc --treatValidationWarningsAsErrors --treatWarningsAsErrors",
     "typedoc:server": "python3 -m http.server --directory build/typedocs"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.1.4",
-    "@swc/core": "^1.13.3",
-    "@vitest/coverage-v8": "3.2.4",
+    "@biomejs/biome": "^2.3.2",
+    "@swc/core": "^1.13.5",
+    "@vitest/coverage-v8": "4.0.4",
     "ts-module-isolation": "^1.0.2",
     "tsup": "^8.5.0",
-    "typedoc": "^0.28.9",
-    "typescript": "^5.9.2",
+    "typedoc": "^0.28.14",
+    "typescript": "^5.9.3",
     "validate-package-exports": "^0.14.0",
-    "vitest": "^3.2.4"
+    "vitest": "^4.0.4"
   },
   "packageManager": "pnpm@10.20.0"
 }

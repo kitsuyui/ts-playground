@@ -35,8 +35,8 @@
     "package.json"
   ],
   "devDependencies": {
-    "@types/luxon": "^3.6.2",
-    "luxon": "^3.6.1"
+    "@types/luxon": "^3.7.1",
+    "luxon": "^3.7.2"
   },
   "peerDependencies": {
     "luxon": "^3"
