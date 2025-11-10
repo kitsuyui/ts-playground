@@ -6,8 +6,8 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "Provide rollback for transactional operations",
   "scripts": {
-    "build": "tsup --clean",
-    "dev": "tsup --watch",
+    "build": "tsdown --clean",
+    "dev": "tsdown --watch",
     "test": "vitest run",
     "validate": "validate-package-exports --check --verify"
   },
@@ -22,15 +22,15 @@
         "default": "./dist/index.cjs"
       },
       "import": {
-        "type": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "type": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
       }
     }
   },
   "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "files": [
     "dist",
     "package.json"

@@ -6,8 +6,8 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "A simple additional library for String",
   "scripts": {
-    "build": "tsup --clean",
-    "dev": "tsup --watch",
+    "build": "tsdown --clean",
+    "dev": "tsdown --watch",
     "test": "vitest run",
     "validate": "validate-package-exports --check --verify"
   },
@@ -22,8 +22,8 @@
         "default": "./dist/index.cjs"
       },
       "import": {
-        "type": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "type": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
       }
     },
     "./capitalization/cases": {
@@ -32,8 +32,8 @@
         "default": "./dist/capitalization/cases/index.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/cases/index.d.ts",
-        "default": "./dist/capitalization/cases/index.js"
+        "type": "./dist/capitalization/cases/index.d.mts",
+        "default": "./dist/capitalization/cases/index.mjs"
       }
     },
     "./capitalization/convert": {
@@ -42,8 +42,8 @@
         "default": "./dist/capitalization/convert/index.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/convert/index.d.ts",
-        "default": "./dist/capitalization/convert/index.js"
+        "type": "./dist/capitalization/convert/index.d.mts",
+        "default": "./dist/capitalization/convert/index.mjs"
       }
     },
     "./capitalization/join": {
@@ -52,8 +52,8 @@
         "default": "./dist/capitalization/join/index.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/join/index.d.ts",
-        "default": "./dist/capitalization/join/index.js"
+        "type": "./dist/capitalization/join/index.d.mts",
+        "default": "./dist/capitalization/join/index.mjs"
       }
     },
     "./capitalization/split": {
@@ -62,14 +62,14 @@
         "default": "./dist/capitalization/split/index.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/split/index.d.ts",
-        "default": "./dist/capitalization/split/index.js"
+        "type": "./dist/capitalization/split/index.d.mts",
+        "default": "./dist/capitalization/split/index.mjs"
       }
     }
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "files": [
     "dist",
     "package.json"
