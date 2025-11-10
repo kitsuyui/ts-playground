@@ -4,6 +4,7 @@ export default defineConfig({
   target: 'es2020',
   format: ['cjs', 'esm'],
   entry: ['./src/**/*.ts', '!./src/**/*.spec.ts'],
+  platform: 'neutral',
   splitting: true,
   treeshake: true,
   sourcemap: true,
