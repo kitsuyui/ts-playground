@@ -6,8 +6,8 @@
   "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
   "description": "Treat number as time",
   "scripts": {
-    "build": "tsdown --clean",
-    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "dev": "tsdown --no-clean --watch",
     "test": "vitest run",
     "validate": "validate-package-exports --check --verify"
   },
