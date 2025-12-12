@@ -1,0 +1,38 @@
+{
+  "name": "@kitsuyui/is-local",
+  "type": "module",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Yui Kitsu <kitsuyui@kitsuyui.com>",
+  "description": "Determine if a given host is local or not",
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --no-clean --watch",
+    "test": "vitest run",
+    "validate": "validate-package-exports --check --verify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitsuyui/ts-playground.git"
+  },
+  "exports": {
+    ".": {
+      "require": {
+        "type": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "import": {
+        "type": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "devDependencies": {}
+}
