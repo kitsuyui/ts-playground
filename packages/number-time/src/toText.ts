@@ -37,14 +37,13 @@ export const zeroPad3 = (num: number): string => {
 }
 
 /**
- * Convert a time value in seconds to a label string
- * The format is `mm:ss.mmm` where:
- * @param value
+ * Convert seconds to formatted time label `mm:ss.SSS`
+ * @param seconds
  * @returns formatted time label
  */
-export const toText = (value: number): string => {
-  const minutes = Math.floor(value / 60)
-  const seconds = (value % 60) | 0
-  const milliseconds = ((value % 1) * 1000) | 0
-  return `${zeroPad2(minutes)}:${zeroPad2(seconds)}.${zeroPad3(milliseconds)}`
+export const toText = (seconds: number): string => {
+  const minutes = Math.floor(seconds / 60)
+  const secondsPart = (seconds % 60) | 0
+  const milliseconds = ((seconds % 1) * 1000) | 0
+  return `${zeroPad2(minutes)}:${zeroPad2(secondsPart)}.${zeroPad3(milliseconds)}`
 }
