@@ -79,7 +79,7 @@ importers:
     devDependencies:
       '@automerge/automerge':
         specifier: ^3.2.0
-        version: 3.2.1
+        version: 3.2.2
       '@types/node':
         specifier: ^24.9.2
         version: 24.10.7
@@ -92,14 +92,14 @@ importers:
     dependencies:
       '@automerge/automerge':
         specifier: ^3.2.0
-        version: 3.2.1
+        version: 3.2.2
 
   packages/word-stats: {}
 
 packages:
 
-  '@automerge/automerge@3.2.1':
-    resolution: {integrity: sha512-xsEZlZe8lWyVCbD7Z7roH4X6ZKlRxMmmumb0M5CuxJWptUEfYsf+1z9lFEJh4aDBbWTLAgxsXd+TBi6jKTj0+g==}
+  '@automerge/automerge@3.2.2':
+    resolution: {integrity: sha512-A6E2MDnX+IWmFV2GydrkJEf4ClO2hucROJkGmX3bWYoZfgvmCz3QFqew126/uXQAJxWq8WMFf34PuKa7c/cJfg==}
 
   '@babel/generator@7.28.5':
     resolution: {integrity: sha512-3EwLFhZ38J4VyIP6WNtt2kUdW9dokXA9Cr4IVIFHuCpZ3H8/YFOl5JjZHisrn1fATPBmKKqXzDFvh9fUwHz6CQ==}
@@ -1612,7 +1612,7 @@ packages:
 
 snapshots:
 
-  '@automerge/automerge@3.2.1': {}
+  '@automerge/automerge@3.2.2': {}
 
   '@babel/generator@7.28.5':
     dependencies:
