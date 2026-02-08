@@ -9,7 +9,7 @@
     "build": "tsdown",
     "dev": "tsdown --no-clean --watch",
     "test": "vitest run",
-    "validate": "validate-package-exports --check --verify"
+    "validate": "validate-package-exports --check"
   },
   "repository": {
     "type": "git",
@@ -59,7 +59,6 @@
   },
   "sideEffects": false,
   "main": "dist/index.js",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
