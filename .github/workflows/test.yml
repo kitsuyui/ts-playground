@@ -54,15 +54,3 @@ jobs:
 
       - name: Typedoc build
         run: pnpm typedoc
-
-      - name: Upload coverage to Codecov
-        # https://nodejs.org/en/about/previous-releases
-        if: matrix.node-version == '24.x'
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage/lcov.info
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: true
-          verbose: true
