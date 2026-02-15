@@ -1,6 +1,6 @@
 # ts-playground
 
-[![codecov](https://codecov.io/gh/kitsuyui/ts-playground/graph/badge.svg?token=E6RO7KERTY)](https://codecov.io/gh/kitsuyui/ts-playground)
+![Coverage](https://raw.githubusercontent.com/kitsuyui/octocov-central/main/badges/kitsuyui/ts-playground/coverage.svg)
 
 Playground for TypeScript
 
@@ -8,7 +8,7 @@ Playground for TypeScript
 
 - [x] Basis
   - [x] test with vitest
-  - [x] coverage with codecov
+  - [x] coverage with octocov
   - [x] lint / format with biomejs
   - [x] Add TypeDoc for documentation
   - [x] Publish NPM package
