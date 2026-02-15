@@ -2,13 +2,19 @@
 coverage:
   paths:
     - coverage/lcov.info
+  badge:
+    path: docs/octocov/coverage.svg
 codeToTestRatio:
   code:
     - '**/src/**/*.ts'
   test:
     - '**/src/**/*.spec.ts'
+  badge:
+    path: docs/octocov/ratio.svg
 testExecutionTime:
   if: true
+  badge:
+    path: docs/octocov/time.svg
 diff:
   datastores:
     - artifact://${GITHUB_REPOSITORY}

@@ -9,6 +9,7 @@ Playground for TypeScript
 - [x] Basis
   - [x] test with vitest
   - [x] coverage with codecov
+  - [x] coverage with octocov
   - [x] lint / format with biomejs
   - [x] Add TypeDoc for documentation
   - [x] Publish NPM package
