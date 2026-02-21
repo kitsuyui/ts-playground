@@ -27,8 +27,8 @@ Playground for TypeScript
 ## Dependency updates
 
 - Renovate execution is switched to a self-hosted GitHub Action in `.github/workflows/renovate.yml`.
-- Set repository secret `RENOVATE_TOKEN` before enabling it.
-- Use a classic Personal Access Token with at least `repo` and `workflow` scopes.
+- For this branch experiment, the workflow uses `GITHUB_TOKEN`.
+- For stable operation, use `RENOVATE_TOKEN` (classic PAT with at least `repo` and `workflow` scopes).
 - Disable previous Renovate App/SaaS execution to avoid duplicate pull requests during migration.
 
 ## Usage

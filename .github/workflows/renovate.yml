@@ -2,6 +2,9 @@ name: renovate
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - chore/setup-renovate-github-action
   schedule:
     - cron: '0 3 * * *'
 
@@ -19,4 +22,4 @@ jobs:
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v46.1.1
         with:
-          token: ${{ secrets.RENOVATE_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
