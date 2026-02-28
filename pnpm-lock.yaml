@@ -36,6 +36,12 @@ importers:
         specifier: ^4.0.4
         version: 4.0.18(@types/node@24.10.13)(tsx@4.21.0)(yaml@2.8.2)
 
+  packages/bits128:
+    devDependencies:
+      '@kitsuyui/cipher':
+        specifier: workspace:*
+        version: link:../cipher
+
   packages/cipher: {}
 
   packages/debug: {}
