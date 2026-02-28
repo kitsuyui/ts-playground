@@ -1,6 +1,17 @@
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
+  resolve: {
+    alias: [
+      {
+        find: /^@kitsuyui\/([^/]+)$/,
+        replacement: fileURLToPath(
+          new URL('./packages/$1/src/index.ts', import.meta.url)
+        ),
+      },
+    ],
+  },
   test: {
     /**
      * globals: true allows you to use describe, test, etc. without importing them

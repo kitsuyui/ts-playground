@@ -10,4 +10,5 @@ export default defineConfig({
   sourcemap: true,
   minify: true,
   dts: true,
+  noExternal: [/^@kitsuyui\//],
 })

@@ -11,6 +11,10 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@kitsuyui/*": ["packages/*/src/index.ts"]
+    },
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true
