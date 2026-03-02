@@ -64,3 +64,110 @@ export const average = (rads: number[]): number => {
   const avgRad = Math.atan2(avgSin, avgCos)
   return toSignedRad(avgRad)
 }
+
+/**
+ * Computes the average of an array of radian values in the range [0, 2π).
+ * @param rads
+ * @returns The average of the radian values in the range [0, 2π).
+ */
+export const averageUnsigned = (rads: number[]): number => {
+  const avg = average(rads)
+  return toUnsignedRad(avg)
+}
+
+/**
+ * Computes the shortest circular distance between two angles.
+ * @param rad1
+ * @param rad2
+ * @returns The shortest distance in radians.
+ */
+export const distance = (rad1: number, rad2: number): number => {
+  const rad1_ = toUnsignedRad(rad1)
+  const rad2_ = toUnsignedRad(rad2)
+  const diff = Math.abs(rad1_ - rad2_)
+  return Math.min(diff, 2 * Math.PI - diff)
+}
+
+/**
+ * Rotates a radian value and normalizes it to the range [0, 2π).
+ * @param rad
+ * @param delta
+ * @returns The rotated radian value.
+ */
+export const rotate = (rad: number, delta: number): number => {
+  return toUnsignedRad(rad + delta)
+}
+
+/**
+ * Rotates a radian value by π and normalizes it to the range [0, 2π).
+ * @param rad
+ * @returns The opposite radian value.
+ */
+export const opposite = (rad: number): number => {
+  return rotate(rad, Math.PI)
+}
+
+const assignLabels = (rads: number[], centers: number[]): number[] => {
+  const labels = new Array(rads.length).fill(-1)
+  for (let i = 0; i < rads.length; i++) {
+    let minDistance = Math.PI * 2
+    let minIndex = -1
+    for (let j = 0; j < centers.length; j++) {
+      const circularDistance = distance(rads[i], centers[j])
+      if (circularDistance < minDistance) {
+        minDistance = circularDistance
+        minIndex = j
+      }
+    }
+    labels[i] = minIndex
+  }
+  return labels
+}
+
+/**
+ * Runs k-means clustering on circular values.
+ * @param rads
+ * @param k
+ * @param maxIterations
+ * @returns A tuple of sorted centers and labels.
+ */
+export const kMeans = (
+  rads: number[],
+  k: number,
+  maxIterations = 10
+): [number[], number[]] => {
+  if (rads.length === 0 || k <= 0) {
+    return [[], []]
+  }
+  let centers = new Array(k).fill(0).map((_, i) => (i * 2 * Math.PI) / k)
+  let labels = new Array(rads.length).fill(-1)
+  let iterations = 0
+
+  while (iterations < maxIterations) {
+    iterations++
+    labels = assignLabels(rads, centers)
+    const prevCenters = [...centers]
+    const nextCenters = new Array(k).fill(0).map((_, j) => {
+      const clusterItems = rads.filter((_, i) => labels[i] === j)
+      if (clusterItems.length === 0) {
+        return rads[j % rads.length]
+      }
+      return averageUnsigned(clusterItems)
+    })
+    const sorted = nextCenters
+      .map((center, oldIndex) => ({ center, oldIndex }))
+      .sort((a, b) => a.center - b.center)
+    const remap = new Map<number, number>()
+    sorted.forEach((item, newIndex) => {
+      remap.set(item.oldIndex, newIndex)
+    })
+    centers = sorted.map((item) => item.center)
+    labels = labels.map((label) => remap.get(label) ?? label)
+    if (centers.every((center, index) => center === prevCenters[index])) {
+      break
+    }
+  }
+
+  labels = assignLabels(rads, centers)
+  return [centers, labels]
+}
