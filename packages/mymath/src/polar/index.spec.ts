@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest'
-import { average, toSignedRad, toUnsignedRad } from './index'
+import {
+  average,
+  averageUnsigned,
+  distance,
+  kMeans,
+  opposite,
+  rotate,
+  toSignedRad,
+  toUnsignedRad,
+} from './index'
 
 describe('toUnsignedRad', () => {
   it('should normalize negative radian values to the range [0, 2π)', () => {
@@ -96,5 +105,55 @@ describe('average', () => {
   it('should handle negative values in the array', () => {
     const rads = [-Math.PI / 2, -Math.PI]
     expect(average(rads)).toBeCloseTo((-Math.PI * 3) / 4)
+  })
+})
+
+describe('averageUnsigned', () => {
+  it('should compute the average in the range [0, 2π)', () => {
+    const rads = [-Math.PI / 2, -Math.PI]
+    expect(averageUnsigned(rads)).toBeCloseTo((Math.PI * 5) / 4)
+  })
+
+  it('should return NaN for an empty array', () => {
+    expect(averageUnsigned([])).toBeNaN()
+  })
+})
+
+describe('distance', () => {
+  it('should compute the shortest circular distance', () => {
+    expect(distance(0, Math.PI / 2)).toBeCloseTo(Math.PI / 2)
+    expect(distance(0, Math.PI * 1.5)).toBeCloseTo(Math.PI / 2)
+  })
+})
+
+describe('rotate', () => {
+  it('should rotate and normalize to [0, 2π)', () => {
+    expect(rotate(-Math.PI / 2, Math.PI)).toBeCloseTo(Math.PI / 2)
+  })
+})
+
+describe('opposite', () => {
+  it('should rotate by π', () => {
+    expect(opposite(Math.PI / 2)).toBeCloseTo(Math.PI * 1.5)
+  })
+})
+
+describe('kMeans', () => {
+  it('should cluster circular values and keep label-center consistency', () => {
+    const rads = [0, 0.2, Math.PI, Math.PI + 0.2]
+    const [centers, labels] = kMeans(rads, 2)
+
+    expect(centers).toHaveLength(2)
+    expect(labels).toHaveLength(rads.length)
+    expect(labels[0]).toBe(labels[1])
+    expect(labels[2]).toBe(labels[3])
+    expect(labels[0]).not.toBe(labels[2])
+    expect(centers[labels[0]]).toBeCloseTo(0.1)
+    expect(centers[labels[2]]).toBeCloseTo(Math.PI + 0.1)
+  })
+
+  it('should return empty arrays for invalid inputs', () => {
+    expect(kMeans([], 2)).toEqual([[], []])
+    expect(kMeans([0, 1], 0)).toEqual([[], []])
   })
 })
