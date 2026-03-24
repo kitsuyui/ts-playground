@@ -1,8 +1,10 @@
 # ts-playground
 
 ![Coverage](https://raw.githubusercontent.com/kitsuyui/octocov-central/main/badges/kitsuyui/ts-playground/coverage.svg)
+[![TODO/FIXME](https://raw.githubusercontent.com/kitsuyui/ts-playground/gh-counter-assets/badges/maintenance-comments.svg)](https://github.com/kitsuyui/ts-playground/search?q=%28TODO+OR+FIXME%29+path%3Apackages&type=code)
 
 Playground for TypeScript
+The repository tracks `TODO` and `FIXME` markers with [`gh-counter`](https://github.com/kitsuyui/gh-counter).
 
 ## Features
 
