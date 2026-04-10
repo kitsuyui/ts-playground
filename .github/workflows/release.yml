@@ -69,7 +69,7 @@ jobs:
           done
         if: github.event_name == 'release' && !github.event.release.prerelease
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: deploy (dry-run)
         run: |
@@ -82,4 +82,4 @@ jobs:
           done
         if: github.event_name != 'release' || github.event.release.prerelease
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
