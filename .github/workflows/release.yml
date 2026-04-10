@@ -50,7 +50,7 @@ jobs:
           git config user.name "dummy"
           VERSION="${GITHUB_REF_NAME#v}"
           if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
-            VERSION="999.999.999-rc.${GITHUB_RUN_NUMBER}"
+            VERSION="0.0.0-rc.${GITHUB_RUN_NUMBER}"
           fi
           for dir in . packages/*; do
             (cd "$dir" && bun pm pkg set version="$VERSION")
