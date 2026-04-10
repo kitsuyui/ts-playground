@@ -16,10 +16,10 @@ npm install @kitsuyui/word-stats
 yarn add @kitsuyui/word-stats
 ```
 
-### PNPM
+### Bun
 
 ```bash
-pnpm add @kitsuyui/word-stats
+bun add @kitsuyui/word-stats
 ```
 
 ## Usage

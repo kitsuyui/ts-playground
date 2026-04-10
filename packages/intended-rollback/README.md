@@ -16,10 +16,10 @@ $ npm install @kitsuyui/intended-rollback
 $ yarn add @kitsuyui/intended-rollback
 ```
 
-### pnpm
+### Bun
 
 ```sh
-$ pnpm add @kitsuyui/intended-rollback
+$ bun add @kitsuyui/intended-rollback
 ```
 
 ## Usage
