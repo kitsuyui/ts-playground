@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+env:
+  # Temporary workaround for JavaScript actions that still default to Node 20 on runners.
+  # Remove this once the affected actions have migrated, otherwise this may become a future warning source itself.
+  # https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     name: Build Typedoc
