@@ -16,10 +16,10 @@ npm install @kitsuyui/string
 yarn add @kitsuyui/string
 ```
 
-### PNPM
+### Bun
 
 ```bash
-pnpm add @kitsuyui/string
+bun add @kitsuyui/string
 ```
 
 ## Usage

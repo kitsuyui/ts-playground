@@ -58,7 +58,7 @@
       "!**/*.md",
       "!**/*.yml",
       "!**/docs",
-      "!**/pnpm-lock.yaml"
+      "!**/bun.lock"
     ]
   }
 }

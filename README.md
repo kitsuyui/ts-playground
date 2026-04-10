@@ -31,25 +31,34 @@ The repository tracks `TODO` and `FIXME` markers with [`gh-counter`](https://git
 ### Install
 
 ```sh
-pnpm install
+bun install
 ```
 
 ### Build
 
 ```sh
-pnpm build
+bun run build
 ```
 
 ### Run with development mode (watch mode)
 
 ```sh
-pnpm dev
+bun run dev
 ```
 
 ## Test
 
 ```sh
-pnpm test
+bun run test
+```
+
+## Additional commands
+
+```sh
+bun run check-module-isolation
+bun run typecheck
+bun run validate
+bun run typedoc
 ```
 
 ## License
