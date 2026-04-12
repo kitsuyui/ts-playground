@@ -52,7 +52,7 @@ jobs:
 
       - name: Measure build size
         if: matrix.node-version == '24.x'
-        uses: kitsuyui/gh-build-size@v0.1.1
+        uses: kitsuyui/gh-build-size@v0.1.2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       
