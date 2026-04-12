@@ -5,6 +5,7 @@
 
 Playground for TypeScript
 The repository tracks `TODO` and `FIXME` markers with [`gh-counter`](https://github.com/kitsuyui/gh-counter).
+It also tracks built package artifact size with [`gh-build-size`](https://github.com/kitsuyui/gh-build-size).
 
 ## Features
 

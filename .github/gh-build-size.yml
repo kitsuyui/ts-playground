@@ -1,0 +1,44 @@
+version: 1
+publish:
+  enabled: true
+  branch: gh-build-size-assets
+comment:
+  key: package-build-size
+targets:
+  - id: total
+    label: Total package artifacts
+    files:
+      - packages/*/dist/**
+    compressions: [raw, gzip, brotli]
+    badge:
+      compression: gzip
+      label: package artifacts (gzip)
+  - id: esm
+    label: ESM bundles
+    files:
+      - packages/*/dist/**/*.js
+    compressions: [raw, gzip, brotli]
+    badge:
+      compression: gzip
+  - id: cjs
+    label: CJS bundles
+    files:
+      - packages/*/dist/**/*.cjs
+    compressions: [raw, gzip, brotli]
+    badge:
+      compression: gzip
+  - id: maps
+    label: Source maps
+    files:
+      - packages/*/dist/**/*.map
+    compressions: [raw, gzip, brotli]
+    badge:
+      compression: raw
+  - id: types
+    label: Type declarations
+    files:
+      - packages/*/dist/**/*.d.ts
+      - packages/*/dist/**/*.d.cts
+    compressions: [raw, gzip, brotli]
+    badge:
+      compression: raw
