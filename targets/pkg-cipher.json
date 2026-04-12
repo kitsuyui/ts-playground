@@ -1,0 +1,203 @@
+{
+  "id": "pkg-cipher",
+  "label": "cipher",
+  "files": [
+    {
+      "path": "packages/cipher/dist/RijndaelSBox.cjs",
+      "sizes": {
+        "raw": 2271,
+        "gzip": 1216,
+        "brotli": 925
+      }
+    },
+    {
+      "path": "packages/cipher/dist/RijndaelSBox.cjs.map",
+      "sizes": {
+        "raw": 7576,
+        "gzip": 2062,
+        "brotli": 1437
+      }
+    },
+    {
+      "path": "packages/cipher/dist/RijndaelSBox.d.cts",
+      "sizes": {
+        "raw": 647,
+        "gzip": 282,
+        "brotli": 232
+      }
+    },
+    {
+      "path": "packages/cipher/dist/RijndaelSBox.d.ts",
+      "sizes": {
+        "raw": 646,
+        "gzip": 281,
+        "brotli": 231
+      }
+    },
+    {
+      "path": "packages/cipher/dist/RijndaelSBox.js",
+      "sizes": {
+        "raw": 2135,
+        "gzip": 1125,
+        "brotli": 882
+      }
+    },
+    {
+      "path": "packages/cipher/dist/RijndaelSBox.js.map",
+      "sizes": {
+        "raw": 7575,
+        "gzip": 2061,
+        "brotli": 1447
+      }
+    },
+    {
+      "path": "packages/cipher/dist/chunk-BwIEoMh7.cjs",
+      "sizes": {
+        "raw": 224,
+        "gzip": 180,
+        "brotli": 133
+      }
+    },
+    {
+      "path": "packages/cipher/dist/chunk-WfQuXRBF.js",
+      "sizes": {
+        "raw": 158,
+        "gzip": 154,
+        "brotli": 116
+      }
+    },
+    {
+      "path": "packages/cipher/dist/index.cjs",
+      "sizes": {
+        "raw": 418,
+        "gzip": 201,
+        "brotli": 160
+      }
+    },
+    {
+      "path": "packages/cipher/dist/index.d.cts",
+      "sizes": {
+        "raw": 292,
+        "gzip": 128,
+        "brotli": 128
+      }
+    },
+    {
+      "path": "packages/cipher/dist/index.d.ts",
+      "sizes": {
+        "raw": 289,
+        "gzip": 127,
+        "brotli": 132
+      }
+    },
+    {
+      "path": "packages/cipher/dist/index.js",
+      "sizes": {
+        "raw": 153,
+        "gzip": 109,
+        "brotli": 107
+      }
+    },
+    {
+      "path": "packages/cipher/dist/utils.cjs",
+      "sizes": {
+        "raw": 557,
+        "gzip": 355,
+        "brotli": 306
+      }
+    },
+    {
+      "path": "packages/cipher/dist/utils.cjs.map",
+      "sizes": {
+        "raw": 1576,
+        "gzip": 651,
+        "brotli": 558
+      }
+    },
+    {
+      "path": "packages/cipher/dist/utils.d.cts",
+      "sizes": {
+        "raw": 1002,
+        "gzip": 383,
+        "brotli": 311
+      }
+    },
+    {
+      "path": "packages/cipher/dist/utils.d.ts",
+      "sizes": {
+        "raw": 1001,
+        "gzip": 382,
+        "brotli": 311
+      }
+    },
+    {
+      "path": "packages/cipher/dist/utils.js",
+      "sizes": {
+        "raw": 421,
+        "gzip": 285,
+        "brotli": 278
+      }
+    },
+    {
+      "path": "packages/cipher/dist/utils.js.map",
+      "sizes": {
+        "raw": 1575,
+        "gzip": 650,
+        "brotli": 559
+      }
+    },
+    {
+      "path": "packages/cipher/dist/xorShuffle.cjs",
+      "sizes": {
+        "raw": 412,
+        "gzip": 299,
+        "brotli": 256
+      }
+    },
+    {
+      "path": "packages/cipher/dist/xorShuffle.cjs.map",
+      "sizes": {
+        "raw": 1202,
+        "gzip": 590,
+        "brotli": 542
+      }
+    },
+    {
+      "path": "packages/cipher/dist/xorShuffle.d.cts",
+      "sizes": {
+        "raw": 620,
+        "gzip": 348,
+        "brotli": 279
+      }
+    },
+    {
+      "path": "packages/cipher/dist/xorShuffle.d.ts",
+      "sizes": {
+        "raw": 619,
+        "gzip": 347,
+        "brotli": 278
+      }
+    },
+    {
+      "path": "packages/cipher/dist/xorShuffle.js",
+      "sizes": {
+        "raw": 281,
+        "gzip": 227,
+        "brotli": 206
+      }
+    },
+    {
+      "path": "packages/cipher/dist/xorShuffle.js.map",
+      "sizes": {
+        "raw": 1201,
+        "gzip": 588,
+        "brotli": 532
+      }
+    }
+  ],
+  "totals": {
+    "raw": 32851,
+    "gzip": 13031,
+    "brotli": 10346
+  }
+}

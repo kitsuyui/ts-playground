@@ -1,0 +1,219 @@
+{
+  "id": "pkg-bits128",
+  "label": "bits128",
+  "files": [
+    {
+      "path": "packages/bits128/dist/bitShuffle.cjs",
+      "sizes": {
+        "raw": 313,
+        "gzip": 250,
+        "brotli": 215
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bitShuffle.cjs.map",
+      "sizes": {
+        "raw": 1044,
+        "gzip": 501,
+        "brotli": 452
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bitShuffle.d.cts",
+      "sizes": {
+        "raw": 210,
+        "gzip": 158,
+        "brotli": 132
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bitShuffle.d.ts",
+      "sizes": {
+        "raw": 209,
+        "gzip": 156,
+        "brotli": 128
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bitShuffle.js",
+      "sizes": {
+        "raw": 248,
+        "gzip": 211,
+        "brotli": 192
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bitShuffle.js.map",
+      "sizes": {
+        "raw": 1120,
+        "gzip": 509,
+        "brotli": 467
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bits.cjs",
+      "sizes": {
+        "raw": 577,
+        "gzip": 370,
+        "brotli": 339
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bits.cjs.map",
+      "sizes": {
+        "raw": 1630,
+        "gzip": 726,
+        "brotli": 667
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bits.d.cts",
+      "sizes": {
+        "raw": 469,
+        "gzip": 250,
+        "brotli": 219
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bits.d.ts",
+      "sizes": {
+        "raw": 468,
+        "gzip": 248,
+        "brotli": 219
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bits.js",
+      "sizes": {
+        "raw": 502,
+        "gzip": 324,
+        "brotli": 295
+      }
+    },
+    {
+      "path": "packages/bits128/dist/bits.js.map",
+      "sizes": {
+        "raw": 1628,
+        "gzip": 724,
+        "brotli": 660
+      }
+    },
+    {
+      "path": "packages/bits128/dist/index.cjs",
+      "sizes": {
+        "raw": 439,
+        "gzip": 233,
+        "brotli": 198
+      }
+    },
+    {
+      "path": "packages/bits128/dist/index.d.cts",
+      "sizes": {
+        "raw": 343,
+        "gzip": 163,
+        "brotli": 146
+      }
+    },
+    {
+      "path": "packages/bits128/dist/index.d.ts",
+      "sizes": {
+        "raw": 340,
+        "gzip": 162,
+        "brotli": 145
+      }
+    },
+    {
+      "path": "packages/bits128/dist/index.js",
+      "sizes": {
+        "raw": 371,
+        "gzip": 190,
+        "brotli": 173
+      }
+    },
+    {
+      "path": "packages/bits128/dist/uuid.cjs",
+      "sizes": {
+        "raw": 270,
+        "gzip": 219,
+        "brotli": 198
+      }
+    },
+    {
+      "path": "packages/bits128/dist/uuid.cjs.map",
+      "sizes": {
+        "raw": 465,
+        "gzip": 314,
+        "brotli": 276
+      }
+    },
+    {
+      "path": "packages/bits128/dist/uuid.d.cts",
+      "sizes": {
+        "raw": 218,
+        "gzip": 161,
+        "brotli": 154
+      }
+    },
+    {
+      "path": "packages/bits128/dist/uuid.d.ts",
+      "sizes": {
+        "raw": 217,
+        "gzip": 159,
+        "brotli": 150
+      }
+    },
+    {
+      "path": "packages/bits128/dist/uuid.js",
+      "sizes": {
+        "raw": 200,
+        "gzip": 169,
+        "brotli": 146
+      }
+    },
+    {
+      "path": "packages/bits128/dist/uuid.js.map",
+      "sizes": {
+        "raw": 463,
+        "gzip": 312,
+        "brotli": 268
+      }
+    },
+    {
+      "path": "packages/bits128/dist/xorShuffle-CuQs4aGw.cjs",
+      "sizes": {
+        "raw": 1720,
+        "gzip": 858,
+        "brotli": 669
+      }
+    },
+    {
+      "path": "packages/bits128/dist/xorShuffle-CuQs4aGw.cjs.map",
+      "sizes": {
+        "raw": 8857,
+        "gzip": 2716,
+        "brotli": 2031
+      }
+    },
+    {
+      "path": "packages/bits128/dist/xorShuffle-DCHF3TsQ.js",
+      "sizes": {
+        "raw": 1451,
+        "gzip": 795,
+        "brotli": 638
+      }
+    },
+    {
+      "path": "packages/bits128/dist/xorShuffle-DCHF3TsQ.js.map",
+      "sizes": {
+        "raw": 8856,
+        "gzip": 2717,
+        "brotli": 2042
+      }
+    }
+  ],
+  "totals": {
+    "raw": 32628,
+    "gzip": 13595,
+    "brotli": 11219
+  }
+}

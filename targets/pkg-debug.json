@@ -1,0 +1,203 @@
+{
+  "id": "pkg-debug",
+  "label": "debug",
+  "files": [
+    {
+      "path": "packages/debug/dist/chunk-BwIEoMh7.cjs",
+      "sizes": {
+        "raw": 224,
+        "gzip": 180,
+        "brotli": 133
+      }
+    },
+    {
+      "path": "packages/debug/dist/chunk-WfQuXRBF.js",
+      "sizes": {
+        "raw": 158,
+        "gzip": 154,
+        "brotli": 116
+      }
+    },
+    {
+      "path": "packages/debug/dist/index.cjs",
+      "sizes": {
+        "raw": 200,
+        "gzip": 163,
+        "brotli": 110
+      }
+    },
+    {
+      "path": "packages/debug/dist/index.d.cts",
+      "sizes": {
+        "raw": 108,
+        "gzip": 94,
+        "brotli": 80
+      }
+    },
+    {
+      "path": "packages/debug/dist/index.d.ts",
+      "sizes": {
+        "raw": 107,
+        "gzip": 93,
+        "brotli": 76
+      }
+    },
+    {
+      "path": "packages/debug/dist/index.js",
+      "sizes": {
+        "raw": 70,
+        "gzip": 75,
+        "brotli": 64
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/errorFunctions/index.cjs",
+      "sizes": {
+        "raw": 451,
+        "gzip": 290,
+        "brotli": 222
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/errorFunctions/index.cjs.map",
+      "sizes": {
+        "raw": 1212,
+        "gzip": 540,
+        "brotli": 455
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/errorFunctions/index.d.cts",
+      "sizes": {
+        "raw": 532,
+        "gzip": 262,
+        "brotli": 220
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/errorFunctions/index.d.ts",
+      "sizes": {
+        "raw": 531,
+        "gzip": 261,
+        "brotli": 217
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/errorFunctions/index.js",
+      "sizes": {
+        "raw": 381,
+        "gzip": 247,
+        "brotli": 218
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/errorFunctions/index.js.map",
+      "sizes": {
+        "raw": 1210,
+        "gzip": 537,
+        "brotli": 456
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/index.cjs",
+      "sizes": {
+        "raw": 878,
+        "gzip": 423,
+        "brotli": 394
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/index.cjs.map",
+      "sizes": {
+        "raw": 3966,
+        "gzip": 1099,
+        "brotli": 944
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/index.d.cts",
+      "sizes": {
+        "raw": 2189,
+        "gzip": 681,
+        "brotli": 556
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/index.d.ts",
+      "sizes": {
+        "raw": 2186,
+        "gzip": 677,
+        "brotli": 572
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/index.js",
+      "sizes": {
+        "raw": 663,
+        "gzip": 347,
+        "brotli": 320
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/index.js.map",
+      "sizes": {
+        "raw": 3925,
+        "gzip": 1083,
+        "brotli": 936
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/testFunctions/index.cjs",
+      "sizes": {
+        "raw": 214,
+        "gzip": 176,
+        "brotli": 137
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/testFunctions/index.cjs.map",
+      "sizes": {
+        "raw": 667,
+        "gzip": 359,
+        "brotli": 312
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/testFunctions/index.d.cts",
+      "sizes": {
+        "raw": 506,
+        "gzip": 273,
+        "brotli": 221
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/testFunctions/index.d.ts",
+      "sizes": {
+        "raw": 505,
+        "gzip": 271,
+        "brotli": 217
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/testFunctions/index.js",
+      "sizes": {
+        "raw": 144,
+        "gzip": 133,
+        "brotli": 118
+      }
+    },
+    {
+      "path": "packages/debug/dist/sameBehavior/testFunctions/index.js.map",
+      "sizes": {
+        "raw": 665,
+        "gzip": 357,
+        "brotli": 309
+      }
+    }
+  ],
+  "totals": {
+    "raw": 21692,
+    "gzip": 8775,
+    "brotli": 7403
+  }
+}

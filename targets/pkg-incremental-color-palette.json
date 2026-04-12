@@ -1,0 +1,315 @@
+{
+  "id": "pkg-incremental-color-palette",
+  "label": "incremental-color-palette",
+  "files": [
+    {
+      "path": "packages/incremental-color-palette/dist/bitReversalPermutation.cjs",
+      "sizes": {
+        "raw": 226,
+        "gzip": 204,
+        "brotli": 180
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/bitReversalPermutation.cjs.map",
+      "sizes": {
+        "raw": 686,
+        "gzip": 398,
+        "brotli": 399
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/bitReversalPermutation.d.cts",
+      "sizes": {
+        "raw": 325,
+        "gzip": 212,
+        "brotli": 177
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/bitReversalPermutation.d.ts",
+      "sizes": {
+        "raw": 323,
+        "gzip": 211,
+        "brotli": 179
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/bitReversalPermutation.js",
+      "sizes": {
+        "raw": 161,
+        "gzip": 155,
+        "brotli": 154
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/bitReversalPermutation.js.map",
+      "sizes": {
+        "raw": 684,
+        "gzip": 396,
+        "brotli": 369
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/circularPut.cjs",
+      "sizes": {
+        "raw": 438,
+        "gzip": 324,
+        "brotli": 284
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/circularPut.cjs.map",
+      "sizes": {
+        "raw": 1381,
+        "gzip": 656,
+        "brotli": 607
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/circularPut.d.cts",
+      "sizes": {
+        "raw": 501,
+        "gzip": 283,
+        "brotli": 242
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/circularPut.d.ts",
+      "sizes": {
+        "raw": 499,
+        "gzip": 281,
+        "brotli": 235
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/circularPut.js",
+      "sizes": {
+        "raw": 371,
+        "gzip": 284,
+        "brotli": 257
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/circularPut.js.map",
+      "sizes": {
+        "raw": 1335,
+        "gzip": 646,
+        "brotli": 589
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/colorPalette.cjs",
+      "sizes": {
+        "raw": 551,
+        "gzip": 355,
+        "brotli": 310
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/colorPalette.cjs.map",
+      "sizes": {
+        "raw": 2806,
+        "gzip": 966,
+        "brotli": 872
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/colorPalette.d.cts",
+      "sizes": {
+        "raw": 1173,
+        "gzip": 440,
+        "brotli": 393
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/colorPalette.d.ts",
+      "sizes": {
+        "raw": 1171,
+        "gzip": 438,
+        "brotli": 384
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/colorPalette.js",
+      "sizes": {
+        "raw": 465,
+        "gzip": 317,
+        "brotli": 299
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/colorPalette.js.map",
+      "sizes": {
+        "raw": 2750,
+        "gzip": 943,
+        "brotli": 847
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/grayCode.cjs",
+      "sizes": {
+        "raw": 227,
+        "gzip": 198,
+        "brotli": 162
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/grayCode.cjs.map",
+      "sizes": {
+        "raw": 720,
+        "gzip": 393,
+        "brotli": 361
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/grayCode.d.cts",
+      "sizes": {
+        "raw": 436,
+        "gzip": 242,
+        "brotli": 223
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/grayCode.d.ts",
+      "sizes": {
+        "raw": 434,
+        "gzip": 240,
+        "brotli": 208
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/grayCode.js",
+      "sizes": {
+        "raw": 157,
+        "gzip": 150,
+        "brotli": 145
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/grayCode.js.map",
+      "sizes": {
+        "raw": 718,
+        "gzip": 391,
+        "brotli": 359
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/hsv.cjs",
+      "sizes": {
+        "raw": 476,
+        "gzip": 329,
+        "brotli": 297
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/hsv.cjs.map",
+      "sizes": {
+        "raw": 2084,
+        "gzip": 832,
+        "brotli": 751
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/hsv.d.cts",
+      "sizes": {
+        "raw": 443,
+        "gzip": 292,
+        "brotli": 247
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/hsv.d.ts",
+      "sizes": {
+        "raw": 441,
+        "gzip": 289,
+        "brotli": 244
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/hsv.js",
+      "sizes": {
+        "raw": 411,
+        "gzip": 283,
+        "brotli": 266
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/hsv.js.map",
+      "sizes": {
+        "raw": 2082,
+        "gzip": 831,
+        "brotli": 775
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/index.cjs",
+      "sizes": {
+        "raw": 135,
+        "gzip": 136,
+        "brotli": 98
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/index.d.cts",
+      "sizes": {
+        "raw": 134,
+        "gzip": 105,
+        "brotli": 108
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/index.d.ts",
+      "sizes": {
+        "raw": 132,
+        "gzip": 104,
+        "brotli": 115
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/index.js",
+      "sizes": {
+        "raw": 69,
+        "gzip": 77,
+        "brotli": 65
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/types.cjs",
+      "sizes": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/types.d.cts",
+      "sizes": {
+        "raw": 544,
+        "gzip": 250,
+        "brotli": 207
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/types.d.ts",
+      "sizes": {
+        "raw": 543,
+        "gzip": 247,
+        "brotli": 201
+      }
+    },
+    {
+      "path": "packages/incremental-color-palette/dist/types.js",
+      "sizes": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      }
+    }
+  ],
+  "totals": {
+    "raw": 26032,
+    "gzip": 12938,
+    "brotli": 11611
+  }
+}

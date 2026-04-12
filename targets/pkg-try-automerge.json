@@ -1,0 +1,59 @@
+{
+  "id": "pkg-try-automerge",
+  "label": "try-automerge",
+  "files": [
+    {
+      "path": "packages/try-automerge/dist/index.cjs",
+      "sizes": {
+        "raw": 812,
+        "gzip": 390,
+        "brotli": 343
+      }
+    },
+    {
+      "path": "packages/try-automerge/dist/index.cjs.map",
+      "sizes": {
+        "raw": 2317,
+        "gzip": 770,
+        "brotli": 698
+      }
+    },
+    {
+      "path": "packages/try-automerge/dist/index.d.cts",
+      "sizes": {
+        "raw": 323,
+        "gzip": 219,
+        "brotli": 187
+      }
+    },
+    {
+      "path": "packages/try-automerge/dist/index.d.ts",
+      "sizes": {
+        "raw": 322,
+        "gzip": 218,
+        "brotli": 186
+      }
+    },
+    {
+      "path": "packages/try-automerge/dist/index.js",
+      "sizes": {
+        "raw": 713,
+        "gzip": 339,
+        "brotli": 320
+      }
+    },
+    {
+      "path": "packages/try-automerge/dist/index.js.map",
+      "sizes": {
+        "raw": 2274,
+        "gzip": 765,
+        "brotli": 693
+      }
+    }
+  ],
+  "totals": {
+    "raw": 6761,
+    "gzip": 2701,
+    "brotli": 2427
+  }
+}

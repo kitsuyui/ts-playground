@@ -1,0 +1,171 @@
+{
+  "id": "pkg-intended-rollback",
+  "label": "intended-rollback",
+  "files": [
+    {
+      "path": "packages/intended-rollback/dist/base.cjs",
+      "sizes": {
+        "raw": 630,
+        "gzip": 361,
+        "brotli": 303
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/base.cjs.map",
+      "sizes": {
+        "raw": 3147,
+        "gzip": 1108,
+        "brotli": 965
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/base.d.cts",
+      "sizes": {
+        "raw": 670,
+        "gzip": 345,
+        "brotli": 277
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/base.d.ts",
+      "sizes": {
+        "raw": 668,
+        "gzip": 342,
+        "brotli": 294
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/base.js",
+      "sizes": {
+        "raw": 557,
+        "gzip": 325,
+        "brotli": 278
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/base.js.map",
+      "sizes": {
+        "raw": 3096,
+        "gzip": 1093,
+        "brotli": 944
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/errors.cjs",
+      "sizes": {
+        "raw": 287,
+        "gzip": 209,
+        "brotli": 153
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/errors.cjs.map",
+      "sizes": {
+        "raw": 574,
+        "gzip": 335,
+        "brotli": 286
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/errors.d.cts",
+      "sizes": {
+        "raw": 375,
+        "gzip": 225,
+        "brotli": 179
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/errors.d.ts",
+      "sizes": {
+        "raw": 374,
+        "gzip": 224,
+        "brotli": 178
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/errors.js",
+      "sizes": {
+        "raw": 217,
+        "gzip": 161,
+        "brotli": 125
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/errors.js.map",
+      "sizes": {
+        "raw": 572,
+        "gzip": 333,
+        "brotli": 291
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/index.cjs",
+      "sizes": {
+        "raw": 245,
+        "gzip": 169,
+        "brotli": 139
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/index.d.cts",
+      "sizes": {
+        "raw": 219,
+        "gzip": 133,
+        "brotli": 112
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/index.d.ts",
+      "sizes": {
+        "raw": 216,
+        "gzip": 132,
+        "brotli": 118
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/index.js",
+      "sizes": {
+        "raw": 178,
+        "gzip": 124,
+        "brotli": 109
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/types.cjs",
+      "sizes": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/types.d.cts",
+      "sizes": {
+        "raw": 1013,
+        "gzip": 348,
+        "brotli": 297
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/types.d.ts",
+      "sizes": {
+        "raw": 1012,
+        "gzip": 346,
+        "brotli": 303
+      }
+    },
+    {
+      "path": "packages/intended-rollback/dist/types.js",
+      "sizes": {
+        "raw": 0,
+        "gzip": 20,
+        "brotli": 1
+      }
+    }
+  ],
+  "totals": {
+    "raw": 14050,
+    "gzip": 6353,
+    "brotli": 5353
+  }
+}

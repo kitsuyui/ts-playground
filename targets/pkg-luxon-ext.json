@@ -1,0 +1,203 @@
+{
+  "id": "pkg-luxon-ext",
+  "label": "luxon-ext",
+  "files": [
+    {
+      "path": "packages/luxon-ext/dist/constants.cjs",
+      "sizes": {
+        "raw": 316,
+        "gzip": 260,
+        "brotli": 203
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/constants.cjs.map",
+      "sizes": {
+        "raw": 833,
+        "gzip": 432,
+        "brotli": 372
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/constants.d.cts",
+      "sizes": {
+        "raw": 371,
+        "gzip": 189,
+        "brotli": 150
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/constants.d.ts",
+      "sizes": {
+        "raw": 370,
+        "gzip": 188,
+        "brotli": 150
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/constants.js",
+      "sizes": {
+        "raw": 251,
+        "gzip": 211,
+        "brotli": 181
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/constants.js.map",
+      "sizes": {
+        "raw": 831,
+        "gzip": 430,
+        "brotli": 373
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/index.cjs",
+      "sizes": {
+        "raw": 567,
+        "gzip": 350,
+        "brotli": 294
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/index.cjs.map",
+      "sizes": {
+        "raw": 2638,
+        "gzip": 991,
+        "brotli": 870
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/index.d.cts",
+      "sizes": {
+        "raw": 1170,
+        "gzip": 446,
+        "brotli": 375
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/index.d.ts",
+      "sizes": {
+        "raw": 1168,
+        "gzip": 443,
+        "brotli": 374
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/index.js",
+      "sizes": {
+        "raw": 501,
+        "gzip": 305,
+        "brotli": 272
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/index.js.map",
+      "sizes": {
+        "raw": 2597,
+        "gzip": 976,
+        "brotli": 855
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/rounding/index.cjs",
+      "sizes": {
+        "raw": 922,
+        "gzip": 536,
+        "brotli": 479
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/rounding/index.cjs.map",
+      "sizes": {
+        "raw": 3734,
+        "gzip": 1403,
+        "brotli": 1242
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/rounding/index.d.cts",
+      "sizes": {
+        "raw": 990,
+        "gzip": 430,
+        "brotli": 352
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/rounding/index.d.ts",
+      "sizes": {
+        "raw": 988,
+        "gzip": 429,
+        "brotli": 350
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/rounding/index.js",
+      "sizes": {
+        "raw": 842,
+        "gzip": 498,
+        "brotli": 453
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/rounding/index.js.map",
+      "sizes": {
+        "raw": 3623,
+        "gzip": 1373,
+        "brotli": 1234
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/units/index.cjs",
+      "sizes": {
+        "raw": 482,
+        "gzip": 327,
+        "brotli": 278
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/units/index.cjs.map",
+      "sizes": {
+        "raw": 1926,
+        "gzip": 848,
+        "brotli": 742
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/units/index.d.cts",
+      "sizes": {
+        "raw": 942,
+        "gzip": 450,
+        "brotli": 371
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/units/index.d.ts",
+      "sizes": {
+        "raw": 941,
+        "gzip": 449,
+        "brotli": 369
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/units/index.js",
+      "sizes": {
+        "raw": 412,
+        "gzip": 283,
+        "brotli": 246
+      }
+    },
+    {
+      "path": "packages/luxon-ext/dist/units/index.js.map",
+      "sizes": {
+        "raw": 1924,
+        "gzip": 846,
+        "brotli": 743
+      }
+    }
+  ],
+  "totals": {
+    "raw": 29339,
+    "gzip": 13093,
+    "brotli": 11328
+  }
+}

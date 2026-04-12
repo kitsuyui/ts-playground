@@ -1,0 +1,59 @@
+{
+  "id": "pkg-is-local",
+  "label": "is-local",
+  "files": [
+    {
+      "path": "packages/is-local/dist/index.cjs",
+      "sizes": {
+        "raw": 574,
+        "gzip": 351,
+        "brotli": 283
+      }
+    },
+    {
+      "path": "packages/is-local/dist/index.cjs.map",
+      "sizes": {
+        "raw": 2546,
+        "gzip": 961,
+        "brotli": 802
+      }
+    },
+    {
+      "path": "packages/is-local/dist/index.d.cts",
+      "sizes": {
+        "raw": 1471,
+        "gzip": 546,
+        "brotli": 422
+      }
+    },
+    {
+      "path": "packages/is-local/dist/index.d.ts",
+      "sizes": {
+        "raw": 1470,
+        "gzip": 544,
+        "brotli": 420
+      }
+    },
+    {
+      "path": "packages/is-local/dist/index.js",
+      "sizes": {
+        "raw": 456,
+        "gzip": 290,
+        "brotli": 239
+      }
+    },
+    {
+      "path": "packages/is-local/dist/index.js.map",
+      "sizes": {
+        "raw": 2544,
+        "gzip": 958,
+        "brotli": 802
+      }
+    }
+  ],
+  "totals": {
+    "raw": 9061,
+    "gzip": 3650,
+    "brotli": 2968
+  }
+}
