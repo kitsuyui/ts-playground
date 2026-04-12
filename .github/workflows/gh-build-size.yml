@@ -35,6 +35,6 @@ jobs:
         run: bun run build
 
       - name: Measure build size
-        uses: kitsuyui/gh-build-size@main
+        uses: kitsuyui/gh-build-size@cd266e67adc5bd8af79f4e79ed9d7557eecf0d89
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
