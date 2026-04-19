@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-16T15:01:22.762Z",
+  "generated_at": "2026-04-19T00:02:23.456Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "64f4dc44b05dff459d31ae711f08d0eaf7561377",
+  "base_reference": "370a76c546b80d856d434a42b44b1f88cdd963f6",
   "head_label": "main",
-  "head_reference": "370a76c546b80d856d434a42b44b1f88cdd963f6",
+  "head_reference": "032cd92865733c480e4bfda1db1959b20e225679",
   "targets": [
     {
       "id": "total",
