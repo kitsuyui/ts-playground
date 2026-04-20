@@ -37,6 +37,34 @@ export const cleanDuration = (duration: Duration): Duration => {
   return Duration.fromMillis(abs)
 }
 
+const collectRoundedUnits = (
+  useUnits: TimeUnit[],
+  remain: DurationObjectUnits
+): DurationObjectUnits => {
+  const rounded: DurationObjectUnits = {}
+  for (const unit of useUnits.slice(0, -1)) {
+    const value = remain[unit] ?? 0
+    if (value === 0) continue
+    rounded[unit] = value
+    delete remain[unit]
+  }
+  return rounded
+}
+
+const shouldCarryRoundedUnit = (
+  roundingMethod: RoundingMethod,
+  remainMillis: number,
+  roundingHigherUnit: TimeUnit
+): boolean => {
+  if (roundingMethod === 'ceil') {
+    return remainMillis > 0
+  }
+  if (roundingMethod === 'round') {
+    return remainMillis >= HALF_OF_TIME_UNITS[roundingHigherUnit]
+  }
+  return false
+}
+
 /**
  * Round the duration
  * @param duration duration must be clean
@@ -54,7 +82,6 @@ export const roundDuration = (
     opts ?? {}
   )
   const base = duration.shiftToAll().toObject()
-  const rounded: DurationObjectUnits = {}
   const remain: DurationObjectUnits = { ...base }
   const topUnit = computeTopUnit(duration)
   const useUnits = computeUseUnits({
@@ -64,21 +91,13 @@ export const roundDuration = (
   })
   const roundingHigherUnit = useUnits[useUnits.length - 2]
   const roundingLowerUnit = useUnits[useUnits.length - 1]
-
-  for (const unit of useUnits.slice(0, -1)) {
-    const value = remain[unit] ?? 0
-    if (value === 0) continue
-    rounded[unit] = value
-    delete remain[unit]
-  }
+  const rounded = collectRoundedUnits(useUnits, remain)
 
   const remainMillis = Duration.fromObject(remain).toMillis()
   if (roundingHigherUnit && roundingLowerUnit) {
-    const shouldCarry =
-      (roundingMethod === 'ceil' && remainMillis > 0) ||
-      (roundingMethod === 'round' &&
-        remainMillis >= HALF_OF_TIME_UNITS[roundingHigherUnit])
-    if (shouldCarry) {
+    if (
+      shouldCarryRoundedUnit(roundingMethod, remainMillis, roundingHigherUnit)
+    ) {
       rounded[roundingHigherUnit] = (rounded[roundingHigherUnit] ?? 0) + 1
     }
   }
