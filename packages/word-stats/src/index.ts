@@ -6,6 +6,23 @@ const incrementWordScore = (scores: WordScore, word: Word): void => {
   scores[word] = (scores[word] ?? 0) + 1
 }
 
+const countWordDocumentFrequencies = (documents: Document[]): WordScore => {
+  const wordDocumentCounts: WordScore = {}
+  for (const document of documents) {
+    incrementDocumentWordFrequencies(wordDocumentCounts, document)
+  }
+  return wordDocumentCounts
+}
+
+const incrementDocumentWordFrequencies = (
+  scores: WordScore,
+  document: Document
+): void => {
+  for (const word of extractUniqueWords(document)) {
+    incrementWordScore(scores, word)
+  }
+}
+
 /**
  * Count the number of words in the documents
  * @example
@@ -78,19 +95,11 @@ export const computeInverseDocumentFrequency = (
   documents: Document[]
 ): WordScore => {
   const documentCount = documents.length
-  const wordDocumentCounts: WordScore = {}
-  for (const document of documents) {
-    const words = extractUniqueWords(document)
-    for (const word of words) {
-      incrementWordScore(wordDocumentCounts, word)
-    }
-  }
-  const wordIDFs: WordScore = {}
-  for (const word in wordDocumentCounts) {
-    const count = wordDocumentCounts[word]
-    wordIDFs[word] = Math.log(documentCount / count)
-  }
-  return wordIDFs
+  return Object.fromEntries(
+    Object.entries(countWordDocumentFrequencies(documents)).map(
+      ([word, count]) => [word, Math.log(documentCount / count)]
+    )
+  )
 }
 
 /**

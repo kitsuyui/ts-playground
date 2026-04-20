@@ -41,14 +41,14 @@ const collectRoundedUnits = (
   useUnits: TimeUnit[],
   remain: DurationObjectUnits
 ): DurationObjectUnits => {
-  const rounded: DurationObjectUnits = {}
-  for (const unit of useUnits.slice(0, -1)) {
-    const value = remain[unit] ?? 0
-    if (value === 0) continue
-    rounded[unit] = value
+  const roundedEntries = useUnits
+    .slice(0, -1)
+    .map((unit) => [unit, remain[unit] ?? 0] as const)
+    .filter(([, value]) => value !== 0)
+  for (const [unit] of roundedEntries) {
     delete remain[unit]
   }
-  return rounded
+  return Object.fromEntries(roundedEntries) as DurationObjectUnits
 }
 
 const shouldCarryRoundedUnit = (
@@ -65,6 +65,22 @@ const shouldCarryRoundedUnit = (
   return false
 }
 
+const resolveCarryUnit = (
+  roundingMethod: RoundingMethod,
+  remainMillis: number,
+  roundingHigherUnit: TimeUnit | undefined,
+  roundingLowerUnit: TimeUnit | undefined
+): TimeUnit | null => {
+  if (!roundingHigherUnit || !roundingLowerUnit) return null
+  return shouldCarryRoundedUnit(
+    roundingMethod,
+    remainMillis,
+    roundingHigherUnit
+  )
+    ? roundingHigherUnit
+    : null
+}
+
 const applyCarryRoundedUnit = (
   rounded: DurationObjectUnits,
   roundingMethod: RoundingMethod,
@@ -72,13 +88,14 @@ const applyCarryRoundedUnit = (
   roundingHigherUnit: TimeUnit | undefined,
   roundingLowerUnit: TimeUnit | undefined
 ): void => {
-  if (!roundingHigherUnit || !roundingLowerUnit) return
-  if (
-    !shouldCarryRoundedUnit(roundingMethod, remainMillis, roundingHigherUnit)
-  ) {
-    return
-  }
-  rounded[roundingHigherUnit] = (rounded[roundingHigherUnit] ?? 0) + 1
+  const carryUnit = resolveCarryUnit(
+    roundingMethod,
+    remainMillis,
+    roundingHigherUnit,
+    roundingLowerUnit
+  )
+  if (!carryUnit) return
+  rounded[carryUnit] = (rounded[carryUnit] ?? 0) + 1
 }
 
 const ensureRoundedMinUnit = (

@@ -48,23 +48,12 @@ const findCommonAncestorInQueues = <HashLike>(
   visitedB: Set<HashLike>,
   getParents: (hash: HashLike) => HashLike[]
 ): HashLike | null => {
-  if (queueA.length === 0 && queueB.length === 0) return null
+  if (queuesAreEmpty(queueA, queueB)) return null
 
-  const commonFromA = advanceAncestorSearch(
-    queueA,
-    visitedA,
-    visitedB,
-    getParents
-  )
-  if (commonFromA !== null) return commonFromA
-
-  const commonFromB = advanceAncestorSearch(
-    queueB,
-    visitedB,
-    visitedA,
-    getParents
-  )
-  if (commonFromB !== null) return commonFromB
+  const common =
+    advanceAncestorSearch(queueA, visitedA, visitedB, getParents) ??
+    advanceAncestorSearch(queueB, visitedB, visitedA, getParents)
+  if (common !== null) return common
 
   return findCommonAncestorInQueues(
     queueA,
@@ -74,6 +63,11 @@ const findCommonAncestorInQueues = <HashLike>(
     getParents
   )
 }
+
+const queuesAreEmpty = <HashLike>(
+  queueA: HashLike[],
+  queueB: HashLike[]
+): boolean => queueA.length === 0 && queueB.length === 0
 
 /**
  * find the common ancestor of multiple commits
@@ -157,16 +151,8 @@ export const calculateMergeTarget = <HashLike>(
     commonAncestor,
     getParents
   )
-
-  const descendants = new Set<HashLike>()
-  // The target is a descendant if it is visited only once
-  for (const target of targets) {
-    if (visitedCounter.get(target) === 1) {
-      descendants.add(target)
-    }
-  }
-
-  return { commonAncestor, descendants: Array.from(descendants) }
+  const descendants = collectDescendants(targets, visitedCounter)
+  return { commonAncestor, descendants }
 }
 
 /**
@@ -184,10 +170,28 @@ const countAncestorVisits = <HashLike>(
 ): Map<HashLike, number> => {
   const visitedCounter = new Map<HashLike, number>()
   for (const target of targets) {
-    const ancestors = findAncestorsWithin(target, commonAncestor, getParents)
-    for (const ancestor of ancestors) {
-      visitedCounter.set(ancestor, (visitedCounter.get(ancestor) ?? 0) + 1)
-    }
+    incrementAncestorVisits(
+      visitedCounter,
+      findAncestorsWithin(target, commonAncestor, getParents)
+    )
   }
   return visitedCounter
+}
+
+const incrementAncestorVisits = <HashLike>(
+  visitedCounter: Map<HashLike, number>,
+  ancestors: HashLike[]
+): void => {
+  for (const ancestor of ancestors) {
+    visitedCounter.set(ancestor, (visitedCounter.get(ancestor) ?? 0) + 1)
+  }
+}
+
+const collectDescendants = <HashLike>(
+  targets: HashLike[],
+  visitedCounter: Map<HashLike, number>
+): HashLike[] => {
+  return Array.from(
+    new Set(targets.filter((target) => visitedCounter.get(target) === 1))
+  )
 }

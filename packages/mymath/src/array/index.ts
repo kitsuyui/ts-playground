@@ -138,12 +138,22 @@ export const cubicMean = (values: number[]): number => {
   return Math.cbrt(arithmeticMean(values.map((value) => value ** 3)))
 }
 
-const specialGeneralizedMean = (values: number[], p: number): number | null => {
-  if (p === Number.NEGATIVE_INFINITY) return Math.min(...values) // p -> -∞ means min
-  if (p === 0) return geometricMean(values)
-  if (p === 1) return arithmeticMean(values)
-  if (p === Number.POSITIVE_INFINITY) return Math.max(...values) // p -> +∞ means max
-  return null
+const specialGeneralizedMeanHandlers = new Map<
+  number,
+  (values: number[]) => number
+>([
+  [Number.NEGATIVE_INFINITY, (values) => Math.min(...values)],
+  [0, geometricMean],
+  [1, arithmeticMean],
+  [Number.POSITIVE_INFINITY, (values) => Math.max(...values)],
+])
+
+const specialGeneralizedMean = (values: number[], p: number): number | null =>
+  specialGeneralizedMeanHandlers.get(p)?.(values) ?? null
+
+const generalizedMeanOfEmptySet = (p: number): number => {
+  if (p > 1) return 0
+  throw new Error('Cannot calculate generalized mean of empty set')
 }
 
 /**
@@ -155,10 +165,7 @@ const specialGeneralizedMean = (values: number[], p: number): number | null => {
 const awareGeneralizedMean = (values: number[], p: number): number => {
   const specialMean = specialGeneralizedMean(values, p)
   if (specialMean !== null) return specialMean
-  if (values.length === 0) {
-    if (p > 1) return 0
-    throw new Error('Cannot calculate generalized mean of empty set')
-  }
+  if (values.length === 0) return generalizedMeanOfEmptySet(p)
   return naiveGeneralizedMean(values, p)
 }
 

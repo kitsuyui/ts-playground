@@ -12,11 +12,9 @@
  * @returns true if the host is local, false otherwise
  */
 export const isLocal = (host: string): boolean => {
-  if (isLocalhost(host)) return true
-  if (isIPv4Local(host)) return true
-  if (isIPv6Local(host)) return true
-  if (isLocalRFC6761(host)) return true
-  return false
+  return [isLocalhost, isIPv4Local, isIPv6Local, isLocalRFC6761].some((check) =>
+    check(host)
+  )
 }
 
 /**
