@@ -19,22 +19,37 @@ export const findCommonAncestor2 = <HashLike>(
   const queueB: HashLike[] = [hashB]
 
   while (queueA.length > 0 || queueB.length > 0) {
-    if (queueA.length > 0) {
-      // biome-ignore lint/style/noNonNullAssertion: already checked by queueA.length > 0
-      const currentA = queueA.shift()!
-      if (visitedB.has(currentA)) return currentA
-      visitedA.add(currentA)
-      queueA.push(...getParents(currentA))
-    }
+    const commonFromA = advanceAncestorSearch(
+      queueA,
+      visitedA,
+      visitedB,
+      getParents
+    )
+    if (commonFromA !== null) return commonFromA
 
-    if (queueB.length > 0) {
-      // biome-ignore lint/style/noNonNullAssertion: already checked by queueB.length > 0
-      const currentB = queueB.shift()!
-      if (visitedA.has(currentB)) return currentB
-      visitedB.add(currentB)
-      queueB.push(...getParents(currentB))
-    }
+    const commonFromB = advanceAncestorSearch(
+      queueB,
+      visitedB,
+      visitedA,
+      getParents
+    )
+    if (commonFromB !== null) return commonFromB
   }
+  return null
+}
+
+const advanceAncestorSearch = <HashLike>(
+  queue: HashLike[],
+  visited: Set<HashLike>,
+  otherVisited: Set<HashLike>,
+  getParents: (hash: HashLike) => HashLike[]
+): HashLike | null => {
+  if (queue.length === 0) return null
+  // biome-ignore lint/style/noNonNullAssertion: already checked by queue.length > 0
+  const current = queue.shift()!
+  if (otherVisited.has(current)) return current
+  visited.add(current)
+  queue.push(...getParents(current))
   return null
 }
 
