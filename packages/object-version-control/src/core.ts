@@ -235,9 +235,17 @@ export class Core<T> {
    * @returns True if all snapshots and commits are valid
    */
   verifyAll(): boolean {
+    return this.verifySnapshotsIntegrity() && this.verifyCommitsIntegrity()
+  }
+
+  private verifySnapshotsIntegrity(): boolean {
     for (const snapshot of this.snapshots.values()) {
       if (!this.verifySnapshot(snapshot)) return false
     }
+    return true
+  }
+
+  private verifyCommitsIntegrity(): boolean {
     for (const commit of this.commits.values()) {
       if (!this.verifyCommit(commit)) return false
     }

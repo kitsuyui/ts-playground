@@ -107,21 +107,21 @@ export const opposite = (rad: number): number => {
   return rotate(rad, Math.PI)
 }
 
-const assignLabels = (rads: number[], centers: number[]): number[] => {
-  const labels = new Array(rads.length).fill(-1)
-  for (let i = 0; i < rads.length; i++) {
-    let minDistance = Math.PI * 2
-    let minIndex = -1
-    for (let j = 0; j < centers.length; j++) {
-      const circularDistance = distance(rads[i], centers[j])
-      if (circularDistance < minDistance) {
-        minDistance = circularDistance
-        minIndex = j
-      }
+const findClosestCenterIndex = (rad: number, centers: number[]): number => {
+  let minDistance = Math.PI * 2
+  let minIndex = -1
+  for (let j = 0; j < centers.length; j++) {
+    const circularDistance = distance(rad, centers[j])
+    if (circularDistance < minDistance) {
+      minDistance = circularDistance
+      minIndex = j
     }
-    labels[i] = minIndex
   }
-  return labels
+  return minIndex
+}
+
+const assignLabels = (rads: number[], centers: number[]): number[] => {
+  return rads.map((rad) => findClosestCenterIndex(rad, centers))
 }
 
 /**

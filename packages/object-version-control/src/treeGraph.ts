@@ -17,25 +17,13 @@ export const findCommonAncestor2 = <HashLike>(
 
   const queueA: HashLike[] = [hashA]
   const queueB: HashLike[] = [hashB]
-
-  while (queueA.length > 0 || queueB.length > 0) {
-    const commonFromA = advanceAncestorSearch(
-      queueA,
-      visitedA,
-      visitedB,
-      getParents
-    )
-    if (commonFromA !== null) return commonFromA
-
-    const commonFromB = advanceAncestorSearch(
-      queueB,
-      visitedB,
-      visitedA,
-      getParents
-    )
-    if (commonFromB !== null) return commonFromB
-  }
-  return null
+  return findCommonAncestorInQueues(
+    queueA,
+    visitedA,
+    queueB,
+    visitedB,
+    getParents
+  )
 }
 
 const advanceAncestorSearch = <HashLike>(
@@ -51,6 +39,40 @@ const advanceAncestorSearch = <HashLike>(
   visited.add(current)
   queue.push(...getParents(current))
   return null
+}
+
+const findCommonAncestorInQueues = <HashLike>(
+  queueA: HashLike[],
+  visitedA: Set<HashLike>,
+  queueB: HashLike[],
+  visitedB: Set<HashLike>,
+  getParents: (hash: HashLike) => HashLike[]
+): HashLike | null => {
+  if (queueA.length === 0 && queueB.length === 0) return null
+
+  const commonFromA = advanceAncestorSearch(
+    queueA,
+    visitedA,
+    visitedB,
+    getParents
+  )
+  if (commonFromA !== null) return commonFromA
+
+  const commonFromB = advanceAncestorSearch(
+    queueB,
+    visitedB,
+    visitedA,
+    getParents
+  )
+  if (commonFromB !== null) return commonFromB
+
+  return findCommonAncestorInQueues(
+    queueA,
+    visitedA,
+    queueB,
+    visitedB,
+    getParents
+  )
 }
 
 /**

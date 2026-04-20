@@ -24,10 +24,7 @@ export const wordCount = (documents: Document[]): WordScore => {
   const wordCounts: WordScore = {}
   for (const document of documents) {
     for (const word of document) {
-      if (!wordCounts[word]) {
-        wordCounts[word] = 0
-      }
-      wordCounts[word]++
+      incrementWordScore(wordCounts, word)
     }
   }
   return wordCounts

@@ -23,6 +23,42 @@ export const wrapWithRollback = <TClient, TClientTran, TContent>(
   return wrapped
 }
 
+const createSuccessResult = <TContent>(
+  content: TContent
+): Result<TContent> => ({
+  success: true,
+  content,
+  rollback: {
+    occurred: false,
+    intended: false,
+  },
+})
+
+const createIntendedRollbackResult = <TContent>(
+  content: TContent | null
+): Result<TContent> => {
+  if (content === null) {
+    throw new Unreachable('Intended rollback without content.')
+  }
+  return {
+    success: true,
+    content,
+    rollback: {
+      occurred: true,
+      intended: true,
+    },
+  }
+}
+
+const createFailureResult = <TContent>(error: unknown): Result<TContent> => ({
+  success: false,
+  error,
+  rollback: {
+    occurred: true,
+    intended: false,
+  },
+})
+
 /**
  * Handle rollback
  * @param client Client instance (i.e. database client like PrismaClient)
@@ -48,35 +84,11 @@ const handleRollback = async <TClient, TClientTran, TContent>(
       }
       return content_
     })
-    return {
-      success: true,
-      content,
-      rollback: {
-        occurred: false,
-        intended: false,
-      },
-    }
+    return createSuccessResult(content)
   } catch (e) {
     if (e instanceof IntendedRollback) {
-      if (content !== null) {
-        return {
-          success: true,
-          content,
-          rollback: {
-            occurred: true,
-            intended: true,
-          },
-        }
-      }
-      throw new Unreachable('Intended rollback without content.')
+      return createIntendedRollbackResult(content)
     }
-    return {
-      success: false,
-      error: e,
-      rollback: {
-        occurred: true,
-        intended: false,
-      },
-    }
+    return createFailureResult(e)
   }
 }
