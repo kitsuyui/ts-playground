@@ -156,4 +156,18 @@ describe('kMeans', () => {
     expect(kMeans([], 2)).toEqual([[], []])
     expect(kMeans([0, 1], 0)).toEqual([[], []])
   })
+
+  it('should keep going when some clusters become empty', () => {
+    const [centers, labels] = kMeans([0], 2)
+
+    expect(centers).toEqual([0, 0])
+    expect(labels).toEqual([0])
+  })
+
+  it('should return the current centers when max iterations is zero', () => {
+    const [centers, labels] = kMeans([0, Math.PI], 2, 0)
+
+    expect(centers).toEqual([0, Math.PI])
+    expect(labels).toEqual([0, 1])
+  })
 })
