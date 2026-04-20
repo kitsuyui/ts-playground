@@ -65,6 +65,31 @@ const shouldCarryRoundedUnit = (
   return false
 }
 
+const applyCarryRoundedUnit = (
+  rounded: DurationObjectUnits,
+  roundingMethod: RoundingMethod,
+  remainMillis: number,
+  roundingHigherUnit: TimeUnit | undefined,
+  roundingLowerUnit: TimeUnit | undefined
+): void => {
+  if (!roundingHigherUnit || !roundingLowerUnit) return
+  if (
+    !shouldCarryRoundedUnit(roundingMethod, remainMillis, roundingHigherUnit)
+  ) {
+    return
+  }
+  rounded[roundingHigherUnit] = (rounded[roundingHigherUnit] ?? 0) + 1
+}
+
+const ensureRoundedMinUnit = (
+  rounded: DurationObjectUnits,
+  minUnit: TimeUnit
+): void => {
+  if (Object.keys(rounded).length === 0) {
+    rounded[minUnit] = 0
+  }
+}
+
 /**
  * Round the duration
  * @param duration duration must be clean
@@ -94,17 +119,14 @@ export const roundDuration = (
   const rounded = collectRoundedUnits(useUnits, remain)
 
   const remainMillis = Duration.fromObject(remain).toMillis()
-  if (roundingHigherUnit && roundingLowerUnit) {
-    if (
-      shouldCarryRoundedUnit(roundingMethod, remainMillis, roundingHigherUnit)
-    ) {
-      rounded[roundingHigherUnit] = (rounded[roundingHigherUnit] ?? 0) + 1
-    }
-  }
-
-  if (Object.keys(rounded).length === 0) {
-    rounded[minUnit] = 0
-  }
+  applyCarryRoundedUnit(
+    rounded,
+    roundingMethod,
+    remainMillis,
+    roundingHigherUnit,
+    roundingLowerUnit
+  )
+  ensureRoundedMinUnit(rounded, minUnit)
 
   return Duration.fromObject(rounded)
 }

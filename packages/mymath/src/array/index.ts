@@ -138,6 +138,14 @@ export const cubicMean = (values: number[]): number => {
   return Math.cbrt(arithmeticMean(values.map((value) => value ** 3)))
 }
 
+const specialGeneralizedMean = (values: number[], p: number): number | null => {
+  if (p === Number.NEGATIVE_INFINITY) return Math.min(...values) // p -> -∞ means min
+  if (p === 0) return geometricMean(values)
+  if (p === 1) return arithmeticMean(values)
+  if (p === Number.POSITIVE_INFINITY) return Math.max(...values) // p -> +∞ means max
+  return null
+}
+
 /**
  * Aware implementation of generalized mean (Hölder mean) of all values in the array
  * @param values
@@ -145,13 +153,12 @@ export const cubicMean = (values: number[]): number => {
  * @returns
  */
 const awareGeneralizedMean = (values: number[], p: number): number => {
-  if (p === Number.NEGATIVE_INFINITY) return Math.min(...values) // p -> -∞ means min
-  if (p === 0) return geometricMean(values)
-  if (p === 1) return arithmeticMean(values)
-  if (p === Number.POSITIVE_INFINITY) return Math.max(...values) // p -> +∞ means max
-  const n = values.length
-  if (p > 1 && n === 0) return 0
-  if (n === 0) throw new Error('Cannot calculate generalized mean of empty set')
+  const specialMean = specialGeneralizedMean(values, p)
+  if (specialMean !== null) return specialMean
+  if (values.length === 0) {
+    if (p > 1) return 0
+    throw new Error('Cannot calculate generalized mean of empty set')
+  }
   return naiveGeneralizedMean(values, p)
 }
 

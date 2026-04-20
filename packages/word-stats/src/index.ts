@@ -2,6 +2,10 @@ type Word = string
 type Document = Word[]
 type WordScore = { [word: Word]: number }
 
+const incrementWordScore = (scores: WordScore, word: Word): void => {
+  scores[word] = (scores[word] ?? 0) + 1
+}
+
 /**
  * Count the number of words in the documents
  * @example
@@ -81,10 +85,7 @@ export const computeInverseDocumentFrequency = (
   for (const document of documents) {
     const words = extractUniqueWords(document)
     for (const word of words) {
-      if (!wordDocumentCounts[word]) {
-        wordDocumentCounts[word] = 0
-      }
-      wordDocumentCounts[word]++
+      incrementWordScore(wordDocumentCounts, word)
     }
   }
   const wordIDFs: WordScore = {}
