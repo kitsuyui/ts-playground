@@ -11,63 +11,123 @@ export const findCommonAncestor2 = <HashLike>(
   hashA: HashLike,
   hashB: HashLike,
   getParents: (hash: HashLike) => HashLike[]
-): HashLike | null => {
-  const visitedA = new Set<HashLike>()
-  const visitedB = new Set<HashLike>()
-
-  const queueA: HashLike[] = [hashA]
-  const queueB: HashLike[] = [hashB]
-  return findCommonAncestorInQueues(
-    queueA,
-    visitedA,
-    queueB,
-    visitedB,
+): HashLike | null =>
+  findCommonAncestorFromStates(
+    createAncestorSearchState(hashA),
+    createAncestorSearchState(hashB),
     getParents
   )
+
+type AncestorSearchState<HashLike> = {
+  queue: HashLike[]
+  index: number
+  visited: Set<HashLike>
 }
 
-const advanceAncestorSearch = <HashLike>(
-  queue: HashLike[],
-  visited: Set<HashLike>,
-  otherVisited: Set<HashLike>,
+const createAncestorSearchState = <HashLike>(
+  hash: HashLike
+): AncestorSearchState<HashLike> => ({
+  queue: [hash],
+  index: 0,
+  visited: new Set<HashLike>(),
+})
+
+const hasQueuedNodes = <HashLike>(
+  state: AncestorSearchState<HashLike>
+): boolean => state.index < state.queue.length
+
+const advanceAncestorSearchState = <HashLike>(
+  state: AncestorSearchState<HashLike>,
+  otherVisited: ReadonlySet<HashLike>,
+  getParents: (hash: HashLike) => HashLike[]
+): {
+  state: AncestorSearchState<HashLike>
+  common: HashLike | null
+} => {
+  if (!hasQueuedNodes(state)) {
+    return { state, common: null }
+  }
+
+  const current = state.queue[state.index]
+  if (current === undefined) {
+    return { state, common: null }
+  }
+  if (otherVisited.has(current)) {
+    return {
+      state: { ...state, index: state.index + 1 },
+      common: current,
+    }
+  }
+
+  return {
+    state: {
+      queue: [...state.queue, ...getParents(current)],
+      index: state.index + 1,
+      visited: new Set(state.visited).add(current),
+    },
+    common: null,
+  }
+}
+
+const advanceAncestorSearchPair = <HashLike>(
+  stateA: AncestorSearchState<HashLike>,
+  stateB: AncestorSearchState<HashLike>,
+  getParents: (hash: HashLike) => HashLike[]
+): {
+  stateA: AncestorSearchState<HashLike>
+  stateB: AncestorSearchState<HashLike>
+  common: HashLike | null
+} => {
+  const advancedA = advanceAncestorSearchState(
+    stateA,
+    stateB.visited,
+    getParents
+  )
+  if (advancedA.common !== null) {
+    return {
+      stateA: advancedA.state,
+      stateB,
+      common: advancedA.common,
+    }
+  }
+
+  const advancedB = advanceAncestorSearchState(
+    stateB,
+    advancedA.state.visited,
+    getParents
+  )
+  return {
+    stateA: advancedA.state,
+    stateB: advancedB.state,
+    common: advancedB.common,
+  }
+}
+
+const hasQueuedSearchStates = <HashLike>(
+  stateA: AncestorSearchState<HashLike>,
+  stateB: AncestorSearchState<HashLike>
+): boolean => hasQueuedNodes(stateA) || hasQueuedNodes(stateB)
+
+const findCommonAncestorFromStates = <HashLike>(
+  stateA: AncestorSearchState<HashLike>,
+  stateB: AncestorSearchState<HashLike>,
   getParents: (hash: HashLike) => HashLike[]
 ): HashLike | null => {
-  if (queue.length === 0) return null
-  // biome-ignore lint/style/noNonNullAssertion: already checked by queue.length > 0
-  const current = queue.shift()!
-  if (otherVisited.has(current)) return current
-  visited.add(current)
-  queue.push(...getParents(current))
+  let currentStateA = stateA
+  let currentStateB = stateB
+
+  while (hasQueuedSearchStates(currentStateA, currentStateB)) {
+    const advanced = advanceAncestorSearchPair(
+      currentStateA,
+      currentStateB,
+      getParents
+    )
+    if (advanced.common !== null) return advanced.common
+    currentStateA = advanced.stateA
+    currentStateB = advanced.stateB
+  }
   return null
 }
-
-const findCommonAncestorInQueues = <HashLike>(
-  queueA: HashLike[],
-  visitedA: Set<HashLike>,
-  queueB: HashLike[],
-  visitedB: Set<HashLike>,
-  getParents: (hash: HashLike) => HashLike[]
-): HashLike | null => {
-  if (queuesAreEmpty(queueA, queueB)) return null
-
-  const common =
-    advanceAncestorSearch(queueA, visitedA, visitedB, getParents) ??
-    advanceAncestorSearch(queueB, visitedB, visitedA, getParents)
-  if (common !== null) return common
-
-  return findCommonAncestorInQueues(
-    queueA,
-    visitedA,
-    queueB,
-    visitedB,
-    getParents
-  )
-}
-
-const queuesAreEmpty = <HashLike>(
-  queueA: HashLike[],
-  queueB: HashLike[]
-): boolean => queueA.length === 0 && queueB.length === 0
 
 /**
  * find the common ancestor of multiple commits
@@ -167,24 +227,35 @@ const countAncestorVisits = <HashLike>(
   targets: HashLike[],
   commonAncestor: HashLike,
   getParents: (hash: HashLike) => HashLike[]
+): Map<HashLike, number> =>
+  targets.reduce(
+    (visitedCounter, target) =>
+      mergeAncestorVisitCounts(
+        visitedCounter,
+        countAncestors(findAncestorsWithin(target, commonAncestor, getParents))
+      ),
+    new Map<HashLike, number>()
+  )
+
+const countAncestors = <HashLike>(
+  ancestors: HashLike[]
 ): Map<HashLike, number> => {
-  const visitedCounter = new Map<HashLike, number>()
-  for (const target of targets) {
-    incrementAncestorVisits(
-      visitedCounter,
-      findAncestorsWithin(target, commonAncestor, getParents)
-    )
+  const counts = new Map<HashLike, number>()
+  for (const ancestor of ancestors) {
+    counts.set(ancestor, (counts.get(ancestor) ?? 0) + 1)
   }
-  return visitedCounter
+  return counts
 }
 
-const incrementAncestorVisits = <HashLike>(
-  visitedCounter: Map<HashLike, number>,
-  ancestors: HashLike[]
-): void => {
-  for (const ancestor of ancestors) {
-    visitedCounter.set(ancestor, (visitedCounter.get(ancestor) ?? 0) + 1)
+const mergeAncestorVisitCounts = <HashLike>(
+  left: Map<HashLike, number>,
+  right: Map<HashLike, number>
+): Map<HashLike, number> => {
+  const merged = new Map(left)
+  for (const [ancestor, count] of right) {
+    merged.set(ancestor, (merged.get(ancestor) ?? 0) + count)
   }
+  return merged
 }
 
 const collectDescendants = <HashLike>(

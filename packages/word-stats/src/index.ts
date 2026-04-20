@@ -2,26 +2,31 @@ type Word = string
 type Document = Word[]
 type WordScore = { [word: Word]: number }
 
-const incrementWordScore = (scores: WordScore, word: Word): void => {
-  scores[word] = (scores[word] ?? 0) + 1
+const countWords = (words: Iterable<Word>): WordScore => {
+  const counts: WordScore = {}
+  for (const word of words) {
+    counts[word] = (counts[word] ?? 0) + 1
+  }
+  return counts
 }
 
-const countWordDocumentFrequencies = (documents: Document[]): WordScore => {
-  const wordDocumentCounts: WordScore = {}
-  for (const document of documents) {
-    incrementDocumentWordFrequencies(wordDocumentCounts, document)
+const mergeWordScores = (left: WordScore, right: WordScore): WordScore => {
+  const merged: WordScore = { ...left }
+  for (const word in right) {
+    merged[word] = (merged[word] ?? 0) + right[word]
   }
-  return wordDocumentCounts
+  return merged
 }
 
-const incrementDocumentWordFrequencies = (
-  scores: WordScore,
-  document: Document
-): void => {
-  for (const word of extractUniqueWords(document)) {
-    incrementWordScore(scores, word)
-  }
-}
+const countWordDocumentFrequencies = (documents: Document[]): WordScore =>
+  documents.reduce(
+    (wordDocumentCounts, document) =>
+      mergeWordScores(
+        wordDocumentCounts,
+        countWords(extractUniqueWords(document))
+      ),
+    {}
+  )
 
 /**
  * Count the number of words in the documents
@@ -38,13 +43,10 @@ const incrementDocumentWordFrequencies = (
  * @returns A dictionary of words and their counts
  */
 export const wordCount = (documents: Document[]): WordScore => {
-  const wordCounts: WordScore = {}
-  for (const document of documents) {
-    for (const word of document) {
-      incrementWordScore(wordCounts, word)
-    }
-  }
-  return wordCounts
+  return documents.reduce(
+    (wordCounts, document) => mergeWordScores(wordCounts, countWords(document)),
+    {}
+  )
 }
 
 /**

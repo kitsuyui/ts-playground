@@ -39,16 +39,23 @@ export const cleanDuration = (duration: Duration): Duration => {
 
 const collectRoundedUnits = (
   useUnits: TimeUnit[],
+  base: DurationObjectUnits
+): {
+  rounded: DurationObjectUnits
   remain: DurationObjectUnits
-): DurationObjectUnits => {
-  const roundedEntries = useUnits
-    .slice(0, -1)
-    .map((unit) => [unit, remain[unit] ?? 0] as const)
-    .filter(([, value]) => value !== 0)
-  for (const [unit] of roundedEntries) {
-    delete remain[unit]
+} => {
+  const roundedUnits = new Set<TimeUnit>(useUnits.slice(0, -1))
+  const entries = Object.entries(base) as [TimeUnit, number][]
+  const isRoundedEntry = ([unit, value]: [TimeUnit, number]): boolean =>
+    roundedUnits.has(unit) && value !== 0
+  return {
+    rounded: Object.fromEntries(
+      entries.filter(isRoundedEntry)
+    ) as DurationObjectUnits,
+    remain: Object.fromEntries(
+      entries.filter((entry) => !isRoundedEntry(entry))
+    ) as DurationObjectUnits,
   }
-  return Object.fromEntries(roundedEntries) as DurationObjectUnits
 }
 
 const shouldCarryRoundedUnit = (
@@ -81,31 +88,31 @@ const resolveCarryUnit = (
     : null
 }
 
-const applyCarryRoundedUnit = (
+const withCarryRoundedUnit = (
   rounded: DurationObjectUnits,
   roundingMethod: RoundingMethod,
   remainMillis: number,
   roundingHigherUnit: TimeUnit | undefined,
   roundingLowerUnit: TimeUnit | undefined
-): void => {
+): DurationObjectUnits => {
   const carryUnit = resolveCarryUnit(
     roundingMethod,
     remainMillis,
     roundingHigherUnit,
     roundingLowerUnit
   )
-  if (!carryUnit) return
-  rounded[carryUnit] = (rounded[carryUnit] ?? 0) + 1
-}
-
-const ensureRoundedMinUnit = (
-  rounded: DurationObjectUnits,
-  minUnit: TimeUnit
-): void => {
-  if (Object.keys(rounded).length === 0) {
-    rounded[minUnit] = 0
+  if (!carryUnit) return rounded
+  return {
+    ...rounded,
+    [carryUnit]: (rounded[carryUnit] ?? 0) + 1,
   }
 }
+
+const withRoundedMinUnit = (
+  rounded: DurationObjectUnits,
+  minUnit: TimeUnit
+): DurationObjectUnits =>
+  Object.keys(rounded).length === 0 ? { [minUnit]: 0 } : rounded
 
 /**
  * Round the duration
@@ -124,7 +131,6 @@ export const roundDuration = (
     opts ?? {}
   )
   const base = duration.shiftToAll().toObject()
-  const remain: DurationObjectUnits = { ...base }
   const topUnit = computeTopUnit(duration)
   const useUnits = computeUseUnits({
     top: topUnit,
@@ -133,17 +139,16 @@ export const roundDuration = (
   })
   const roundingHigherUnit = useUnits[useUnits.length - 2]
   const roundingLowerUnit = useUnits[useUnits.length - 1]
-  const rounded = collectRoundedUnits(useUnits, remain)
+  const { rounded, remain } = collectRoundedUnits(useUnits, base)
 
   const remainMillis = Duration.fromObject(remain).toMillis()
-  applyCarryRoundedUnit(
+  const roundedWithCarry = withCarryRoundedUnit(
     rounded,
     roundingMethod,
     remainMillis,
     roundingHigherUnit,
     roundingLowerUnit
   )
-  ensureRoundedMinUnit(rounded, minUnit)
 
-  return Duration.fromObject(rounded)
+  return Duration.fromObject(withRoundedMinUnit(roundedWithCarry, minUnit))
 }
