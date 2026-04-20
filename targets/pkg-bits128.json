@@ -53,17 +53,17 @@
     {
       "path": "packages/bits128/dist/bits.cjs",
       "sizes": {
-        "raw": 577,
-        "gzip": 370,
-        "brotli": 339
+        "raw": 587,
+        "gzip": 369,
+        "brotli": 348
       }
     },
     {
       "path": "packages/bits128/dist/bits.cjs.map",
       "sizes": {
-        "raw": 1630,
-        "gzip": 726,
-        "brotli": 667
+        "raw": 1702,
+        "gzip": 758,
+        "brotli": 700
       }
     },
     {
@@ -85,17 +85,17 @@
     {
       "path": "packages/bits128/dist/bits.js",
       "sizes": {
-        "raw": 502,
-        "gzip": 324,
-        "brotli": 295
+        "raw": 512,
+        "gzip": 325,
+        "brotli": 292
       }
     },
     {
       "path": "packages/bits128/dist/bits.js.map",
       "sizes": {
-        "raw": 1628,
-        "gzip": 724,
-        "brotli": 660
+        "raw": 1700,
+        "gzip": 756,
+        "brotli": 699
       }
     },
     {
@@ -212,8 +212,8 @@
     }
   ],
   "totals": {
-    "raw": 32628,
-    "gzip": 13595,
-    "brotli": 11219
+    "raw": 32792,
+    "gzip": 13659,
+    "brotli": 11297
   }
 }

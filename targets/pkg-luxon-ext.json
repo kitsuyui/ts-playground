@@ -101,17 +101,17 @@
     {
       "path": "packages/luxon-ext/dist/rounding/index.cjs",
       "sizes": {
-        "raw": 922,
-        "gzip": 536,
-        "brotli": 479
+        "raw": 1160,
+        "gzip": 633,
+        "brotli": 570
       }
     },
     {
       "path": "packages/luxon-ext/dist/rounding/index.cjs.map",
       "sizes": {
-        "raw": 3734,
-        "gzip": 1403,
-        "brotli": 1242
+        "raw": 5808,
+        "gzip": 1858,
+        "brotli": 1664
       }
     },
     {
@@ -133,17 +133,17 @@
     {
       "path": "packages/luxon-ext/dist/rounding/index.js",
       "sizes": {
-        "raw": 842,
-        "gzip": 498,
-        "brotli": 453
+        "raw": 1080,
+        "gzip": 599,
+        "brotli": 547
       }
     },
     {
       "path": "packages/luxon-ext/dist/rounding/index.js.map",
       "sizes": {
-        "raw": 3623,
-        "gzip": 1373,
-        "brotli": 1234
+        "raw": 5697,
+        "gzip": 1832,
+        "brotli": 1626
       }
     },
     {
@@ -196,8 +196,8 @@
     }
   ],
   "totals": {
-    "raw": 29339,
-    "gzip": 13093,
-    "brotli": 11328
+    "raw": 33963,
+    "gzip": 14205,
+    "brotli": 12327
   }
 }

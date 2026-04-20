@@ -1,17 +1,17 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `032cd92865733c480e4bfda1db1959b20e225679`
-- Generated at: 2026-04-19T00:02:23.457Z
+- Head: `337fa41009b21101f140b3514101e1712d695149`
+- Generated at: 2026-04-20T13:49:29.175Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
-| `packages/bits128/dist/bits.cjs` | 577 B | 370 B | 339 B |
-| `packages/bits128/dist/bits.cjs.map` | 1,630 B | 726 B | 667 B |
+| `packages/bits128/dist/bits.cjs` | 587 B | 369 B | 348 B |
+| `packages/bits128/dist/bits.cjs.map` | 1,702 B | 758 B | 700 B |
 | `packages/bits128/dist/bits.d.cts` | 469 B | 250 B | 219 B |
 | `packages/bits128/dist/bits.d.ts` | 468 B | 248 B | 219 B |
-| `packages/bits128/dist/bits.js` | 502 B | 324 B | 295 B |
-| `packages/bits128/dist/bits.js.map` | 1,628 B | 724 B | 660 B |
+| `packages/bits128/dist/bits.js` | 512 B | 325 B | 292 B |
+| `packages/bits128/dist/bits.js.map` | 1,700 B | 756 B | 699 B |
 | `packages/bits128/dist/bitShuffle.cjs` | 313 B | 250 B | 215 B |
 | `packages/bits128/dist/bitShuffle.cjs.map` | 1,044 B | 501 B | 452 B |
 | `packages/bits128/dist/bitShuffle.d.cts` | 210 B | 158 B | 132 B |
@@ -124,12 +124,12 @@
 | `packages/incremental-color-palette/dist/types.d.cts` | 544 B | 250 B | 207 B |
 | `packages/incremental-color-palette/dist/types.d.ts` | 543 B | 247 B | 201 B |
 | `packages/incremental-color-palette/dist/types.js` | 0 B | 20 B | 1 B |
-| `packages/intended-rollback/dist/base.cjs` | 630 B | 361 B | 303 B |
-| `packages/intended-rollback/dist/base.cjs.map` | 3,147 B | 1,108 B | 965 B |
+| `packages/intended-rollback/dist/base.cjs` | 663 B | 385 B | 333 B |
+| `packages/intended-rollback/dist/base.cjs.map` | 3,489 B | 1,229 B | 1,071 B |
 | `packages/intended-rollback/dist/base.d.cts` | 670 B | 345 B | 277 B |
 | `packages/intended-rollback/dist/base.d.ts` | 668 B | 342 B | 294 B |
-| `packages/intended-rollback/dist/base.js` | 557 B | 325 B | 278 B |
-| `packages/intended-rollback/dist/base.js.map` | 3,096 B | 1,093 B | 944 B |
+| `packages/intended-rollback/dist/base.js` | 590 B | 343 B | 302 B |
+| `packages/intended-rollback/dist/base.js.map` | 3,438 B | 1,209 B | 1,043 B |
 | `packages/intended-rollback/dist/errors.cjs` | 287 B | 209 B | 153 B |
 | `packages/intended-rollback/dist/errors.cjs.map` | 574 B | 335 B | 286 B |
 | `packages/intended-rollback/dist/errors.d.cts` | 375 B | 225 B | 179 B |
@@ -144,12 +144,12 @@
 | `packages/intended-rollback/dist/types.d.cts` | 1,013 B | 348 B | 297 B |
 | `packages/intended-rollback/dist/types.d.ts` | 1,012 B | 346 B | 303 B |
 | `packages/intended-rollback/dist/types.js` | 0 B | 20 B | 1 B |
-| `packages/is-local/dist/index.cjs` | 574 B | 351 B | 283 B |
-| `packages/is-local/dist/index.cjs.map` | 2,546 B | 961 B | 802 B |
+| `packages/is-local/dist/index.cjs` | 571 B | 351 B | 285 B |
+| `packages/is-local/dist/index.cjs.map` | 2,471 B | 966 B | 810 B |
 | `packages/is-local/dist/index.d.cts` | 1,471 B | 546 B | 422 B |
 | `packages/is-local/dist/index.d.ts` | 1,470 B | 544 B | 420 B |
-| `packages/is-local/dist/index.js` | 456 B | 290 B | 239 B |
-| `packages/is-local/dist/index.js.map` | 2,544 B | 958 B | 802 B |
+| `packages/is-local/dist/index.js` | 453 B | 292 B | 248 B |
+| `packages/is-local/dist/index.js.map` | 2,469 B | 963 B | 806 B |
 | `packages/luxon-ext/dist/constants.cjs` | 316 B | 260 B | 203 B |
 | `packages/luxon-ext/dist/constants.cjs.map` | 833 B | 432 B | 372 B |
 | `packages/luxon-ext/dist/constants.d.cts` | 371 B | 189 B | 150 B |
@@ -162,24 +162,24 @@
 | `packages/luxon-ext/dist/index.d.ts` | 1,168 B | 443 B | 374 B |
 | `packages/luxon-ext/dist/index.js` | 501 B | 305 B | 272 B |
 | `packages/luxon-ext/dist/index.js.map` | 2,597 B | 976 B | 855 B |
-| `packages/luxon-ext/dist/rounding/index.cjs` | 922 B | 536 B | 479 B |
-| `packages/luxon-ext/dist/rounding/index.cjs.map` | 3,734 B | 1,403 B | 1,242 B |
+| `packages/luxon-ext/dist/rounding/index.cjs` | 1,160 B | 633 B | 570 B |
+| `packages/luxon-ext/dist/rounding/index.cjs.map` | 5,808 B | 1,858 B | 1,664 B |
 | `packages/luxon-ext/dist/rounding/index.d.cts` | 990 B | 430 B | 352 B |
 | `packages/luxon-ext/dist/rounding/index.d.ts` | 988 B | 429 B | 350 B |
-| `packages/luxon-ext/dist/rounding/index.js` | 842 B | 498 B | 453 B |
-| `packages/luxon-ext/dist/rounding/index.js.map` | 3,623 B | 1,373 B | 1,234 B |
+| `packages/luxon-ext/dist/rounding/index.js` | 1,080 B | 599 B | 547 B |
+| `packages/luxon-ext/dist/rounding/index.js.map` | 5,697 B | 1,832 B | 1,626 B |
 | `packages/luxon-ext/dist/units/index.cjs` | 482 B | 327 B | 278 B |
 | `packages/luxon-ext/dist/units/index.cjs.map` | 1,926 B | 848 B | 742 B |
 | `packages/luxon-ext/dist/units/index.d.cts` | 942 B | 450 B | 371 B |
 | `packages/luxon-ext/dist/units/index.d.ts` | 941 B | 449 B | 369 B |
 | `packages/luxon-ext/dist/units/index.js` | 412 B | 283 B | 246 B |
 | `packages/luxon-ext/dist/units/index.js.map` | 1,924 B | 846 B | 743 B |
-| `packages/mymath/dist/array/index.cjs` | 979 B | 483 B | 421 B |
-| `packages/mymath/dist/array/index.cjs.map` | 6,102 B | 1,497 B | 1,338 B |
+| `packages/mymath/dist/array/index.cjs` | 991 B | 518 B | 459 B |
+| `packages/mymath/dist/array/index.cjs.map` | 6,545 B | 1,659 B | 1,476 B |
 | `packages/mymath/dist/array/index.d.cts` | 3,658 B | 771 B | 659 B |
 | `packages/mymath/dist/array/index.d.ts` | 3,657 B | 769 B | 658 B |
-| `packages/mymath/dist/array/index.js` | 869 B | 436 B | 401 B |
-| `packages/mymath/dist/array/index.js.map` | 6,100 B | 1,495 B | 1,333 B |
+| `packages/mymath/dist/array/index.js` | 881 B | 471 B | 429 B |
+| `packages/mymath/dist/array/index.js.map` | 6,543 B | 1,657 B | 1,478 B |
 | `packages/mymath/dist/chunk-BwIEoMh7.cjs` | 224 B | 180 B | 133 B |
 | `packages/mymath/dist/chunk-WfQuXRBF.js` | 158 B | 154 B | 116 B |
 | `packages/mymath/dist/clamp/index.cjs` | 374 B | 275 B | 229 B |
@@ -204,12 +204,12 @@
 | `packages/mymath/dist/log/index.d.ts` | 936 B | 356 B | 294 B |
 | `packages/mymath/dist/log/index.js` | 145 B | 125 B | 103 B |
 | `packages/mymath/dist/log/index.js.map` | 1,205 B | 468 B | 409 B |
-| `packages/mymath/dist/polar/index.cjs` | 1,690 B | 827 B | 755 B |
-| `packages/mymath/dist/polar/index.cjs.map` | 7,179 B | 2,149 B | 1,957 B |
+| `packages/mymath/dist/polar/index.cjs` | 1,750 B | 867 B | 803 B |
+| `packages/mymath/dist/polar/index.cjs.map` | 8,024 B | 2,387 B | 2,186 B |
 | `packages/mymath/dist/polar/index.d.cts` | 2,423 B | 682 B | 596 B |
 | `packages/mymath/dist/polar/index.d.ts` | 2,422 B | 681 B | 595 B |
-| `packages/mymath/dist/polar/index.js` | 1,519 B | 754 B | 712 B |
-| `packages/mymath/dist/polar/index.js.map` | 7,159 B | 2,143 B | 1,950 B |
+| `packages/mymath/dist/polar/index.js` | 1,579 B | 793 B | 743 B |
+| `packages/mymath/dist/polar/index.js.map` | 8,004 B | 2,379 B | 2,189 B |
 | `packages/mymath/dist/sigmoid/index.cjs` | 150 B | 154 B | 112 B |
 | `packages/mymath/dist/sigmoid/index.cjs.map` | 478 B | 322 B | 269 B |
 | `packages/mymath/dist/sigmoid/index.d.cts` | 361 B | 242 B | 193 B |
@@ -240,12 +240,12 @@
 | `packages/object-version-control/dist/automerge.d.ts` | 791 B | 343 B | 272 B |
 | `packages/object-version-control/dist/automerge.js` | 694 B | 429 B | 388 B |
 | `packages/object-version-control/dist/automerge.js.map` | 4,099 B | 1,419 B | 1,260 B |
-| `packages/object-version-control/dist/core.cjs` | 2,305 B | 841 B | 760 B |
-| `packages/object-version-control/dist/core.cjs.map` | 10,403 B | 2,908 B | 2,592 B |
-| `packages/object-version-control/dist/core.d.cts` | 3,654 B | 1,085 B | 918 B |
-| `packages/object-version-control/dist/core.d.ts` | 3,653 B | 1,083 B | 916 B |
-| `packages/object-version-control/dist/core.js` | 2,220 B | 795 B | 723 B |
-| `packages/object-version-control/dist/core.js.map` | 10,312 B | 2,888 B | 2,547 B |
+| `packages/object-version-control/dist/core.cjs` | 2,436 B | 864 B | 779 B |
+| `packages/object-version-control/dist/core.cjs.map` | 10,683 B | 2,968 B | 2,643 B |
+| `packages/object-version-control/dist/core.d.cts` | 3,724 B | 1,100 B | 933 B |
+| `packages/object-version-control/dist/core.d.ts` | 3,723 B | 1,098 B | 931 B |
+| `packages/object-version-control/dist/core.js` | 2,351 B | 818 B | 745 B |
+| `packages/object-version-control/dist/core.js.map` | 10,592 B | 2,947 B | 2,611 B |
 | `packages/object-version-control/dist/index.cjs` | 213 B | 158 B | 117 B |
 | `packages/object-version-control/dist/index.d.cts` | 144 B | 101 B | 87 B |
 | `packages/object-version-control/dist/index.d.ts` | 142 B | 100 B | 86 B |
@@ -262,12 +262,12 @@
 | `packages/object-version-control/dist/ovc.d.ts` | 5,052 B | 1,348 B | 1,125 B |
 | `packages/object-version-control/dist/ovc.js` | 2,220 B | 723 B | 651 B |
 | `packages/object-version-control/dist/ovc.js.map` | 10,840 B | 2,727 B | 2,365 B |
-| `packages/object-version-control/dist/treeGraph.cjs` | 1,079 B | 535 B | 465 B |
-| `packages/object-version-control/dist/treeGraph.cjs.map` | 6,364 B | 1,926 B | 1,684 B |
+| `packages/object-version-control/dist/treeGraph.cjs` | 1,567 B | 743 B | 669 B |
+| `packages/object-version-control/dist/treeGraph.cjs.map` | 9,727 B | 2,718 B | 2,411 B |
 | `packages/object-version-control/dist/treeGraph.d.cts` | 1,787 B | 657 B | 546 B |
 | `packages/object-version-control/dist/treeGraph.d.ts` | 1,786 B | 655 B | 542 B |
-| `packages/object-version-control/dist/treeGraph.js` | 999 B | 487 B | 445 B |
-| `packages/object-version-control/dist/treeGraph.js.map` | 6,362 B | 1,925 B | 1,697 B |
+| `packages/object-version-control/dist/treeGraph.js` | 1,487 B | 692 B | 641 B |
+| `packages/object-version-control/dist/treeGraph.js.map` | 9,725 B | 2,716 B | 2,411 B |
 | `packages/object-version-control/dist/types.d.cjs` | 0 B | 20 B | 1 B |
 | `packages/object-version-control/dist/types.d.cts` | 11 B | 31 B | 15 B |
 | `packages/object-version-control/dist/types.d.ts` | 11 B | 31 B | 15 B |
@@ -333,9 +333,9 @@
 | `packages/try-automerge/dist/index.d.ts` | 322 B | 218 B | 186 B |
 | `packages/try-automerge/dist/index.js` | 713 B | 339 B | 320 B |
 | `packages/try-automerge/dist/index.js.map` | 2,274 B | 765 B | 693 B |
-| `packages/word-stats/dist/index.cjs` | 625 B | 370 B | 311 B |
-| `packages/word-stats/dist/index.cjs.map` | 4,051 B | 1,209 B | 1,065 B |
+| `packages/word-stats/dist/index.cjs` | 693 B | 409 B | 350 B |
+| `packages/word-stats/dist/index.cjs.map` | 4,435 B | 1,403 B | 1,253 B |
 | `packages/word-stats/dist/index.d.cts` | 2,069 B | 646 B | 545 B |
 | `packages/word-stats/dist/index.d.ts` | 2,068 B | 644 B | 542 B |
-| `packages/word-stats/dist/index.js` | 545 B | 320 B | 280 B |
-| `packages/word-stats/dist/index.js.map` | 4,049 B | 1,207 B | 1,063 B |
+| `packages/word-stats/dist/index.js` | 613 B | 366 B | 318 B |
+| `packages/word-stats/dist/index.js.map` | 4,433 B | 1,401 B | 1,261 B |

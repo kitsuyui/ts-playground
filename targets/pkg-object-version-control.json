@@ -53,49 +53,49 @@
     {
       "path": "packages/object-version-control/dist/core.cjs",
       "sizes": {
-        "raw": 2305,
-        "gzip": 841,
-        "brotli": 760
+        "raw": 2436,
+        "gzip": 864,
+        "brotli": 779
       }
     },
     {
       "path": "packages/object-version-control/dist/core.cjs.map",
       "sizes": {
-        "raw": 10403,
-        "gzip": 2908,
-        "brotli": 2592
+        "raw": 10683,
+        "gzip": 2968,
+        "brotli": 2643
       }
     },
     {
       "path": "packages/object-version-control/dist/core.d.cts",
       "sizes": {
-        "raw": 3654,
-        "gzip": 1085,
-        "brotli": 918
+        "raw": 3724,
+        "gzip": 1100,
+        "brotli": 933
       }
     },
     {
       "path": "packages/object-version-control/dist/core.d.ts",
       "sizes": {
-        "raw": 3653,
-        "gzip": 1083,
-        "brotli": 916
+        "raw": 3723,
+        "gzip": 1098,
+        "brotli": 931
       }
     },
     {
       "path": "packages/object-version-control/dist/core.js",
       "sizes": {
-        "raw": 2220,
-        "gzip": 795,
-        "brotli": 723
+        "raw": 2351,
+        "gzip": 818,
+        "brotli": 745
       }
     },
     {
       "path": "packages/object-version-control/dist/core.js.map",
       "sizes": {
-        "raw": 10312,
-        "gzip": 2888,
-        "brotli": 2547
+        "raw": 10592,
+        "gzip": 2947,
+        "brotli": 2611
       }
     },
     {
@@ -229,17 +229,17 @@
     {
       "path": "packages/object-version-control/dist/treeGraph.cjs",
       "sizes": {
-        "raw": 1079,
-        "gzip": 535,
-        "brotli": 465
+        "raw": 1567,
+        "gzip": 743,
+        "brotli": 669
       }
     },
     {
       "path": "packages/object-version-control/dist/treeGraph.cjs.map",
       "sizes": {
-        "raw": 6364,
-        "gzip": 1926,
-        "brotli": 1684
+        "raw": 9727,
+        "gzip": 2718,
+        "brotli": 2411
       }
     },
     {
@@ -261,17 +261,17 @@
     {
       "path": "packages/object-version-control/dist/treeGraph.js",
       "sizes": {
-        "raw": 999,
-        "gzip": 487,
-        "brotli": 445
+        "raw": 1487,
+        "gzip": 692,
+        "brotli": 641
       }
     },
     {
       "path": "packages/object-version-control/dist/treeGraph.js.map",
       "sizes": {
-        "raw": 6362,
-        "gzip": 1925,
-        "brotli": 1697
+        "raw": 9725,
+        "gzip": 2716,
+        "brotli": 2411
       }
     },
     {
@@ -348,8 +348,8 @@
     }
   ],
   "totals": {
-    "raw": 105720,
-    "gzip": 34632,
-    "brotli": 30004
+    "raw": 114384,
+    "gzip": 36823,
+    "brotli": 32031
   }
 }

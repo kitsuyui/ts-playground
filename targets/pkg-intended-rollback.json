@@ -5,17 +5,17 @@
     {
       "path": "packages/intended-rollback/dist/base.cjs",
       "sizes": {
-        "raw": 630,
-        "gzip": 361,
-        "brotli": 303
+        "raw": 663,
+        "gzip": 385,
+        "brotli": 333
       }
     },
     {
       "path": "packages/intended-rollback/dist/base.cjs.map",
       "sizes": {
-        "raw": 3147,
-        "gzip": 1108,
-        "brotli": 965
+        "raw": 3489,
+        "gzip": 1229,
+        "brotli": 1071
       }
     },
     {
@@ -37,17 +37,17 @@
     {
       "path": "packages/intended-rollback/dist/base.js",
       "sizes": {
-        "raw": 557,
-        "gzip": 325,
-        "brotli": 278
+        "raw": 590,
+        "gzip": 343,
+        "brotli": 302
       }
     },
     {
       "path": "packages/intended-rollback/dist/base.js.map",
       "sizes": {
-        "raw": 3096,
-        "gzip": 1093,
-        "brotli": 944
+        "raw": 3438,
+        "gzip": 1209,
+        "brotli": 1043
       }
     },
     {
@@ -164,8 +164,8 @@
     }
   ],
   "totals": {
-    "raw": 14050,
-    "gzip": 6353,
-    "brotli": 5353
+    "raw": 14800,
+    "gzip": 6632,
+    "brotli": 5612
   }
 }
