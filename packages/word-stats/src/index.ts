@@ -2,6 +2,32 @@ type Word = string
 type Document = Word[]
 type WordScore = { [word: Word]: number }
 
+const countWords = (words: Iterable<Word>): WordScore => {
+  const counts: WordScore = {}
+  for (const word of words) {
+    counts[word] = (counts[word] ?? 0) + 1
+  }
+  return counts
+}
+
+const mergeWordScores = (left: WordScore, right: WordScore): WordScore => {
+  const merged: WordScore = { ...left }
+  for (const word in right) {
+    merged[word] = (merged[word] ?? 0) + right[word]
+  }
+  return merged
+}
+
+const countWordDocumentFrequencies = (documents: Document[]): WordScore =>
+  documents.reduce(
+    (wordDocumentCounts, document) =>
+      mergeWordScores(
+        wordDocumentCounts,
+        countWords(extractUniqueWords(document))
+      ),
+    {}
+  )
+
 /**
  * Count the number of words in the documents
  * @example
@@ -17,16 +43,10 @@ type WordScore = { [word: Word]: number }
  * @returns A dictionary of words and their counts
  */
 export const wordCount = (documents: Document[]): WordScore => {
-  const wordCounts: WordScore = {}
-  for (const document of documents) {
-    for (const word of document) {
-      if (!wordCounts[word]) {
-        wordCounts[word] = 0
-      }
-      wordCounts[word]++
-    }
-  }
-  return wordCounts
+  return documents.reduce(
+    (wordCounts, document) => mergeWordScores(wordCounts, countWords(document)),
+    {}
+  )
 }
 
 /**
@@ -77,22 +97,11 @@ export const computeInverseDocumentFrequency = (
   documents: Document[]
 ): WordScore => {
   const documentCount = documents.length
-  const wordDocumentCounts: WordScore = {}
-  for (const document of documents) {
-    const words = extractUniqueWords(document)
-    for (const word of words) {
-      if (!wordDocumentCounts[word]) {
-        wordDocumentCounts[word] = 0
-      }
-      wordDocumentCounts[word]++
-    }
-  }
-  const wordIDFs: WordScore = {}
-  for (const word in wordDocumentCounts) {
-    const count = wordDocumentCounts[word]
-    wordIDFs[word] = Math.log(documentCount / count)
-  }
-  return wordIDFs
+  return Object.fromEntries(
+    Object.entries(countWordDocumentFrequencies(documents)).map(
+      ([word, count]) => [word, Math.log(documentCount / count)]
+    )
+  )
 }
 
 /**

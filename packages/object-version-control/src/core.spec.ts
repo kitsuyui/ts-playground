@@ -65,4 +65,41 @@ describe('Core', () => {
     commit1.timestamp = 0
     expect(core.getSnapshotDataByCommitHash(commitHash)).toEqual(data)
   })
+
+  it('verifies valid repositories', () => {
+    const core = Core.create()
+    const baseHash = core.commit({ key: 'value' }, [])
+    core.commit({ key: 'next' }, [baseHash])
+
+    expect(core.verifyAll()).toBe(true)
+  })
+
+  it('detects invalid snapshots during repository verification', () => {
+    const core = Core.create()
+    const commitHash = core.commit({ key: 'value' }, [])
+    const commit = core.getCommit(commitHash)
+    const snapshots = (core as unknown as { snapshots: Map<string, unknown> })
+      .snapshots
+
+    snapshots.set(commit.snapshotHash, {
+      hash: commit.snapshotHash,
+      data: { key: 'tampered' },
+    })
+
+    expect(core.verifyAll()).toBe(false)
+  })
+
+  it('detects invalid commits during repository verification', () => {
+    const core = Core.create()
+    const commitHash = core.commit({ key: 'value' }, [])
+    const commits = (core as unknown as { commits: Map<string, unknown> })
+      .commits
+
+    commits.set(commitHash, {
+      ...core.getCommit(commitHash),
+      snapshotHash: 'missing-snapshot',
+    })
+
+    expect(core.verifyAll()).toBe(false)
+  })
 })

@@ -105,6 +105,10 @@ describe('findCommonAncestor2', () => {
 })
 
 describe('findCommonAncestor', () => {
+  it('should return null if no targets are given', () => {
+    expect(findCommonAncestor([], () => [])).toEqual(null)
+  })
+
   it('should find common ancestor even if three targets are given', () => {
     // dummy getParents function
     const getParents = (hash: string) => {

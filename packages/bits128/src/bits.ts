@@ -18,6 +18,13 @@ export const from128bitTo2bitArray = (value: bigint): Uint8Array => {
   return bytes
 }
 
+const to2bitBigInt = (bit: number): bigint => {
+  if (bit > 3) {
+    throw new Error(`Invalid bit value: ${bit}`)
+  }
+  return BigInt(bit)
+}
+
 /**
  * Convert an array of 64 two-bit values back to a 128-bit bigint.
  */
@@ -27,11 +34,7 @@ export const from2bitArrayTo128bit = (array: Uint8Array): bigint => {
   }
   let value = BigInt(0)
   for (let i = 0; i < array.length; i++) {
-    const bit = array[i]
-    if (bit > 3) {
-      throw new Error(`Invalid bit value: ${bit}`)
-    }
-    value |= BigInt(bit) << BigInt(i * 2)
+    value |= to2bitBigInt(array[i]) << BigInt(i * 2)
   }
   return value
 }

@@ -10,10 +10,7 @@ import { sum } from '../array'
  * console.log(normalized); // Output: 3.141592653589793
  */
 export const toUnsignedRad = (rad: number): number => {
-  if (Number.isNaN(rad)) {
-    return Number.NaN
-  }
-  if (rad === Number.POSITIVE_INFINITY || rad === Number.NEGATIVE_INFINITY) {
+  if (!Number.isFinite(rad)) {
     return Number.NaN
   }
   let normalized = rad
@@ -107,21 +104,79 @@ export const opposite = (rad: number): number => {
   return rotate(rad, Math.PI)
 }
 
-const assignLabels = (rads: number[], centers: number[]): number[] => {
-  const labels = new Array(rads.length).fill(-1)
-  for (let i = 0; i < rads.length; i++) {
-    let minDistance = Math.PI * 2
-    let minIndex = -1
-    for (let j = 0; j < centers.length; j++) {
-      const circularDistance = distance(rads[i], centers[j])
-      if (circularDistance < minDistance) {
-        minDistance = circularDistance
-        minIndex = j
-      }
+const findClosestCenterIndex = (rad: number, centers: number[]): number => {
+  let minDistance = Math.PI * 2
+  let minIndex = -1
+  for (let j = 0; j < centers.length; j++) {
+    const circularDistance = distance(rad, centers[j])
+    if (circularDistance < minDistance) {
+      minDistance = circularDistance
+      minIndex = j
     }
-    labels[i] = minIndex
   }
-  return labels
+  return minIndex
+}
+
+const assignLabels = (rads: number[], centers: number[]): number[] => {
+  return rads.map((rad) => findClosestCenterIndex(rad, centers))
+}
+
+const computeNextCenters = (
+  rads: number[],
+  labels: number[],
+  k: number
+): number[] => {
+  return new Array(k).fill(0).map((_, j) => {
+    const clusterItems = rads.filter((_, i) => labels[i] === j)
+    if (clusterItems.length === 0) {
+      return rads[j % rads.length]
+    }
+    return averageUnsigned(clusterItems)
+  })
+}
+
+const sortCentersAndRelabel = (
+  centers: number[],
+  labels: number[]
+): [number[], number[]] => {
+  const sorted = centers
+    .map((center, oldIndex) => ({ center, oldIndex }))
+    .sort((a, b) => a.center - b.center)
+  const remap = new Map<number, number>()
+  sorted.forEach((item, newIndex) => {
+    remap.set(item.oldIndex, newIndex)
+  })
+  return [
+    sorted.map((item) => item.center),
+    labels.map((label) => remap.get(label) ?? label),
+  ]
+}
+
+const iterateKMeans = (
+  rads: number[],
+  centers: number[],
+  labels: number[],
+  k: number,
+  maxIterations: number
+): [number[], number[]] => {
+  let currentCenters = centers
+  let currentLabels = labels
+  let iterations = 0
+  while (iterations < maxIterations) {
+    iterations++
+    currentLabels = assignLabels(rads, currentCenters)
+    const prevCenters = [...currentCenters]
+    ;[currentCenters, currentLabels] = sortCentersAndRelabel(
+      computeNextCenters(rads, currentLabels, k),
+      currentLabels
+    )
+    if (
+      currentCenters.every((center, index) => center === prevCenters[index])
+    ) {
+      return [currentCenters, currentLabels]
+    }
+  }
+  return [currentCenters, currentLabels]
 }
 
 /**
@@ -141,32 +196,7 @@ export const kMeans = (
   }
   let centers = new Array(k).fill(0).map((_, i) => (i * 2 * Math.PI) / k)
   let labels = new Array(rads.length).fill(-1)
-  let iterations = 0
-
-  while (iterations < maxIterations) {
-    iterations++
-    labels = assignLabels(rads, centers)
-    const prevCenters = [...centers]
-    const nextCenters = new Array(k).fill(0).map((_, j) => {
-      const clusterItems = rads.filter((_, i) => labels[i] === j)
-      if (clusterItems.length === 0) {
-        return rads[j % rads.length]
-      }
-      return averageUnsigned(clusterItems)
-    })
-    const sorted = nextCenters
-      .map((center, oldIndex) => ({ center, oldIndex }))
-      .sort((a, b) => a.center - b.center)
-    const remap = new Map<number, number>()
-    sorted.forEach((item, newIndex) => {
-      remap.set(item.oldIndex, newIndex)
-    })
-    centers = sorted.map((item) => item.center)
-    labels = labels.map((label) => remap.get(label) ?? label)
-    if (centers.every((center, index) => center === prevCenters[index])) {
-      break
-    }
-  }
+  ;[centers, labels] = iterateKMeans(rads, centers, labels, k, maxIterations)
 
   labels = assignLabels(rads, centers)
   return [centers, labels]

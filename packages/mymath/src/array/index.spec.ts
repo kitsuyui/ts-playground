@@ -124,4 +124,10 @@ describe('generalizedMean', () => {
       geometricMean(values)
     )
   })
+
+  it('should throw for empty arrays when p is less than 1 and not a special case', () => {
+    expect(() => generalizedMean([], 0.5)).toThrowError(
+      'Cannot calculate generalized mean of empty set'
+    )
+  })
 })

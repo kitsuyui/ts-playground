@@ -11,29 +11,118 @@ export const findCommonAncestor2 = <HashLike>(
   hashA: HashLike,
   hashB: HashLike,
   getParents: (hash: HashLike) => HashLike[]
+): HashLike | null =>
+  findCommonAncestorFromStates(
+    createAncestorSearchState(hashA),
+    createAncestorSearchState(hashB),
+    getParents
+  )
+
+type AncestorSearchState<HashLike> = {
+  queue: HashLike[]
+  index: number
+  visited: Set<HashLike>
+}
+
+const createAncestorSearchState = <HashLike>(
+  hash: HashLike
+): AncestorSearchState<HashLike> => ({
+  queue: [hash],
+  index: 0,
+  visited: new Set<HashLike>(),
+})
+
+const hasQueuedNodes = <HashLike>(
+  state: AncestorSearchState<HashLike>
+): boolean => state.index < state.queue.length
+
+const advanceAncestorSearchState = <HashLike>(
+  state: AncestorSearchState<HashLike>,
+  otherVisited: ReadonlySet<HashLike>,
+  getParents: (hash: HashLike) => HashLike[]
+): {
+  state: AncestorSearchState<HashLike>
+  common: HashLike | null
+} => {
+  if (!hasQueuedNodes(state)) {
+    return { state, common: null }
+  }
+
+  // biome-ignore lint/style/noNonNullAssertion: guarded by hasQueuedNodes(state)
+  const current = state.queue[state.index]!
+  if (otherVisited.has(current)) {
+    return {
+      state: { ...state, index: state.index + 1 },
+      common: current,
+    }
+  }
+
+  return {
+    state: {
+      queue: [...state.queue, ...getParents(current)],
+      index: state.index + 1,
+      visited: new Set(state.visited).add(current),
+    },
+    common: null,
+  }
+}
+
+const advanceAncestorSearchPair = <HashLike>(
+  stateA: AncestorSearchState<HashLike>,
+  stateB: AncestorSearchState<HashLike>,
+  getParents: (hash: HashLike) => HashLike[]
+): {
+  stateA: AncestorSearchState<HashLike>
+  stateB: AncestorSearchState<HashLike>
+  common: HashLike | null
+} => {
+  const advancedA = advanceAncestorSearchState(
+    stateA,
+    stateB.visited,
+    getParents
+  )
+  if (advancedA.common !== null) {
+    return {
+      stateA: advancedA.state,
+      stateB,
+      common: advancedA.common,
+    }
+  }
+
+  const advancedB = advanceAncestorSearchState(
+    stateB,
+    advancedA.state.visited,
+    getParents
+  )
+  return {
+    stateA: advancedA.state,
+    stateB: advancedB.state,
+    common: advancedB.common,
+  }
+}
+
+const hasQueuedSearchStates = <HashLike>(
+  stateA: AncestorSearchState<HashLike>,
+  stateB: AncestorSearchState<HashLike>
+): boolean => hasQueuedNodes(stateA) || hasQueuedNodes(stateB)
+
+const findCommonAncestorFromStates = <HashLike>(
+  stateA: AncestorSearchState<HashLike>,
+  stateB: AncestorSearchState<HashLike>,
+  getParents: (hash: HashLike) => HashLike[]
 ): HashLike | null => {
-  const visitedA = new Set<HashLike>()
-  const visitedB = new Set<HashLike>()
+  let currentStateA = stateA
+  let currentStateB = stateB
 
-  const queueA: HashLike[] = [hashA]
-  const queueB: HashLike[] = [hashB]
-
-  while (queueA.length > 0 || queueB.length > 0) {
-    if (queueA.length > 0) {
-      // biome-ignore lint/style/noNonNullAssertion: already checked by queueA.length > 0
-      const currentA = queueA.shift()!
-      if (visitedB.has(currentA)) return currentA
-      visitedA.add(currentA)
-      queueA.push(...getParents(currentA))
-    }
-
-    if (queueB.length > 0) {
-      // biome-ignore lint/style/noNonNullAssertion: already checked by queueB.length > 0
-      const currentB = queueB.shift()!
-      if (visitedA.has(currentB)) return currentB
-      visitedB.add(currentB)
-      queueB.push(...getParents(currentB))
-    }
+  while (hasQueuedSearchStates(currentStateA, currentStateB)) {
+    const advanced = advanceAncestorSearchPair(
+      currentStateA,
+      currentStateB,
+      getParents
+    )
+    if (advanced.common !== null) return advanced.common
+    currentStateA = advanced.stateA
+    currentStateB = advanced.stateB
   }
   return null
 }
@@ -120,16 +209,8 @@ export const calculateMergeTarget = <HashLike>(
     commonAncestor,
     getParents
   )
-
-  const descendants = new Set<HashLike>()
-  // The target is a descendant if it is visited only once
-  for (const target of targets) {
-    if (visitedCounter.get(target) === 1) {
-      descendants.add(target)
-    }
-  }
-
-  return { commonAncestor, descendants: Array.from(descendants) }
+  const descendants = collectDescendants(targets, visitedCounter)
+  return { commonAncestor, descendants }
 }
 
 /**
@@ -144,13 +225,42 @@ const countAncestorVisits = <HashLike>(
   targets: HashLike[],
   commonAncestor: HashLike,
   getParents: (hash: HashLike) => HashLike[]
+): Map<HashLike, number> =>
+  targets.reduce(
+    (visitedCounter, target) =>
+      mergeAncestorVisitCounts(
+        visitedCounter,
+        countAncestors(findAncestorsWithin(target, commonAncestor, getParents))
+      ),
+    new Map<HashLike, number>()
+  )
+
+const countAncestors = <HashLike>(
+  ancestors: HashLike[]
 ): Map<HashLike, number> => {
-  const visitedCounter = new Map<HashLike, number>()
-  for (const target of targets) {
-    const ancestors = findAncestorsWithin(target, commonAncestor, getParents)
-    for (const ancestor of ancestors) {
-      visitedCounter.set(ancestor, (visitedCounter.get(ancestor) ?? 0) + 1)
-    }
+  const counts = new Map<HashLike, number>()
+  for (const ancestor of ancestors) {
+    counts.set(ancestor, (counts.get(ancestor) ?? 0) + 1)
   }
-  return visitedCounter
+  return counts
+}
+
+const mergeAncestorVisitCounts = <HashLike>(
+  left: Map<HashLike, number>,
+  right: Map<HashLike, number>
+): Map<HashLike, number> => {
+  const merged = new Map(left)
+  for (const [ancestor, count] of right) {
+    merged.set(ancestor, (merged.get(ancestor) ?? 0) + count)
+  }
+  return merged
+}
+
+const collectDescendants = <HashLike>(
+  targets: HashLike[],
+  visitedCounter: Map<HashLike, number>
+): HashLike[] => {
+  return Array.from(
+    new Set(targets.filter((target) => visitedCounter.get(target) === 1))
+  )
 }
