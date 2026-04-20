@@ -130,5 +130,12 @@ describe('roundDuration', () => {
         roundingMethod: 'floor',
       }).toObject()
     ).toEqual({ seconds: 0 })
+    expect(
+      roundDuration(Duration.fromObject({ years: 1, months: 7 }), {
+        numOfUnits: 1,
+        minUnit: 'months',
+        roundingMethod: 'floor',
+      }).toObject()
+    ).toEqual({ years: 1 })
   })
 })

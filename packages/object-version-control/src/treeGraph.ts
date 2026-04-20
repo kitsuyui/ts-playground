@@ -48,10 +48,8 @@ const advanceAncestorSearchState = <HashLike>(
     return { state, common: null }
   }
 
-  const current = state.queue[state.index]
-  if (current === undefined) {
-    return { state, common: null }
-  }
+  // biome-ignore lint/style/noNonNullAssertion: guarded by hasQueuedNodes(state)
+  const current = state.queue[state.index]!
   if (otherVisited.has(current)) {
     return {
       state: { ...state, index: state.index + 1 },
