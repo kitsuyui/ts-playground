@@ -2005,17 +2005,17 @@
     {
       "path": "packages/object-version-control/dist/ovc.cjs",
       "sizes": {
-        "raw": 2287,
-        "gzip": 765,
-        "brotli": 672
+        "raw": 2364,
+        "gzip": 780,
+        "brotli": 680
       }
     },
     {
       "path": "packages/object-version-control/dist/ovc.cjs.map",
       "sizes": {
-        "raw": 10854,
-        "gzip": 2732,
-        "brotli": 2381
+        "raw": 11059,
+        "gzip": 2767,
+        "brotli": 2400
       }
     },
     {
@@ -2037,17 +2037,17 @@
     {
       "path": "packages/object-version-control/dist/ovc.js",
       "sizes": {
-        "raw": 2220,
-        "gzip": 723,
-        "brotli": 651
+        "raw": 2297,
+        "gzip": 737,
+        "brotli": 682
       }
     },
     {
       "path": "packages/object-version-control/dist/ovc.js.map",
       "sizes": {
-        "raw": 10840,
-        "gzip": 2727,
-        "brotli": 2365
+        "raw": 11045,
+        "gzip": 2763,
+        "brotli": 2407
       }
     },
     {
@@ -2668,8 +2668,8 @@
     }
   ],
   "totals": {
-    "raw": 448883,
-    "gzip": 169846,
-    "brotli": 145766
+    "raw": 449447,
+    "gzip": 169946,
+    "brotli": 145866
   }
 }
