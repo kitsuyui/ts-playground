@@ -244,6 +244,7 @@ export class ObjectVersionControl<T> {
     syncItems: SyncItems<T>
   ): SyncHead {
     remoteOvc.base.sync(syncItems)
+    if (this.head !== null) remoteOvc.checkout(this.head)
     return {
       local: this.head,
       remote: remoteOvc.head,
@@ -274,6 +275,7 @@ export class ObjectVersionControl<T> {
     syncItems: SyncItems<T>
   ): SyncHead {
     this.base.sync(syncItems)
+    if (remoteOvc.head !== null) this.checkout(remoteOvc.head)
     return {
       local: this.head,
       remote: remoteOvc.head,

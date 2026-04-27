@@ -119,10 +119,16 @@ describe('ObjectVersionControl', () => {
     ovc1.commit({ key: 'value' })
     const [ovc2, syncState] = ovc1.fullClone()
     const commitHash2 = ovc1.commit({ key: 'value', newKey: 'newValue' })
-    ovc1.push(ovc2, syncState)
+    const nextSyncState = ovc1.push(ovc2, syncState)
     const ovc2Commit2 = ovc2.getCommit(commitHash2)
     const ovc1Commit2 = ovc1.getCommit(commitHash2)
     expect(ovc2Commit2).toEqual(ovc1Commit2)
+    expect(ovc2.getHead()).toEqual(ovc1Commit2)
+    expect(ovc2.getCurrentData()).toEqual({ key: 'value', newKey: 'newValue' })
+    expect(nextSyncState).toEqual({
+      local: commitHash2,
+      remote: commitHash2,
+    })
   })
 
   it('should pull some commits from another OVC', () => {
@@ -130,10 +136,16 @@ describe('ObjectVersionControl', () => {
     ovc1.commit({ key: 'value' })
     const [ovc2, syncState] = ovc1.fullClone()
     const commitHash2 = ovc1.commit({ key: 'value', newKey: 'newValue' })
-    ovc2.pull(ovc1, syncState)
+    const nextSyncState = ovc2.pull(ovc1, syncState)
     const ovc2Commit2 = ovc2.getCommit(commitHash2)
     const ovc1Commit2 = ovc1.getCommit(commitHash2)
     expect(ovc2Commit2).toEqual(ovc1Commit2)
+    expect(ovc2.getHead()).toEqual(ovc1Commit2)
+    expect(ovc2.getCurrentData()).toEqual({ key: 'value', newKey: 'newValue' })
+    expect(nextSyncState).toEqual({
+      local: commitHash2,
+      remote: commitHash2,
+    })
   })
 
   it('should throw an error when checking out a non-existent commit', () => {
