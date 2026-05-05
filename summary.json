@@ -1,12 +1,15 @@
 {
-  "generated_at": "2026-05-05T02:16:40.161Z",
+  "generated_at": "2026-05-05T13:12:11.185Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-counter-assets",
   "event_name": "push",
-  "base_reference": "8da56e2093cc55c7add1e3a7c53b19f96f1d5104",
-  "head_reference": "2a70cca60f9288bcc63bdc8842313341f5b8f2eb",
+  "base_label": "main",
+  "base_reference": "2a70cca60f9288bcc63bdc8842313341f5b8f2eb",
+  "head_label": "main",
+  "head_reference": "9bcd788f5607333e3d15e90e9128db95ad1cd80c",
   "bootstrap_message": null,
+  "base_only_paths": [],
   "counters": [
     {
       "id": "maintenance-comments",
@@ -14,8 +17,26 @@
       "current": 2,
       "base": 2,
       "delta": 0,
+      "dashboard_current": 2,
+      "dashboard_base": 2,
+      "dashboard_delta": 0,
       "commentable": true,
       "touched_files": [],
+      "file_deltas": [
+        {
+          "path": "packages/mymath/src/intervalMapper/index.ts",
+          "current": 1,
+          "base": 0,
+          "delta": 1
+        },
+        {
+          "path": "packages/symbolic-prototype/src/number-array/index.ts",
+          "current": 1,
+          "base": 0,
+          "delta": 1
+        }
+      ],
+      "patch_file_deltas": [],
       "violations": [],
       "badge_path": ".gh-counter/badges/maintenance-comments.svg",
       "counter_path": ".gh-counter/counters/maintenance-comments.json"
