@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-27T12:41:21.497Z",
+  "generated_at": "2026-05-05T01:41:16.559Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "337fa41009b21101f140b3514101e1712d695149",
+  "base_reference": "2732ad82ff8b4657b24e37419930de5933bf60b8",
   "head_label": "main",
-  "head_reference": "2732ad82ff8b4657b24e37419930de5933bf60b8",
+  "head_reference": "8da56e2093cc55c7add1e3a7c53b19f96f1d5104",
   "targets": [
     {
       "id": "total",
@@ -353,18 +353,18 @@
       "sizes": {
         "raw": {
           "current": 449447,
-          "base": 448883,
-          "delta": 564
+          "base": 449447,
+          "delta": 0
         },
         "gzip": {
           "current": 169946,
-          "base": 169846,
-          "delta": 100
+          "base": 169946,
+          "delta": 0
         },
         "brotli": {
           "current": 145866,
-          "base": 145766,
-          "delta": 100
+          "base": 145866,
+          "delta": 0
         }
       },
       "violations": [],
@@ -943,18 +943,18 @@
       "sizes": {
         "raw": {
           "current": 114948,
-          "base": 114384,
-          "delta": 564
+          "base": 114948,
+          "delta": 0
         },
         "gzip": {
           "current": 36923,
-          "base": 36823,
-          "delta": 100
+          "base": 36923,
+          "delta": 0
         },
         "brotli": {
           "current": 32131,
-          "base": 32031,
-          "delta": 100
+          "base": 32131,
+          "delta": 0
         }
       },
       "violations": [],
