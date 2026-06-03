@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' || github.event_name == 'push' }}
+
 env:
   # Temporary workaround for JavaScript actions that still default to Node 20 on runners.
   # Remove this once the affected actions have migrated, otherwise this may become a future warning source itself.
