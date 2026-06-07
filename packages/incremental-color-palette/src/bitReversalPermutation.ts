@@ -13,8 +13,8 @@ export const bitReversalIndex = (
   let reversedIndex = 0
 
   for (let i = 0; i < bits; i++) {
-    if (index & (1 << i)) {
-      reversedIndex |= 1 << (bits - 1 - i)
+    if (Math.floor(index / 2 ** i) % 2 !== 0) {
+      reversedIndex += 2 ** (bits - 1 - i)
     }
   }
 
