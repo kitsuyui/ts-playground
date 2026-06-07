@@ -76,16 +76,15 @@ export class Core<T> {
    */
   createCommit(parents: HashValue[], data: T): HashValue {
     const snapshotHash = this.createSnapshot(data)
-    const timestamp = Date.now()
     const commitInfo: CommitInfo = {
       parents,
       snapshotHash,
-      timestamp,
     }
     const commitHash = this.computeHash(commitInfo)
     const commit: Commit = {
       ...commitInfo,
       hash: commitHash,
+      timestamp: Date.now(),
     }
     this.commits.set(commitHash, commit)
     return commitHash
@@ -261,13 +260,12 @@ export class Core<T> {
 
   // Verify the integrity of a commit
   private verifyCommit(commit: Commit): boolean {
-    const { parents, snapshotHash, timestamp } = commit
+    const { parents, snapshotHash } = commit
 
     // Verify the integrity of the commit hash
     const computedHash = this.computeHash({
       parents,
       snapshotHash,
-      timestamp,
     })
     const isValidHash = computedHash === commit.hash
     if (!isValidHash) return false
