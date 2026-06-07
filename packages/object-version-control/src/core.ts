@@ -216,16 +216,22 @@ export class Core<T> {
 
   // Store a snapshot when it is verified
   storeSnapshot(snapshot: Snapshot<T>): void {
-    if (this.verifySnapshot(snapshot)) {
-      this.snapshots.set(snapshot.hash, snapshot)
+    if (!this.verifySnapshot(snapshot)) {
+      throw new Error(
+        `Snapshot verification failed: hash mismatch for ${snapshot.hash}`
+      )
     }
+    this.snapshots.set(snapshot.hash, snapshot)
   }
 
   // Store a commit when it is verified
   storeCommit(commit: Commit): void {
-    if (this.verifyCommit(commit)) {
-      this.commits.set(commit.hash, commit)
+    if (!this.verifyCommit(commit)) {
+      throw new Error(
+        `Commit verification failed: hash mismatch or missing snapshot for ${commit.hash}`
+      )
     }
+    this.commits.set(commit.hash, commit)
   }
 
   /**

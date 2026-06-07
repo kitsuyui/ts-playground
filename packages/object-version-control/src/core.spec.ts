@@ -102,4 +102,40 @@ describe('Core', () => {
 
     expect(core.verifyAll()).toBe(false)
   })
+
+  it('throws when storing a snapshot with a tampered hash', () => {
+    const core = Core.create()
+    const tamperedSnapshot = {
+      hash: 'fake-hash',
+      data: { key: 'value' },
+    }
+    expect(() => core.storeSnapshot(tamperedSnapshot)).toThrow(
+      'Snapshot verification failed'
+    )
+  })
+
+  it('throws when storing a commit with a tampered hash', () => {
+    const core = Core.create()
+    const tamperedCommit = {
+      hash: 'fake-hash',
+      parents: [],
+      snapshotHash: 'fake-snapshot',
+      timestamp: Date.now(),
+    }
+    expect(() => core.storeCommit(tamperedCommit)).toThrow(
+      'Commit verification failed'
+    )
+  })
+
+  it('throws during sync when a tampered snapshot is received', () => {
+    const core1 = Core.create()
+    const core2 = Core.create()
+    core1.commit({ key: 'value' }, [])
+    const items = core1.getFullSyncItems()
+
+    // tamper the snapshot before syncing
+    items.snapshots[0] = { ...items.snapshots[0], hash: 'tampered-hash' }
+
+    expect(() => core2.sync(items)).toThrow('Snapshot verification failed')
+  })
 })
