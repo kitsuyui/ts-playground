@@ -1,4 +1,5 @@
 import type { ObjectVersionControl } from './ovc'
+import type { HashValue } from './types'
 
 /**
  * Merge the targets with the Last-Writer-Wins strategy

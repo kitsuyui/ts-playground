@@ -1,4 +1,11 @@
 import { Core } from './core'
+import type { Commit, HashValue, Snapshot, SyncHead, SyncItems } from './types'
+
+type MergeResolver<T> = (
+  ovc: ObjectVersionControl<T>,
+  targets: HashValue[],
+  base: HashValue | null
+) => T
 
 type CloneResult<T> = [ObjectVersionControl<T>, SyncHead]
 
