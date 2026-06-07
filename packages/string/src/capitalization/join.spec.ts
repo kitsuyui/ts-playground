@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import type { Case } from '../cases'
+import type { Case } from './cases'
 import {
   intoAllCaps,
   intoDotSeparated,
@@ -12,7 +12,7 @@ import {
   intoSpaceSeparated,
   intoTrainCase,
   joinWords,
-} from './index'
+} from './join'
 
 describe('joinWords', () => {
   it('should join words into the specified case', () => {
