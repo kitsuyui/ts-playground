@@ -28,7 +28,7 @@ export const clamp = (value: number, range: [number, number]): number => {
  * @returns The clamped value between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER
  */
 export const clampMinAndMax = (value: number): number => {
-  return clamp(value, [Number.MIN_VALUE, Number.MAX_VALUE])
+  return clamp(value, [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER])
 }
 
 /**

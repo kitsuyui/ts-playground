@@ -17,12 +17,21 @@ describe('clamp', () => {
 })
 
 describe('clampMinAndMax', () => {
-  it('should clamp value to Number.MIN_VALUE and Number.MAX_VALUE', () => {
+  it('should clamp value to Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER', () => {
     expect(clampMinAndMax(1e-10)).toBe(1e-10)
-    expect(clampMinAndMax(Number.MAX_VALUE + 1)).toBe(Number.MAX_VALUE)
-    expect(clampMinAndMax(Number.MIN_VALUE - 1)).toBe(Number.MIN_VALUE)
-    expect(clampMinAndMax(Number.POSITIVE_INFINITY)).toBe(Number.MAX_VALUE)
-    expect(clampMinAndMax(Number.NEGATIVE_INFINITY)).toBe(Number.MIN_VALUE)
+    expect(clampMinAndMax(-100)).toBe(-100)
+    expect(clampMinAndMax(Number.MAX_SAFE_INTEGER + 1)).toBe(
+      Number.MAX_SAFE_INTEGER
+    )
+    expect(clampMinAndMax(Number.MIN_SAFE_INTEGER - 1)).toBe(
+      Number.MIN_SAFE_INTEGER
+    )
+    expect(clampMinAndMax(Number.POSITIVE_INFINITY)).toBe(
+      Number.MAX_SAFE_INTEGER
+    )
+    expect(clampMinAndMax(Number.NEGATIVE_INFINITY)).toBe(
+      Number.MIN_SAFE_INTEGER
+    )
   })
 })
 
