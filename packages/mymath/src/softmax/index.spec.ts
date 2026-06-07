@@ -24,6 +24,26 @@ describe('softmaxWithTemperature', () => {
     const temperature = 1
     expect(softmaxWithTemperature(weights, temperature)).toEqual([])
   })
+
+  it('should throw RangeError for temperature=0', () => {
+    expect(() => softmaxWithTemperature([1, 2, 3], 0)).toThrow(RangeError)
+  })
+
+  it('should throw RangeError for negative temperature', () => {
+    expect(() => softmaxWithTemperature([1, 2, 3], -1)).toThrow(RangeError)
+  })
+
+  it('should throw RangeError for temperature=NaN', () => {
+    expect(() => softmaxWithTemperature([1, 2, 3], Number.NaN)).toThrow(
+      RangeError
+    )
+  })
+
+  it('should throw RangeError for temperature=Infinity', () => {
+    expect(() =>
+      softmaxWithTemperature([1, 2, 3], Number.POSITIVE_INFINITY)
+    ).toThrow(RangeError)
+  })
 })
 
 describe('softmax', () => {
