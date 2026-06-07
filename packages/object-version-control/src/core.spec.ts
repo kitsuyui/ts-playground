@@ -102,4 +102,14 @@ describe('Core', () => {
 
     expect(core.verifyAll()).toBe(false)
   })
+
+  it('deduplicates snapshots for logically equal objects with different key orders', () => {
+    const core = Core.create<Record<string, number>>()
+    const h1 = core.commit({ a: 1, b: 2 }, [])
+    const h2 = core.commit({ b: 2, a: 1 }, [h1])
+
+    const c1 = core.getCommit(h1)
+    const c2 = core.getCommit(h2)
+    expect(c1.snapshotHash).toBe(c2.snapshotHash)
+  })
 })

@@ -1,5 +1,5 @@
 import { findAncestorsWithin } from './treeGraph'
-import { deepCopy, generateHash } from './utils'
+import { canonicalStringify, deepCopy, generateHash } from './utils'
 
 /**
  * Core class
@@ -35,7 +35,7 @@ export class Core<T> {
 
   // Generate a hash for any given input
   private computeHash(input: unknown): string {
-    return this.hasher(JSON.stringify(input))
+    return this.hasher(canonicalStringify(input))
   }
 
   hasCommit(hash: HashValue): boolean {
