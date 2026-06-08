@@ -1,4 +1,4 @@
-import { IntendedRollback, Unreachable } from './errors'
+import { IntendedRollback } from './errors'
 import type {
   Result,
   TranInnerFn,
@@ -35,20 +35,15 @@ const createSuccessResult = <TContent>(
 })
 
 const createIntendedRollbackResult = <TContent>(
-  content: TContent | null
-): Result<TContent> => {
-  if (content === null) {
-    throw new Unreachable('Intended rollback without content.')
-  }
-  return {
-    success: true,
-    content,
-    rollback: {
-      occurred: true,
-      intended: true,
-    },
-  }
-}
+  content: TContent
+): Result<TContent> => ({
+  success: true,
+  content,
+  rollback: {
+    occurred: true,
+    intended: true,
+  },
+})
 
 const createFailureResult = <TContent>(error: unknown): Result<TContent> => ({
   success: false,
@@ -90,11 +85,10 @@ const wrapFuncWithErrorCapture =
 
 const resolveFromCatch = <TContent>(
   e: unknown,
-  content: TContent | null,
   funcErrors: Array<{ error: unknown }>
 ): Result<TContent> => {
   if (e instanceof IntendedRollback)
-    return createIntendedRollbackResult(content)
+    return createIntendedRollbackResult(e.content as TContent)
   if (funcErrors.length > 0 && e !== funcErrors[0].error) {
     return createDoubleFailureResult(funcErrors[0].error, e)
   }
@@ -115,19 +109,18 @@ const handleRollback = async <TClient, TClientTran, TContent>(
   func: TranInnerFn<TClientTran, TContent>,
   rollback: boolean
 ): Promise<Result<TContent>> => {
-  let content: TContent | null = null
   const funcErrors: Array<{ error: unknown }> = []
   const wrappedFunc = wrapFuncWithErrorCapture(func, funcErrors)
   try {
-    content = await outer(client, async (something) => {
+    const content = await outer(client, async (something) => {
       const content_ = await wrappedFunc(something)
-      // keep the content prepared for intended rollback
-      content = content_
-      if (rollback) throw new IntendedRollback()
+      if (rollback) {
+        throw new IntendedRollback(content_)
+      }
       return content_
     })
     return createSuccessResult(content)
   } catch (e) {
-    return resolveFromCatch(e, content, funcErrors)
+    return resolveFromCatch(e, funcErrors)
   }
 }
