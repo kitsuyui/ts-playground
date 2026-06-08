@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `5ff05e94c4de36e8304be28cfddbd289bf3351b1`
-- Generated at: 2026-06-03T12:53:03.042Z
+- Head: `6b2f6611771b2b479f256a584f68c4c5627d6fa8`
+- Generated at: 2026-06-08T10:45:56.535Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -271,12 +271,12 @@
 | `packages/object-version-control/dist/types.d.cjs` | 0 B | 20 B | 1 B |
 | `packages/object-version-control/dist/types.d.cts` | 11 B | 31 B | 15 B |
 | `packages/object-version-control/dist/types.d.ts` | 11 B | 31 B | 15 B |
-| `packages/object-version-control/dist/utils.cjs` | 260 B | 222 B | 203 B |
-| `packages/object-version-control/dist/utils.cjs.map` | 691 B | 428 B | 351 B |
-| `packages/object-version-control/dist/utils.d.cts` | 476 B | 299 B | 238 B |
-| `packages/object-version-control/dist/utils.d.ts` | 475 B | 298 B | 238 B |
-| `packages/object-version-control/dist/utils.js` | 160 B | 159 B | 125 B |
-| `packages/object-version-control/dist/utils.js.map` | 680 B | 421 B | 343 B |
+| `packages/object-version-control/dist/utils.cjs` | 249 B | 214 B | 202 B |
+| `packages/object-version-control/dist/utils.cjs.map` | 789 B | 488 B | 412 B |
+| `packages/object-version-control/dist/utils.d.cts` | 601 B | 377 B | 303 B |
+| `packages/object-version-control/dist/utils.d.ts` | 600 B | 375 B | 302 B |
+| `packages/object-version-control/dist/utils.js` | 149 B | 151 B | 131 B |
+| `packages/object-version-control/dist/utils.js.map` | 778 B | 480 B | 392 B |
 | `packages/string/dist/capitalization/cases/index.cjs` | 385 B | 273 B | 231 B |
 | `packages/string/dist/capitalization/cases/index.cjs.map` | 1,100 B | 539 B | 465 B |
 | `packages/string/dist/capitalization/cases/index.d.cts` | 751 B | 406 B | 346 B |
