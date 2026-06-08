@@ -7,6 +7,16 @@ interface ResultFailure {
   }
 }
 
+interface ResultDoubleFailure {
+  success: false
+  error: unknown
+  rollbackError: unknown
+  rollback: {
+    occurred: false
+    intended: false
+  }
+}
+
 interface ResultSuccess<T> {
   success: true
   content: T
@@ -27,6 +37,7 @@ interface ResultSuccessAndIntendedRollback<T> {
 
 export type Result<T> =
   | ResultFailure
+  | ResultDoubleFailure
   | ResultSuccess<T>
   | ResultSuccessAndIntendedRollback<T>
 
