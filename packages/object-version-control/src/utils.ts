@@ -11,10 +11,12 @@ export const generateHash = (text: string): string => {
 /**
  * Deep copy an object
  * @remarks
- * This function is not suitable for copying objects with functions, symbols, or circular references.
+ * This function is not suitable for copying objects with function values or symbol-keyed properties
+ * (throws DataCloneError). Handles `Date`, `Map`, `Set`, `BigInt`, circular references, and
+ * `undefined` values correctly.
  * @param obj
  * @returns copied object
  */
 export const deepCopy = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj))
+  return structuredClone(obj)
 }
