@@ -193,5 +193,7 @@ export const intoLowerCamelCase = (words: string[]): string => {
  * ```
  */
 const capitalize = (word: string): string => {
-  return word.charAt(0).toUpperCase() + word.slice(1)
+  const codePoints = [...word]
+  if (codePoints.length === 0) return word
+  return codePoints[0].toUpperCase() + codePoints.slice(1).join('')
 }
