@@ -92,7 +92,7 @@ export const geometricMean = (values: number[]): number => {
 
 /**
  * Harmonic mean of all values in the array
- * If the array is empty, it throws an error
+ * If the array is empty, it returns NaN (harmonic mean of an empty set is undefined)
  *
  * @example
  * ```ts
@@ -104,7 +104,7 @@ export const geometricMean = (values: number[]): number => {
  */
 export const harmonicMean = (values: number[]): number => {
   const n = values.length
-  if (n === 0) throw new Error('Cannot calculate harmonic mean of empty set')
+  if (n === 0) return Number.NaN
   return n / sum(values.map((value) => 1 / value))
 }
 
