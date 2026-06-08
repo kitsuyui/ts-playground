@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-08T10:45:56.535Z",
+  "generated_at": "2026-06-08T13:51:28.576Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
-  "head_reference": "6b2f6611771b2b479f256a584f68c4c5627d6fa8",
+  "head_reference": "2c09c731135f909b0197a8d894a97b67521e5019",
   "files": [
     {
       "path": "packages/bits128/dist/bits.cjs",
@@ -2305,17 +2305,17 @@
     {
       "path": "packages/string/dist/capitalization/join/index.cjs",
       "sizes": {
-        "raw": 1271,
-        "gzip": 555,
-        "brotli": 480
+        "raw": 1310,
+        "gzip": 576,
+        "brotli": 500
       }
     },
     {
       "path": "packages/string/dist/capitalization/join/index.cjs.map",
       "sizes": {
-        "raw": 6434,
-        "gzip": 1403,
-        "brotli": 1260
+        "raw": 6593,
+        "gzip": 1459,
+        "brotli": 1300
       }
     },
     {
@@ -2337,17 +2337,17 @@
     {
       "path": "packages/string/dist/capitalization/join/index.js",
       "sizes": {
-        "raw": 1160,
-        "gzip": 516,
-        "brotli": 451
+        "raw": 1199,
+        "gzip": 537,
+        "brotli": 465
       }
     },
     {
       "path": "packages/string/dist/capitalization/join/index.js.map",
       "sizes": {
-        "raw": 6413,
-        "gzip": 1394,
-        "brotli": 1247
+        "raw": 6572,
+        "gzip": 1449,
+        "brotli": 1320
       }
     },
     {

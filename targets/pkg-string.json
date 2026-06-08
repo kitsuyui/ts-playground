@@ -133,17 +133,17 @@
     {
       "path": "packages/string/dist/capitalization/join/index.cjs",
       "sizes": {
-        "raw": 1271,
-        "gzip": 555,
-        "brotli": 480
+        "raw": 1310,
+        "gzip": 576,
+        "brotli": 500
       }
     },
     {
       "path": "packages/string/dist/capitalization/join/index.cjs.map",
       "sizes": {
-        "raw": 6434,
-        "gzip": 1403,
-        "brotli": 1260
+        "raw": 6593,
+        "gzip": 1459,
+        "brotli": 1300
       }
     },
     {
@@ -165,17 +165,17 @@
     {
       "path": "packages/string/dist/capitalization/join/index.js",
       "sizes": {
-        "raw": 1160,
-        "gzip": 516,
-        "brotli": 451
+        "raw": 1199,
+        "gzip": 537,
+        "brotli": 465
       }
     },
     {
       "path": "packages/string/dist/capitalization/join/index.js.map",
       "sizes": {
-        "raw": 6413,
-        "gzip": 1394,
-        "brotli": 1247
+        "raw": 6572,
+        "gzip": 1449,
+        "brotli": 1320
       }
     },
     {
@@ -260,8 +260,8 @@
     }
   ],
   "totals": {
-    "raw": 37079,
-    "gzip": 13023,
-    "brotli": 11218
+    "raw": 37475,
+    "gzip": 13176,
+    "brotli": 11365
   }
 }

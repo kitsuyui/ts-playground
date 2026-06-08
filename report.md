@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `6b2f6611771b2b479f256a584f68c4c5627d6fa8`
-- Generated at: 2026-06-08T10:45:56.535Z
+- Head: `2c09c731135f909b0197a8d894a97b67521e5019`
+- Generated at: 2026-06-08T13:51:28.576Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -293,12 +293,12 @@
 | `packages/string/dist/capitalization/index.d.cts` | 74 B | 71 B | 63 B |
 | `packages/string/dist/capitalization/index.d.ts` | 73 B | 70 B | 61 B |
 | `packages/string/dist/capitalization/index.js` | 74 B | 74 B | 63 B |
-| `packages/string/dist/capitalization/join/index.cjs` | 1,271 B | 555 B | 480 B |
-| `packages/string/dist/capitalization/join/index.cjs.map` | 6,434 B | 1,403 B | 1,260 B |
+| `packages/string/dist/capitalization/join/index.cjs` | 1,310 B | 576 B | 500 B |
+| `packages/string/dist/capitalization/join/index.cjs.map` | 6,593 B | 1,459 B | 1,300 B |
 | `packages/string/dist/capitalization/join/index.d.cts` | 3,288 B | 653 B | 564 B |
 | `packages/string/dist/capitalization/join/index.d.ts` | 3,286 B | 651 B | 561 B |
-| `packages/string/dist/capitalization/join/index.js` | 1,160 B | 516 B | 451 B |
-| `packages/string/dist/capitalization/join/index.js.map` | 6,413 B | 1,394 B | 1,247 B |
+| `packages/string/dist/capitalization/join/index.js` | 1,199 B | 537 B | 465 B |
+| `packages/string/dist/capitalization/join/index.js.map` | 6,572 B | 1,449 B | 1,320 B |
 | `packages/string/dist/capitalization/split/index.cjs` | 300 B | 237 B | 192 B |
 | `packages/string/dist/capitalization/split/index.cjs.map` | 1,358 B | 597 B | 522 B |
 | `packages/string/dist/capitalization/split/index.d.cts` | 761 B | 320 B | 269 B |
