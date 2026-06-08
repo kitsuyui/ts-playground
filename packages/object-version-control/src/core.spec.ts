@@ -102,4 +102,46 @@ describe('Core', () => {
 
     expect(core.verifyAll()).toBe(false)
   })
+
+  it('prune removes unreachable commits and snapshots', () => {
+    const core = Core.create()
+    const hash1 = core.commit({ step: 1 }, [])
+    const hash2 = core.commit({ step: 2 }, [hash1])
+    // Branch from hash1 — hash3 will become unreachable after prune([hash2])
+    const hash3 = core.commit({ step: 3, branch: true }, [hash1])
+
+    // Before prune: all 3 commits exist
+    expect(core.getCommit(hash1)).toBeDefined()
+    expect(core.getCommit(hash2)).toBeDefined()
+    expect(core.getCommit(hash3)).toBeDefined()
+
+    // Prune keeping only the hash2 lineage
+    core.prune([hash2])
+
+    // hash1 and hash2 are reachable; hash3 is not
+    expect(core.getCommit(hash1)).toBeDefined()
+    expect(core.getCommit(hash2)).toBeDefined()
+    expect(() => core.getCommit(hash3)).toThrow()
+
+    // Repository integrity is maintained for reachable commits
+    expect(core.verifyAll()).toBe(true)
+  })
+
+  it('prune with empty heads removes all commits and snapshots', () => {
+    const core = Core.create()
+    core.commit({ x: 1 }, [])
+    core.prune([])
+    // No reachable roots — everything is removed; verifyAll on empty store is true
+    expect(core.verifyAll()).toBe(true)
+  })
+
+  it('prune with all heads preserves all commits', () => {
+    const core = Core.create()
+    const hash1 = core.commit({ a: 1 }, [])
+    const hash2 = core.commit({ a: 2 }, [hash1])
+    core.prune([hash2])
+    expect(core.getCommit(hash1)).toBeDefined()
+    expect(core.getCommit(hash2)).toBeDefined()
+    expect(core.verifyAll()).toBe(true)
+  })
 })

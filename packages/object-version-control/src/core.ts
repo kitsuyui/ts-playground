@@ -229,6 +229,54 @@ export class Core<T> {
   }
 
   /**
+   * Remove commits and snapshots not reachable from the given heads.
+   * Equivalent to `git gc` — unreachable objects are deleted.
+   * @param reachableHeads Commit hashes to treat as GC roots
+   */
+  prune(reachableHeads: HashValue[]): void {
+    const reachableCommits = this.collectReachableCommits(reachableHeads)
+    const reachableSnapshots = this.collectReachableSnapshots(reachableCommits)
+    this.deleteUnreachableEntries(this.commits, reachableCommits)
+    this.deleteUnreachableEntries(this.snapshots, reachableSnapshots)
+  }
+
+  private collectReachableCommits(heads: HashValue[]): Set<HashValue> {
+    const reachable = new Set<HashValue>()
+    const queue: HashValue[] = [...heads]
+    while (queue.length > 0) {
+      // biome-ignore lint/style/noNonNullAssertion: guarded by queue.length > 0
+      const hash = queue.shift()!
+      if (reachable.has(hash)) continue
+      reachable.add(hash)
+      queue.push(...this.getParentHashes(hash))
+    }
+    return reachable
+  }
+
+  private getParentHashes(hash: HashValue): HashValue[] {
+    return this.commits.get(hash)?.parents ?? []
+  }
+
+  private collectReachableSnapshots(
+    reachableCommits: Set<HashValue>
+  ): Set<HashValue> {
+    return new Set(
+      [...reachableCommits]
+        .map((hash) => this.commits.get(hash)?.snapshotHash)
+        .filter((h): h is HashValue => h !== undefined)
+    )
+  }
+
+  private deleteUnreachableEntries<V>(
+    map: Map<HashValue, V>,
+    reachable: Set<HashValue>
+  ): void {
+    for (const hash of [...map.keys()]) {
+      if (!reachable.has(hash)) map.delete(hash)
+    }
+  }
+
+  /**
    * Verify all snapshots and commits in the repository
    * This is equivalent to `git fsck` in Git
    * if any snapshot or commit is invalid, this method returns false
