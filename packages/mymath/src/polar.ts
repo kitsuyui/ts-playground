@@ -13,14 +13,8 @@ export const toUnsignedRad = (rad: number): number => {
   if (!Number.isFinite(rad)) {
     return Number.NaN
   }
-  let normalized = rad
-  while (normalized < 0) {
-    normalized += 2 * Math.PI
-  }
-  while (normalized >= 2 * Math.PI) {
-    normalized -= 2 * Math.PI
-  }
-  return normalized
+  const TWO_PI = 2 * Math.PI
+  return ((rad % TWO_PI) + TWO_PI) % TWO_PI
 }
 
 /**
