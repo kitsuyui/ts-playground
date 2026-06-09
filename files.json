@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-09T16:26:04.892Z",
+  "generated_at": "2026-06-09T16:36:15.880Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
-  "head_reference": "c22b0a0a95037540bb9aa419ec821506a6cf0727",
+  "head_reference": "e18ebb9ec32543547fc3b92f56576cc4ecd422b1",
   "files": [
     {
       "path": "packages/bits128/dist/bits.cjs",
@@ -1593,17 +1593,17 @@
     {
       "path": "packages/mymath/dist/polar/index.cjs",
       "sizes": {
-        "raw": 1750,
-        "gzip": 867,
-        "brotli": 803
+        "raw": 1710,
+        "gzip": 858,
+        "brotli": 794
       }
     },
     {
       "path": "packages/mymath/dist/polar/index.cjs.map",
       "sizes": {
-        "raw": 8024,
-        "gzip": 2387,
-        "brotli": 2186
+        "raw": 7857,
+        "gzip": 2371,
+        "brotli": 2157
       }
     },
     {
@@ -1625,17 +1625,17 @@
     {
       "path": "packages/mymath/dist/polar/index.js",
       "sizes": {
-        "raw": 1579,
-        "gzip": 793,
-        "brotli": 743
+        "raw": 1539,
+        "gzip": 784,
+        "brotli": 741
       }
     },
     {
       "path": "packages/mymath/dist/polar/index.js.map",
       "sizes": {
-        "raw": 8004,
-        "gzip": 2379,
-        "brotli": 2189
+        "raw": 7837,
+        "gzip": 2363,
+        "brotli": 2170
       }
     },
     {

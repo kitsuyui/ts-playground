@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `c22b0a0a95037540bb9aa419ec821506a6cf0727`
-- Generated at: 2026-06-09T16:26:04.892Z
+- Head: `e18ebb9ec32543547fc3b92f56576cc4ecd422b1`
+- Generated at: 2026-06-09T16:36:15.880Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -204,12 +204,12 @@
 | `packages/mymath/dist/log/index.d.ts` | 936 B | 356 B | 294 B |
 | `packages/mymath/dist/log/index.js` | 145 B | 125 B | 103 B |
 | `packages/mymath/dist/log/index.js.map` | 1,205 B | 468 B | 409 B |
-| `packages/mymath/dist/polar/index.cjs` | 1,750 B | 867 B | 803 B |
-| `packages/mymath/dist/polar/index.cjs.map` | 8,024 B | 2,387 B | 2,186 B |
+| `packages/mymath/dist/polar/index.cjs` | 1,710 B | 858 B | 794 B |
+| `packages/mymath/dist/polar/index.cjs.map` | 7,857 B | 2,371 B | 2,157 B |
 | `packages/mymath/dist/polar/index.d.cts` | 2,423 B | 682 B | 596 B |
 | `packages/mymath/dist/polar/index.d.ts` | 2,422 B | 681 B | 595 B |
-| `packages/mymath/dist/polar/index.js` | 1,579 B | 793 B | 743 B |
-| `packages/mymath/dist/polar/index.js.map` | 8,004 B | 2,379 B | 2,189 B |
+| `packages/mymath/dist/polar/index.js` | 1,539 B | 784 B | 741 B |
+| `packages/mymath/dist/polar/index.js.map` | 7,837 B | 2,363 B | 2,170 B |
 | `packages/mymath/dist/sigmoid/index.cjs` | 150 B | 154 B | 112 B |
 | `packages/mymath/dist/sigmoid/index.cjs.map` | 478 B | 322 B | 269 B |
 | `packages/mymath/dist/sigmoid/index.d.cts` | 361 B | 242 B | 193 B |
