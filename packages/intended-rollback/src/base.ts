@@ -1,4 +1,4 @@
-import { IntendedRollback, Unreachable } from './errors'
+import { IntendedRollback } from './errors'
 import type {
   Result,
   TranInnerFn,
@@ -35,20 +35,15 @@ const createSuccessResult = <TContent>(
 })
 
 const createIntendedRollbackResult = <TContent>(
-  content: TContent | null
-): Result<TContent> => {
-  if (content === null) {
-    throw new Unreachable('Intended rollback without content.')
-  }
-  return {
-    success: true,
-    content,
-    rollback: {
-      occurred: true,
-      intended: true,
-    },
-  }
-}
+  content: TContent
+): Result<TContent> => ({
+  success: true,
+  content,
+  rollback: {
+    occurred: true,
+    intended: true,
+  },
+})
 
 const createFailureResult = <TContent>(error: unknown): Result<TContent> => ({
   success: false,
@@ -73,21 +68,18 @@ const handleRollback = async <TClient, TClientTran, TContent>(
   func: TranInnerFn<TClientTran, TContent>,
   rollback: boolean
 ): Promise<Result<TContent>> => {
-  let content: TContent | null = null
   try {
-    content = await outer(client, async (something) => {
+    const content = await outer(client, async (something) => {
       const content_ = await func(something)
-      // keep the content prepared for intended rollback
-      content = content_
       if (rollback) {
-        throw new IntendedRollback()
+        throw new IntendedRollback(content_)
       }
       return content_
     })
     return createSuccessResult(content)
   } catch (e) {
     if (e instanceof IntendedRollback) {
-      return createIntendedRollbackResult(content)
+      return createIntendedRollbackResult(e.content as TContent)
     }
     return createFailureResult(e)
   }
