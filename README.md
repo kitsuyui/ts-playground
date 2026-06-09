@@ -62,6 +62,29 @@ bun run validate
 bun run typedoc
 ```
 
+## Development
+
+Install [lefthook](https://github.com/evilmartians/lefthook) and register the Git hooks:
+
+```sh
+lefthook install
+```
+
+### Git hooks
+
+**pre-commit** — runs on every commit:
+
+- `bun run lint` — Biome linter check
+- `bun run typecheck` — TypeScript type check
+
+**pre-push** — runs on every push:
+
+- `bun run lint` — Biome linter check
+- `bun run typecheck` — TypeScript type check
+- `bun run test` — Vitest test suite with coverage
+
+These hooks bring CI feedback to your local workflow. CI still runs the full suite (including build, package export validation, and TypeDoc generation) on every pull request and push to main.
+
 ## License
 
 MIT
