@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import type { Case } from '../cases'
+import type { Case } from './cases'
 import {
   intoAllCaps,
   intoDotSeparated,
@@ -11,8 +11,9 @@ import {
   intoSnakeCase,
   intoSpaceSeparated,
   intoTrainCase,
+  intoUpperCamelCase,
   joinWords,
-} from './index'
+} from './join'
 
 describe('joinWords', () => {
   it('should join words into the specified case', () => {
@@ -101,5 +102,25 @@ describe('intoLowerCamelCase', () => {
     const words = ['lower', 'camel', 'case']
     const camel = intoLowerCamelCase(words)
     expect(camel).toBe('lowerCamelCase')
+  })
+})
+
+describe('intoUpperCamelCase', () => {
+  it('should join words into upper camel case', () => {
+    const words = ['upper', 'camel', 'case']
+    const camel = intoUpperCamelCase(words)
+    expect(camel).toBe('UpperCamelCase')
+  })
+
+  it('preserves surrogate pair emoji at word start without corruption', () => {
+    const words = ['😀hello', 'world']
+    const camel = intoUpperCamelCase(words)
+    expect(camel).toBe('😀helloWorld')
+  })
+
+  it('capitalizes ASCII word following emoji word correctly', () => {
+    const words = ['hello', '😀world']
+    const camel = intoUpperCamelCase(words)
+    expect(camel).toBe('Hello😀world')
   })
 })

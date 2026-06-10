@@ -11,13 +11,13 @@ interface Snapshot<T> {
 
 interface CommitInfo {
   parents: HashValue[]
-  timestamp: Timestamp
   snapshotHash: HashValue
   // message: Git has commit messages, but not used in this implementation
 }
 
 type Commit = {
   hash: HashValue
+  timestamp: Timestamp
 } & CommitInfo
 
 type CommitMap = Map<HashValue, Commit>
@@ -36,7 +36,15 @@ interface SyncItems<T> {
   snapshots: Snapshot<T>[]
 }
 
+declare const _syncHeadBrand: unique symbol
+
+/**
+ * SyncHead represents the last-known sync positions between two OVC instances.
+ * Valid SyncHead values are only produced by push(), pull(), fullClone(), and shallowClone().
+ * The opaque brand prevents construction of arbitrary SyncHead literals.
+ */
 interface SyncHead {
+  readonly [_syncHeadBrand]: undefined
   local: HashValue | null
   remote: HashValue | null
 }

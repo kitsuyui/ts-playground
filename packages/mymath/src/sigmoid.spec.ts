@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { sigmoid } from './index'
+import { sigmoid } from './sigmoid'
 
 describe('sigmoid', () => {
   it('should return 0.5 for 0', () => {

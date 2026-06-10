@@ -10,16 +10,16 @@ describe('error functions', () => {
         .mockImplementation(() => {})
 
       const args = [1, 2, 3]
-      const resultA = 'resultA'
-      const resultB = 'resultB'
+      const resultA = { value: 'resultA' }
+      const resultB = { value: 'resultB' }
 
       errorLogger(args, resultA, resultB)
 
       expect(consoleErrorSpy).toHaveBeenCalledWith(
-        'Functions exhibit different behavior!\n Args: %s\n Result A: %s\n Result B: %s',
-        args,
-        resultA,
-        resultB
+        'Functions exhibit different behavior!\n' +
+          `Arguments: ${JSON.stringify(args)}\n` +
+          `Result A: ${JSON.stringify(resultA)}\n` +
+          `Result B: ${JSON.stringify(resultB)}`
       )
 
       consoleErrorSpy.mockRestore()

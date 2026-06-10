@@ -8,12 +8,9 @@ export const Symbols = {
   sum: Sum,
 } as const
 
-declare global {
-  // FIXME
-  interface Array<T> {
-    [Sum](this: Array<number>): number
-    [Scale](this: Array<number>, scaler: number): number[]
-  }
+export type NumberArray = Array<number> & {
+  [Sum](): number
+  [Scale](scaler: number): number[]
 }
 
 extend(Array, Scale, (array: number[], scaler: number) => {

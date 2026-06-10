@@ -34,7 +34,7 @@
     "dist",
     "package.json"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@kitsuyui/cipher": "workspace:*"
   }
 }

@@ -1,5 +1,5 @@
 import { Duration, type DurationObjectUnits } from 'luxon'
-import { HALF_OF_TIME_UNITS } from '../constants'
+import { HALF_OF_TIME_UNITS_MS } from '../constants'
 import { computeTopUnit, computeUseUnits, type TimeUnit } from '../units'
 
 type RoundingMethod = 'floor' | 'ceil' | 'round'
@@ -32,9 +32,9 @@ const roundingOptionsFromPartial = (
  * @returns
  */
 export const cleanDuration = (duration: Duration): Duration => {
-  const cleaned = duration.shiftToAll().toMillis()
-  const abs = Math.abs(cleaned)
-  return Duration.fromMillis(abs)
+  const ms = duration.as('milliseconds')
+  if (ms >= 0) return duration
+  return Duration.fromMillis(-ms)
 }
 
 const collectRoundedUnits = (
@@ -67,7 +67,7 @@ const shouldCarryRoundedUnit = (
     return remainMillis > 0
   }
   if (roundingMethod === 'round') {
-    return remainMillis >= HALF_OF_TIME_UNITS[roundingHigherUnit]
+    return remainMillis >= HALF_OF_TIME_UNITS_MS[roundingHigherUnit]
   }
   return false
 }
