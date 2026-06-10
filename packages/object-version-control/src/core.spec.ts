@@ -66,6 +66,14 @@ describe('Core', () => {
     expect(core.getSnapshotDataByCommitHash(commitHash)).toEqual(data)
   })
 
+  it('produces identical hashes for identical data and parents', () => {
+    const core1 = Core.create()
+    const core2 = Core.create()
+    const hash1 = core1.commit({ key: 'value' }, [])
+    const hash2 = core2.commit({ key: 'value' }, [])
+    expect(hash1).toBe(hash2)
+  })
+
   it('verifies valid repositories', () => {
     const core = Core.create()
     const baseHash = core.commit({ key: 'value' }, [])

@@ -11,13 +11,13 @@ interface Snapshot<T> {
 
 interface CommitInfo {
   parents: HashValue[]
-  timestamp: Timestamp
   snapshotHash: HashValue
   // message: Git has commit messages, but not used in this implementation
 }
 
 type Commit = {
   hash: HashValue
+  timestamp: Timestamp
 } & CommitInfo
 
 type CommitMap = Map<HashValue, Commit>
