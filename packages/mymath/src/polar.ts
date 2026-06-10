@@ -1,4 +1,4 @@
-import { sum } from '../array'
+import { sum } from './array'
 /**
  * Normalizes a radian value to the range [0, 2π).
  * @param rad - The radian value to normalize.

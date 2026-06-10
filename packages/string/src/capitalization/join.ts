@@ -1,4 +1,4 @@
-import { type Case, isValidCaseName } from '../cases'
+import { type Case, isValidCaseName } from './cases'
 
 /**
  * Join words into a single string with the specified case

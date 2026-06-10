@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { splitBySeparator, splitCamelCase, splitToWords } from './index'
+import { splitBySeparator, splitCamelCase, splitToWords } from './split'
 
 describe('splitToWords', () => {
   it('should split text into words', () => {

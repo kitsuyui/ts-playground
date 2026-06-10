@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { isValidCaseName } from '.'
+import { isValidCaseName } from './cases'
 
 describe('isValidCaseName', () => {
   it('should return true for valid case names', () => {

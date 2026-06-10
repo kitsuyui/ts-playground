@@ -8,7 +8,7 @@ import {
   rotate,
   toSignedRad,
   toUnsignedRad,
-} from './index'
+} from './polar'
 
 describe('toUnsignedRad', () => {
   it('should normalize negative radian values to the range [0, 2π)', () => {
