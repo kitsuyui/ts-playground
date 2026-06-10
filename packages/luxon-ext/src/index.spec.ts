@@ -109,4 +109,26 @@ describe('toHumanDurationWithDiff', () => {
     expect(toHumanDurationWithDiff(begin, end)).toBe('in 1 hour, 23 minutes')
     expect(toHumanDurationWithDiff(end, begin)).toBe('1 hour, 23 minutes ago')
   })
+
+  it('should use begin locale when end has no locale', () => {
+    // begin.locale is 'ja'; end has no locale → locale should be 'ja'
+    const begin = DateTime.fromISO('2022-01-01T00:00:00Z').reconfigure({
+      locale: 'ja',
+    })
+    const end = DateTime.fromISO('2022-01-01T01:23:00Z')
+    // defaultFormatter wraps with English "in"/"ago"; duration text uses begin locale
+    expect(toHumanDurationWithDiff(begin, end)).toBe('in 1 時間、23 分')
+  })
+
+  it('should use calendar-aware diff for month-level durations', () => {
+    // Jan 1 to Mar 1 2022: exactly 2 calendar months
+    const begin = DateTime.fromISO('2022-01-01T00:00:00Z').reconfigure({
+      locale: 'en',
+    })
+    const end = DateTime.fromISO('2022-03-01T00:00:00Z').reconfigure({
+      locale: 'en',
+    })
+    // calendar-aware diff gives {months: 2, days: 0} → rounds to "2 months"
+    expect(toHumanDurationWithDiff(begin, end)).toBe('in 2 months')
+  })
 })

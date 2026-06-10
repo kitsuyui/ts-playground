@@ -8,7 +8,7 @@ import {
   rotate,
   toSignedRad,
   toUnsignedRad,
-} from './index'
+} from './polar'
 
 describe('toUnsignedRad', () => {
   it('should normalize negative radian values to the range [0, 2π)', () => {
@@ -40,6 +40,13 @@ describe('toUnsignedRad', () => {
     expect(toUnsignedRad(Number.NaN)).toBeNaN()
     expect(toUnsignedRad(Number.POSITIVE_INFINITY)).toBeNaN()
     expect(toUnsignedRad(Number.NEGATIVE_INFINITY)).toBeNaN()
+  })
+
+  it('should handle very large values without infinite loop', () => {
+    const large = 1e17
+    const result = toUnsignedRad(large)
+    expect(result).toBeGreaterThanOrEqual(0)
+    expect(result).toBeLessThan(2 * Math.PI)
   })
 })
 

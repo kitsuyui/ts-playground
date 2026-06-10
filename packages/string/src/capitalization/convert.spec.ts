@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { ALL_CASES, type Case } from '../cases'
-import { convertCase } from '.'
+import { ALL_CASES, type Case } from './cases'
+import { convertCase } from './convert'
 
 describe('convertCase', () => {
   it('should work some simple examples', () => {

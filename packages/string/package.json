@@ -28,42 +28,42 @@
     },
     "./capitalization/cases": {
       "require": {
-        "type": "./dist/capitalization/cases/index.d.cts",
-        "default": "./dist/capitalization/cases/index.cjs"
+        "type": "./dist/capitalization/cases.d.cts",
+        "default": "./dist/capitalization/cases.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/cases/index.d.ts",
-        "default": "./dist/capitalization/cases/index.js"
+        "type": "./dist/capitalization/cases.d.ts",
+        "default": "./dist/capitalization/cases.js"
       }
     },
     "./capitalization/convert": {
       "require": {
-        "type": "./dist/capitalization/convert/index.d.cts",
-        "default": "./dist/capitalization/convert/index.cjs"
+        "type": "./dist/capitalization/convert.d.cts",
+        "default": "./dist/capitalization/convert.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/convert/index.d.ts",
-        "default": "./dist/capitalization/convert/index.js"
+        "type": "./dist/capitalization/convert.d.ts",
+        "default": "./dist/capitalization/convert.js"
       }
     },
     "./capitalization/join": {
       "require": {
-        "type": "./dist/capitalization/join/index.d.cts",
-        "default": "./dist/capitalization/join/index.cjs"
+        "type": "./dist/capitalization/join.d.cts",
+        "default": "./dist/capitalization/join.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/join/index.d.ts",
-        "default": "./dist/capitalization/join/index.js"
+        "type": "./dist/capitalization/join.d.ts",
+        "default": "./dist/capitalization/join.js"
       }
     },
     "./capitalization/split": {
       "require": {
-        "type": "./dist/capitalization/split/index.d.cts",
-        "default": "./dist/capitalization/split/index.cjs"
+        "type": "./dist/capitalization/split.d.cts",
+        "default": "./dist/capitalization/split.cjs"
       },
       "import": {
-        "type": "./dist/capitalization/split/index.d.ts",
-        "default": "./dist/capitalization/split/index.js"
+        "type": "./dist/capitalization/split.d.ts",
+        "default": "./dist/capitalization/split.js"
       }
     }
   },

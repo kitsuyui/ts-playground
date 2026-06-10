@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { logFnOfBase, logOfBase } from './index'
+import { logFnOfBase, logOfBase } from './log'
 
 describe('logOfBase', () => {
   it('should return 1 for 10 and 10', () => {
