@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `f526b018948575501e6988e9a14347a19955c0bf`
-- Generated at: 2026-06-10T23:19:36.166Z
+- Head: `15c3b61911d5a97a65ed304949d8278987c334a2`
+- Generated at: 2026-06-10T23:21:06.376Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -182,12 +182,12 @@
 | `packages/mymath/dist/array.js.map` | 6,507 B | 1,638 B | 1,457 B |
 | `packages/mymath/dist/chunk-BwIEoMh7.cjs` | 224 B | 180 B | 133 B |
 | `packages/mymath/dist/chunk-WfQuXRBF.js` | 158 B | 154 B | 116 B |
-| `packages/mymath/dist/clamp.cjs` | 374 B | 275 B | 229 B |
-| `packages/mymath/dist/clamp.cjs.map` | 1,972 B | 697 B | 626 B |
+| `packages/mymath/dist/clamp.cjs` | 359 B | 251 B | 213 B |
+| `packages/mymath/dist/clamp.cjs.map` | 1,973 B | 673 B | 606 B |
 | `packages/mymath/dist/clamp.d.cts` | 1,315 B | 452 B | 389 B |
 | `packages/mymath/dist/clamp.d.ts` | 1,314 B | 450 B | 386 B |
-| `packages/mymath/dist/clamp.js` | 294 B | 225 B | 203 B |
-| `packages/mymath/dist/clamp.js.map` | 1,970 B | 695 B | 623 B |
+| `packages/mymath/dist/clamp.js` | 279 B | 203 B | 182 B |
+| `packages/mymath/dist/clamp.js.map` | 1,971 B | 671 B | 602 B |
 | `packages/mymath/dist/index.cjs` | 1,040 B | 398 B | 340 B |
 | `packages/mymath/dist/index.d.cts` | 818 B | 291 B | 256 B |
 | `packages/mymath/dist/index.d.ts` | 811 B | 290 B | 254 B |

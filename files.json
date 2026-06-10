@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T23:19:36.166Z",
+  "generated_at": "2026-06-10T23:21:06.376Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
-  "head_reference": "f526b018948575501e6988e9a14347a19955c0bf",
+  "head_reference": "15c3b61911d5a97a65ed304949d8278987c334a2",
   "files": [
     {
       "path": "packages/bits128/dist/bits.cjs",
@@ -1417,17 +1417,17 @@
     {
       "path": "packages/mymath/dist/clamp.cjs",
       "sizes": {
-        "raw": 374,
-        "gzip": 275,
-        "brotli": 229
+        "raw": 359,
+        "gzip": 251,
+        "brotli": 213
       }
     },
     {
       "path": "packages/mymath/dist/clamp.cjs.map",
       "sizes": {
-        "raw": 1972,
-        "gzip": 697,
-        "brotli": 626
+        "raw": 1973,
+        "gzip": 673,
+        "brotli": 606
       }
     },
     {
@@ -1449,17 +1449,17 @@
     {
       "path": "packages/mymath/dist/clamp.js",
       "sizes": {
-        "raw": 294,
-        "gzip": 225,
-        "brotli": 203
+        "raw": 279,
+        "gzip": 203,
+        "brotli": 182
       }
     },
     {
       "path": "packages/mymath/dist/clamp.js.map",
       "sizes": {
-        "raw": 1970,
-        "gzip": 695,
-        "brotli": 623
+        "raw": 1971,
+        "gzip": 671,
+        "brotli": 602
       }
     },
     {

@@ -69,17 +69,17 @@
     {
       "path": "packages/mymath/dist/clamp.cjs",
       "sizes": {
-        "raw": 374,
-        "gzip": 275,
-        "brotli": 229
+        "raw": 359,
+        "gzip": 251,
+        "brotli": 213
       }
     },
     {
       "path": "packages/mymath/dist/clamp.cjs.map",
       "sizes": {
-        "raw": 1972,
-        "gzip": 697,
-        "brotli": 626
+        "raw": 1973,
+        "gzip": 673,
+        "brotli": 606
       }
     },
     {
@@ -101,17 +101,17 @@
     {
       "path": "packages/mymath/dist/clamp.js",
       "sizes": {
-        "raw": 294,
-        "gzip": 225,
-        "brotli": 203
+        "raw": 279,
+        "gzip": 203,
+        "brotli": 182
       }
     },
     {
       "path": "packages/mymath/dist/clamp.js.map",
       "sizes": {
-        "raw": 1970,
-        "gzip": 695,
-        "brotli": 623
+        "raw": 1971,
+        "gzip": 671,
+        "brotli": 602
       }
     },
     {
@@ -388,8 +388,8 @@
     }
   ],
   "totals": {
-    "raw": 85530,
-    "gzip": 29033,
-    "brotli": 25390
+    "raw": 85502,
+    "gzip": 28939,
+    "brotli": 25312
   }
 }
