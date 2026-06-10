@@ -56,8 +56,20 @@ export const toHumanDurationWithDiff = (
   opts?: TemporalToHumanDurationOptions
 ): string => {
   const temporal = end > begin ? 'future' : 'past'
-  const locale = end.locale ?? undefined
-  const duration = begin.diff(end).reconfigure({ locale })
+  const locale = begin.locale ?? end.locale ?? undefined
+  const [earlier, later] = end > begin ? [begin, end] : [end, begin]
+  const duration = later
+    .diff(earlier, [
+      'years',
+      'months',
+      'weeks',
+      'days',
+      'hours',
+      'minutes',
+      'seconds',
+      'milliseconds',
+    ])
+    .reconfigure({ locale })
   return toHumanDurationWithTemporal(duration, temporal, opts)
 }
 

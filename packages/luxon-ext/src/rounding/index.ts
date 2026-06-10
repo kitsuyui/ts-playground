@@ -32,9 +32,9 @@ const roundingOptionsFromPartial = (
  * @returns
  */
 export const cleanDuration = (duration: Duration): Duration => {
-  const cleaned = duration.shiftToAll().toMillis()
-  const abs = Math.abs(cleaned)
-  return Duration.fromMillis(abs)
+  const ms = duration.as('milliseconds')
+  if (ms >= 0) return duration
+  return Duration.fromMillis(-ms)
 }
 
 const collectRoundedUnits = (
