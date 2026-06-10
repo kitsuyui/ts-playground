@@ -51,7 +51,7 @@ export class ObjectVersionControl<T> {
     const syncHead = {
       local: this.head,
       remote: ovc.head,
-    }
+    } as unknown as SyncHead
     return [ovc, syncHead]
   }
 
@@ -248,7 +248,7 @@ export class ObjectVersionControl<T> {
     return {
       local: this.head,
       remote: remoteOvc.head,
-    }
+    } as unknown as SyncHead
   }
 
   /**
@@ -279,6 +279,6 @@ export class ObjectVersionControl<T> {
     return {
       local: this.head,
       remote: remoteOvc.head,
-    }
+    } as unknown as SyncHead
   }
 }

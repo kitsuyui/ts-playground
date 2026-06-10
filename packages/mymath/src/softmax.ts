@@ -1,4 +1,4 @@
-import { sum } from '../array'
+import { sum } from './array'
 
 /**
  * Softmax function

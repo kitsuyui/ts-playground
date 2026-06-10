@@ -11,7 +11,7 @@ import {
   product,
   rootMeanSquare,
   sum,
-} from './index'
+} from './array'
 
 describe('sum', () => {
   it('should return sum of all values', () => {
