@@ -1,17 +1,12 @@
 {
   "id": "maintenance-comments",
   "label": "TODO/FIXME",
-  "count": 2,
+  "count": 1,
   "matches": [
     {
       "path": "packages/mymath/src/intervalMapper.ts",
       "line": 7,
       "text": "* TODO: Implement Mittag-Leffler function to create parameterized decay functions."
-    },
-    {
-      "path": "packages/symbolic-prototype/src/number-array/index.ts",
-      "line": 12,
-      "text": "// FIXME"
     }
   ]
 }

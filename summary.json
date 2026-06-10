@@ -1,36 +1,30 @@
 {
-  "generated_at": "2026-06-10T14:42:48.497Z",
+  "generated_at": "2026-06-10T14:43:55.507Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-counter-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "b28e425607586c8f631cb1df4b2084b600eaa152",
+  "base_reference": "8d999700234291ae367e3e4fa37cd434148bd628",
   "head_label": "main",
-  "head_reference": "8d999700234291ae367e3e4fa37cd434148bd628",
+  "head_reference": "1e427bf7cfc39666650cebfad9aef029426f5fd8",
   "bootstrap_message": null,
   "base_only_paths": [],
   "counters": [
     {
       "id": "maintenance-comments",
       "label": "TODO/FIXME",
-      "current": 2,
+      "current": 1,
       "base": 2,
-      "delta": 0,
-      "dashboard_current": 2,
+      "delta": -1,
+      "dashboard_current": 1,
       "dashboard_base": 2,
-      "dashboard_delta": 0,
+      "dashboard_delta": -1,
       "commentable": true,
       "touched_files": [],
       "file_deltas": [
         {
           "path": "packages/mymath/src/intervalMapper.ts",
-          "current": 1,
-          "base": 0,
-          "delta": 1
-        },
-        {
-          "path": "packages/symbolic-prototype/src/number-array/index.ts",
           "current": 1,
           "base": 0,
           "delta": 1
