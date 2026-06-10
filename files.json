@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T23:21:06.376Z",
+  "generated_at": "2026-06-10T23:27:07.495Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
-  "head_reference": "15c3b61911d5a97a65ed304949d8278987c334a2",
+  "head_reference": "bf39297ee7b8efa8f3825b6a9c731c1248fb7376",
   "files": [
     {
       "path": "packages/bits128/dist/bits.cjs",
@@ -1689,49 +1689,49 @@
     {
       "path": "packages/mymath/dist/softmax.cjs",
       "sizes": {
-        "raw": 317,
-        "gzip": 251,
-        "brotli": 204
+        "raw": 421,
+        "gzip": 318,
+        "brotli": 254
       }
     },
     {
       "path": "packages/mymath/dist/softmax.cjs.map",
       "sizes": {
-        "raw": 1273,
-        "gzip": 582,
-        "brotli": 512
+        "raw": 1640,
+        "gzip": 729,
+        "brotli": 642
       }
     },
     {
       "path": "packages/mymath/dist/softmax.d.cts",
       "sizes": {
-        "raw": 664,
-        "gzip": 283,
-        "brotli": 221
+        "raw": 788,
+        "gzip": 332,
+        "brotli": 269
       }
     },
     {
       "path": "packages/mymath/dist/softmax.d.ts",
       "sizes": {
-        "raw": 663,
-        "gzip": 280,
-        "brotli": 219
+        "raw": 787,
+        "gzip": 330,
+        "brotli": 266
       }
     },
     {
       "path": "packages/mymath/dist/softmax.js",
       "sizes": {
-        "raw": 251,
-        "gzip": 207,
-        "brotli": 177
+        "raw": 355,
+        "gzip": 274,
+        "brotli": 236
       }
     },
     {
       "path": "packages/mymath/dist/softmax.js.map",
       "sizes": {
-        "raw": 1265,
-        "gzip": 575,
-        "brotli": 535
+        "raw": 1632,
+        "gzip": 723,
+        "brotli": 641
       }
     },
     {

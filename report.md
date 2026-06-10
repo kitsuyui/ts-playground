@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `15c3b61911d5a97a65ed304949d8278987c334a2`
-- Generated at: 2026-06-10T23:21:06.376Z
+- Head: `bf39297ee7b8efa8f3825b6a9c731c1248fb7376`
+- Generated at: 2026-06-10T23:27:07.495Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -216,12 +216,12 @@
 | `packages/mymath/dist/sigmoid.d.ts` | 356 B | 237 B | 191 B |
 | `packages/mymath/dist/sigmoid.js` | 87 B | 102 B | 91 B |
 | `packages/mymath/dist/sigmoid.js.map` | 469 B | 314 B | 260 B |
-| `packages/mymath/dist/softmax.cjs` | 317 B | 251 B | 204 B |
-| `packages/mymath/dist/softmax.cjs.map` | 1,273 B | 582 B | 512 B |
-| `packages/mymath/dist/softmax.d.cts` | 664 B | 283 B | 221 B |
-| `packages/mymath/dist/softmax.d.ts` | 663 B | 280 B | 219 B |
-| `packages/mymath/dist/softmax.js` | 251 B | 207 B | 177 B |
-| `packages/mymath/dist/softmax.js.map` | 1,265 B | 575 B | 535 B |
+| `packages/mymath/dist/softmax.cjs` | 421 B | 318 B | 254 B |
+| `packages/mymath/dist/softmax.cjs.map` | 1,640 B | 729 B | 642 B |
+| `packages/mymath/dist/softmax.d.cts` | 788 B | 332 B | 269 B |
+| `packages/mymath/dist/softmax.d.ts` | 787 B | 330 B | 266 B |
+| `packages/mymath/dist/softmax.js` | 355 B | 274 B | 236 B |
+| `packages/mymath/dist/softmax.js.map` | 1,632 B | 723 B | 641 B |
 | `packages/number-time/dist/chunk-BwIEoMh7.cjs` | 224 B | 180 B | 133 B |
 | `packages/number-time/dist/chunk-WfQuXRBF.js` | 158 B | 154 B | 116 B |
 | `packages/number-time/dist/index.cjs` | 182 B | 153 B | 115 B |
