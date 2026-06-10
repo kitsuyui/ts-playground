@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-10T23:18:22.210Z",
+  "generated_at": "2026-06-10T23:19:36.166Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
-  "head_reference": "4cfdfeed2133959b9d3871bc90a8b95e080d92cf",
+  "head_reference": "f526b018948575501e6988e9a14347a19955c0bf",
   "files": [
     {
       "path": "packages/bits128/dist/bits.cjs",
@@ -1353,49 +1353,49 @@
     {
       "path": "packages/mymath/dist/array.cjs",
       "sizes": {
-        "raw": 991,
-        "gzip": 518,
-        "brotli": 459
+        "raw": 933,
+        "gzip": 506,
+        "brotli": 444
       }
     },
     {
       "path": "packages/mymath/dist/array.cjs.map",
       "sizes": {
-        "raw": 6536,
-        "gzip": 1651,
-        "brotli": 1471
+        "raw": 6509,
+        "gzip": 1640,
+        "brotli": 1459
       }
     },
     {
       "path": "packages/mymath/dist/array.d.cts",
       "sizes": {
-        "raw": 3652,
-        "gzip": 766,
-        "brotli": 658
+        "raw": 3693,
+        "gzip": 776,
+        "brotli": 691
       }
     },
     {
       "path": "packages/mymath/dist/array.d.ts",
       "sizes": {
-        "raw": 3651,
-        "gzip": 765,
-        "brotli": 657
+        "raw": 3692,
+        "gzip": 774,
+        "brotli": 668
       }
     },
     {
       "path": "packages/mymath/dist/array.js",
       "sizes": {
-        "raw": 881,
-        "gzip": 471,
-        "brotli": 429
+        "raw": 823,
+        "gzip": 458,
+        "brotli": 418
       }
     },
     {
       "path": "packages/mymath/dist/array.js.map",
       "sizes": {
-        "raw": 6534,
-        "gzip": 1649,
-        "brotli": 1467
+        "raw": 6507,
+        "gzip": 1638,
+        "brotli": 1457
       }
     },
     {

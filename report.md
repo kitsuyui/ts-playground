@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `4cfdfeed2133959b9d3871bc90a8b95e080d92cf`
-- Generated at: 2026-06-10T23:18:22.210Z
+- Head: `f526b018948575501e6988e9a14347a19955c0bf`
+- Generated at: 2026-06-10T23:19:36.166Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -174,12 +174,12 @@
 | `packages/luxon-ext/dist/units/index.d.ts` | 941 B | 449 B | 369 B |
 | `packages/luxon-ext/dist/units/index.js` | 412 B | 283 B | 246 B |
 | `packages/luxon-ext/dist/units/index.js.map` | 1,924 B | 846 B | 743 B |
-| `packages/mymath/dist/array.cjs` | 991 B | 518 B | 459 B |
-| `packages/mymath/dist/array.cjs.map` | 6,536 B | 1,651 B | 1,471 B |
-| `packages/mymath/dist/array.d.cts` | 3,652 B | 766 B | 658 B |
-| `packages/mymath/dist/array.d.ts` | 3,651 B | 765 B | 657 B |
-| `packages/mymath/dist/array.js` | 881 B | 471 B | 429 B |
-| `packages/mymath/dist/array.js.map` | 6,534 B | 1,649 B | 1,467 B |
+| `packages/mymath/dist/array.cjs` | 933 B | 506 B | 444 B |
+| `packages/mymath/dist/array.cjs.map` | 6,509 B | 1,640 B | 1,459 B |
+| `packages/mymath/dist/array.d.cts` | 3,693 B | 776 B | 691 B |
+| `packages/mymath/dist/array.d.ts` | 3,692 B | 774 B | 668 B |
+| `packages/mymath/dist/array.js` | 823 B | 458 B | 418 B |
+| `packages/mymath/dist/array.js.map` | 6,507 B | 1,638 B | 1,457 B |
 | `packages/mymath/dist/chunk-BwIEoMh7.cjs` | 224 B | 180 B | 133 B |
 | `packages/mymath/dist/chunk-WfQuXRBF.js` | 158 B | 154 B | 116 B |
 | `packages/mymath/dist/clamp.cjs` | 374 B | 275 B | 229 B |
