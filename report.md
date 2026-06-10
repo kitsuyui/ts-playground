@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `1e427bf7cfc39666650cebfad9aef029426f5fd8`
-- Generated at: 2026-06-10T14:44:41.333Z
+- Head: `4cfdfeed2133959b9d3871bc90a8b95e080d92cf`
+- Generated at: 2026-06-10T23:18:22.210Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -240,12 +240,12 @@
 | `packages/object-version-control/dist/automerge.d.ts` | 791 B | 343 B | 272 B |
 | `packages/object-version-control/dist/automerge.js` | 694 B | 429 B | 388 B |
 | `packages/object-version-control/dist/automerge.js.map` | 4,099 B | 1,419 B | 1,260 B |
-| `packages/object-version-control/dist/core.cjs` | 2,418 B | 860 B | 770 B |
-| `packages/object-version-control/dist/core.cjs.map` | 10,671 B | 2,973 B | 2,664 B |
-| `packages/object-version-control/dist/core.d.cts` | 3,724 B | 1,100 B | 933 B |
-| `packages/object-version-control/dist/core.d.ts` | 3,723 B | 1,098 B | 931 B |
-| `packages/object-version-control/dist/core.js` | 2,338 B | 811 B | 741 B |
-| `packages/object-version-control/dist/core.js.map` | 10,551 B | 2,943 B | 2,605 B |
+| `packages/object-version-control/dist/core.cjs` | 2,997 B | 1,061 B | 945 B |
+| `packages/object-version-control/dist/core.cjs.map` | 12,986 B | 3,667 B | 3,263 B |
+| `packages/object-version-control/dist/core.d.cts` | 4,112 B | 1,229 B | 1,046 B |
+| `packages/object-version-control/dist/core.d.ts` | 4,111 B | 1,227 B | 1,047 B |
+| `packages/object-version-control/dist/core.js` | 2,917 B | 1,011 B | 911 B |
+| `packages/object-version-control/dist/core.js.map` | 12,866 B | 3,636 B | 3,220 B |
 | `packages/object-version-control/dist/index.cjs` | 213 B | 158 B | 117 B |
 | `packages/object-version-control/dist/index.d.cts` | 144 B | 101 B | 87 B |
 | `packages/object-version-control/dist/index.d.ts` | 142 B | 100 B | 86 B |

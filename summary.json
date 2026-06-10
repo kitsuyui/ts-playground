@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-10T14:44:41.332Z",
+  "generated_at": "2026-06-10T23:18:22.209Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "b28e425607586c8f631cb1df4b2084b600eaa152",
+  "base_reference": "1e427bf7cfc39666650cebfad9aef029426f5fd8",
   "head_label": "main",
-  "head_reference": "1e427bf7cfc39666650cebfad9aef029426f5fd8",
+  "head_reference": "4cfdfeed2133959b9d3871bc90a8b95e080d92cf",
   "targets": [
     {
       "id": "total",
@@ -352,19 +352,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 458557,
-          "base": 449853,
-          "delta": 8704
+          "current": 465121,
+          "base": 458557,
+          "delta": 6564
         },
         "gzip": {
-          "current": 173047,
-          "base": 170307,
-          "delta": 2740
+          "current": 175093,
+          "base": 173047,
+          "delta": 2046
         },
         "brotli": {
-          "current": 148612,
-          "base": 146198,
-          "delta": 2414
+          "current": 150400,
+          "base": 148612,
+          "delta": 1788
         }
       },
       "violations": [],
@@ -514,18 +514,18 @@
       "sizes": {
         "raw": {
           "current": 22232,
-          "base": 21692,
-          "delta": 540
+          "base": 22232,
+          "delta": 0
         },
         "gzip": {
           "current": 8665,
-          "base": 8775,
-          "delta": -110
+          "base": 8665,
+          "delta": 0
         },
         "brotli": {
           "current": 7286,
-          "base": 7403,
-          "delta": -117
+          "base": 7286,
+          "delta": 0
         }
       },
       "violations": [],
@@ -616,18 +616,18 @@
       "sizes": {
         "raw": {
           "current": 26160,
-          "base": 26032,
-          "delta": 128
+          "base": 26160,
+          "delta": 0
         },
         "gzip": {
           "current": 13022,
-          "base": 12938,
-          "delta": 84
+          "base": 13022,
+          "delta": 0
         },
         "brotli": {
           "current": 11621,
-          "base": 11611,
-          "delta": 10
+          "base": 11621,
+          "delta": 0
         }
       },
       "violations": [],
@@ -665,18 +665,18 @@
       "sizes": {
         "raw": {
           "current": 18684,
-          "base": 14800,
-          "delta": 3884
+          "base": 18684,
+          "delta": 0
         },
         "gzip": {
           "current": 7689,
-          "base": 6632,
-          "delta": 1057
+          "base": 7689,
+          "delta": 0
         },
         "brotli": {
           "current": 6531,
-          "base": 5612,
-          "delta": 919
+          "base": 6531,
+          "delta": 0
         }
       },
       "violations": [],
@@ -753,18 +753,18 @@
       "sizes": {
         "raw": {
           "current": 35046,
-          "base": 33963,
-          "delta": 1083
+          "base": 35046,
+          "delta": 0
         },
         "gzip": {
           "current": 14652,
-          "base": 14205,
-          "delta": 447
+          "base": 14652,
+          "delta": 0
         },
         "brotli": {
           "current": 12785,
-          "base": 12327,
-          "delta": 458
+          "base": 12785,
+          "delta": 0
         }
       },
       "violations": [],
@@ -830,18 +830,18 @@
       "sizes": {
         "raw": {
           "current": 85618,
-          "base": 85878,
-          "delta": -260
+          "base": 85618,
+          "delta": 0
         },
         "gzip": {
           "current": 29061,
-          "base": 29237,
-          "delta": -176
+          "base": 29061,
+          "delta": 0
         },
         "brotli": {
           "current": 25394,
-          "base": 25524,
-          "delta": -130
+          "base": 25394,
+          "delta": 0
         }
       },
       "violations": [],
@@ -942,19 +942,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 118977,
-          "base": 115372,
-          "delta": 3605
+          "current": 125541,
+          "base": 118977,
+          "delta": 6564
         },
         "gzip": {
-          "current": 38804,
-          "base": 37181,
-          "delta": 1623
+          "current": 40850,
+          "base": 38804,
+          "delta": 2046
         },
         "brotli": {
-          "current": 33739,
-          "base": 32375,
-          "delta": 1364
+          "current": 35527,
+          "base": 33739,
+          "delta": 1788
         }
       },
       "violations": [],
@@ -1004,18 +1004,18 @@
       "sizes": {
         "raw": {
           "current": 37221,
-          "base": 37475,
-          "delta": -254
+          "base": 37221,
+          "delta": 0
         },
         "gzip": {
           "current": 13042,
-          "base": 13176,
-          "delta": -134
+          "base": 13042,
+          "delta": 0
         },
         "brotli": {
           "current": 11274,
-          "base": 11365,
-          "delta": -91
+          "base": 11274,
+          "delta": 0
         }
       },
       "violations": [],
@@ -1051,18 +1051,18 @@
       "sizes": {
         "raw": {
           "current": 9125,
-          "base": 9147,
-          "delta": -22
+          "base": 9125,
+          "delta": 0
         },
         "gzip": {
           "current": 5350,
-          "base": 5401,
-          "delta": -51
+          "base": 5350,
+          "delta": 0
         },
         "brotli": {
           "current": 4546,
-          "base": 4545,
-          "delta": 1
+          "base": 4546,
+          "delta": 0
         }
       },
       "violations": [],
