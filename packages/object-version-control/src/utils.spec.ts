@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { deepCopy, generateHash } from './utils'
+import { canonicalStringify, deepCopy, generateHash } from './utils'
 
 describe('deepCopy', () => {
   it('should deep copy an object', () => {
@@ -48,5 +48,38 @@ describe('generateHash', () => {
     expect(hash).toBe(
       '2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824'
     )
+  })
+})
+
+describe('canonicalStringify', () => {
+  it('produces the same output regardless of object key insertion order', () => {
+    const a = { a: 1, b: 2 }
+    const b = { b: 2, a: 1 }
+    expect(canonicalStringify(a)).toBe(canonicalStringify(b))
+  })
+
+  it('sorts nested object keys recursively', () => {
+    const a = { z: { y: 1, x: 2 }, m: 3 }
+    const b = { m: 3, z: { x: 2, y: 1 } }
+    expect(canonicalStringify(a)).toBe(canonicalStringify(b))
+  })
+
+  it('preserves array element order', () => {
+    const a = [1, 2, 3]
+    const b = [3, 2, 1]
+    expect(canonicalStringify(a)).not.toBe(canonicalStringify(b))
+  })
+
+  it('handles primitives and null', () => {
+    expect(canonicalStringify(null)).toBe('null')
+    expect(canonicalStringify(42)).toBe('42')
+    expect(canonicalStringify('hello')).toBe('"hello"')
+    expect(canonicalStringify(true)).toBe('true')
+  })
+
+  it('handles arrays of objects with different key orders', () => {
+    const a = [{ b: 2, a: 1 }]
+    const b = [{ a: 1, b: 2 }]
+    expect(canonicalStringify(a)).toBe(canonicalStringify(b))
   })
 })
