@@ -16,12 +16,20 @@ It also tracks built package artifact size with [`gh-build-size`](https://github
   - [x] Add TypeDoc for documentation
   - [x] Publish NPM package
 
+- [x] `@kitsuyui/bits128` ... utilities for converting and transforming 128-bit values
+- [x] `@kitsuyui/cipher` ... cipher utilities for encryption and decryption
+- [x] `@kitsuyui/debug` ... debugging utilities for JavaScript and TypeScript
 - [x] `@kitsuyui/hello` ... simple hello world package
-- [x] `@kitsuyui/string` ... simple string package
-- [x] `@kitsuyui/mymath` ... simple math package
-- [x] `@kitsuyui/luxon-ext` ... extension for [luxon](https://moment.github.io/luxon/)
-- [x] `@kitsuyui/intended-rollback` ... intended transaction rollback for prisma
 - [x] `@kitsuyui/incremental-color-palette` ... incremental color palette generator
+- [x] `@kitsuyui/intended-rollback` ... intended transaction rollback for prisma
+- [x] `@kitsuyui/is-local` ... determine if a given host is local or not
+- [x] `@kitsuyui/luxon-ext` ... extension for [luxon](https://moment.github.io/luxon/)
+- [x] `@kitsuyui/mymath` ... simple math package
+- [x] `@kitsuyui/number-time` ... treat number as time
+- [x] `@kitsuyui/object-version-control` ... object version control with diff and merge
+- [x] `@kitsuyui/string` ... simple string package
+- [x] `@kitsuyui/symbolic-prototype` ... modern prototype extension with Symbol
+- [x] `@kitsuyui/word-stats` ... word statistics package (count, TF-IDF, etc.)
 
 ## Docs
 
