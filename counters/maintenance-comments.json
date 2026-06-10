@@ -4,7 +4,7 @@
   "count": 2,
   "matches": [
     {
-      "path": "packages/mymath/src/intervalMapper/index.ts",
+      "path": "packages/mymath/src/intervalMapper.ts",
       "line": 7,
       "text": "* TODO: Implement Mittag-Leffler function to create parameterized decay functions."
     },

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-09T17:24:42.286Z",
+  "generated_at": "2026-06-10T14:42:48.497Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-counter-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "e18ebb9ec32543547fc3b92f56576cc4ecd422b1",
+  "base_reference": "b28e425607586c8f631cb1df4b2084b600eaa152",
   "head_label": "main",
-  "head_reference": "b28e425607586c8f631cb1df4b2084b600eaa152",
+  "head_reference": "8d999700234291ae367e3e4fa37cd434148bd628",
   "bootstrap_message": null,
   "base_only_paths": [],
   "counters": [
@@ -24,7 +24,7 @@
       "touched_files": [],
       "file_deltas": [
         {
-          "path": "packages/mymath/src/intervalMapper/index.ts",
+          "path": "packages/mymath/src/intervalMapper.ts",
           "current": 1,
           "base": 0,
           "delta": 1
