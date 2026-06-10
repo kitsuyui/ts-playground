@@ -59,6 +59,48 @@ const createFailureResult = <TContent>(error: unknown): Result<TContent> => ({
   },
 })
 
+const createDoubleFailureResult = <TContent>(
+  error: unknown,
+  rollbackError: unknown
+): Result<TContent> => ({
+  success: false,
+  error,
+  rollbackError,
+  rollback: {
+    occurred: false,
+    intended: false,
+  },
+})
+
+// Wraps `func` to capture its error before rethrowing, allowing the caller
+// to detect whether a subsequent outer exception is a rollback failure.
+const wrapFuncWithErrorCapture =
+  <TClientTran, TContent>(
+    func: TranInnerFn<TClientTran, TContent>,
+    errors: Array<{ error: unknown }>
+  ): TranInnerFn<TClientTran, TContent> =>
+  async (something) => {
+    try {
+      return await func(something)
+    } catch (e) {
+      errors.push({ error: e })
+      throw e
+    }
+  }
+
+const resolveFromCatch = <TContent>(
+  e: unknown,
+  content: TContent | null,
+  funcErrors: Array<{ error: unknown }>
+): Result<TContent> => {
+  if (e instanceof IntendedRollback)
+    return createIntendedRollbackResult(content)
+  if (funcErrors.length > 0 && e !== funcErrors[0].error) {
+    return createDoubleFailureResult(funcErrors[0].error, e)
+  }
+  return createFailureResult(e)
+}
+
 /**
  * Handle rollback
  * @param client Client instance (i.e. database client like PrismaClient)
@@ -74,21 +116,18 @@ const handleRollback = async <TClient, TClientTran, TContent>(
   rollback: boolean
 ): Promise<Result<TContent>> => {
   let content: TContent | null = null
+  const funcErrors: Array<{ error: unknown }> = []
+  const wrappedFunc = wrapFuncWithErrorCapture(func, funcErrors)
   try {
     content = await outer(client, async (something) => {
-      const content_ = await func(something)
+      const content_ = await wrappedFunc(something)
       // keep the content prepared for intended rollback
       content = content_
-      if (rollback) {
-        throw new IntendedRollback()
-      }
+      if (rollback) throw new IntendedRollback()
       return content_
     })
     return createSuccessResult(content)
   } catch (e) {
-    if (e instanceof IntendedRollback) {
-      return createIntendedRollbackResult(content)
-    }
-    return createFailureResult(e)
+    return resolveFromCatch(e, content, funcErrors)
   }
 }

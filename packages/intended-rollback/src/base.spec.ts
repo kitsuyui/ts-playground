@@ -112,4 +112,34 @@ describe('dummyClientIntendedRollback', () => {
       },
     })
   })
+  it('should return double failure when rollback also fails', async () => {
+    const mainError = new Error('main error')
+    const rollbackError = new Error('rollback failed')
+    const failingRollbackOuterFn = async <T>(
+      _client: unknown,
+      callback: (tran: DummyClientTransaction) => Promise<T>
+    ): Promise<T> => {
+      const tran = new DummyClientTransaction()
+      try {
+        return await callback(tran)
+      } catch (_) {
+        throw rollbackError
+      }
+    }
+    const wrapped = wrapWithRollback<unknown, DummyClientTransaction, string>(
+      failingRollbackOuterFn
+    )
+    const result = await wrapped(null, false, async () => {
+      throw mainError
+    })
+    expect(result).toEqual({
+      success: false,
+      error: mainError,
+      rollbackError: rollbackError,
+      rollback: {
+        occurred: false,
+        intended: false,
+      },
+    })
+  })
 })
