@@ -86,10 +86,8 @@ describe('harmonicMean', () => {
     expect(harmonicMean([1, 2, 3, 4])).toBeCloseTo(1.92)
   })
 
-  it('should return 0 for []', () => {
-    expect(() => harmonicMean([])).toThrowError(
-      'Cannot calculate harmonic mean of empty set'
-    )
+  it('should return NaN for []', () => {
+    expect(harmonicMean([])).toBeNaN()
   })
 })
 
