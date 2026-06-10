@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
-import { sum } from '../array'
-import { softmax, softmaxWithTemperature } from './index'
+import { sum } from './array'
+import { softmax, softmaxWithTemperature } from './softmax'
 
 describe('softmaxWithTemperature', () => {
   it('should return the correct result', () => {

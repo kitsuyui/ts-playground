@@ -22,6 +22,12 @@ export default defineConfig({
       include: ['**/src/**/*.ts'],
       exclude: ['**/src/**/*.spec.ts'],
       reporter: ['text', 'html', 'lcov'],
+      thresholds: {
+        statements: 95,
+        branches: 85,
+        functions: 95,
+        lines: 95,
+      },
     },
   },
   /**

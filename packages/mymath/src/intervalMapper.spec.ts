@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import * as module from './index'
+import * as module from './intervalMapper'
 
 describe('map01to0InfTan', () => {
   it('should map values from [0, 1] to [0, +∞)', () => {

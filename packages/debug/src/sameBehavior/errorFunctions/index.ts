@@ -9,12 +9,13 @@ export const errorLogger = <A extends unknown[], S>(
   resultA: S,
   resultB: S
 ): void => {
-  console.error(
-    'Functions exhibit different behavior!\n Args: %s\n Result A: %s\n Result B: %s',
-    args,
-    resultA,
-    resultB
-  )
+  const message = [
+    'Functions exhibit different behavior!',
+    `Arguments: ${JSON.stringify(args)}`,
+    `Result A: ${JSON.stringify(resultA)}`,
+    `Result B: ${JSON.stringify(resultB)}`,
+  ].join('\n')
+  console.error(message)
 }
 
 /**

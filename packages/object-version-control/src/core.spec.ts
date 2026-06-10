@@ -66,6 +66,14 @@ describe('Core', () => {
     expect(core.getSnapshotDataByCommitHash(commitHash)).toEqual(data)
   })
 
+  it('produces identical hashes for identical data and parents', () => {
+    const core1 = Core.create()
+    const core2 = Core.create()
+    const hash1 = core1.commit({ key: 'value' }, [])
+    const hash2 = core2.commit({ key: 'value' }, [])
+    expect(hash1).toBe(hash2)
+  })
+
   it('verifies valid repositories', () => {
     const core = Core.create()
     const baseHash = core.commit({ key: 'value' }, [])
@@ -143,5 +151,15 @@ describe('Core', () => {
     expect(core.getCommit(hash1)).toBeDefined()
     expect(core.getCommit(hash2)).toBeDefined()
     expect(core.verifyAll()).toBe(true)
+  })
+
+  it('deduplicates snapshots for logically equal objects with different key orders', () => {
+    const core = Core.create<Record<string, number>>()
+    const h1 = core.commit({ a: 1, b: 2 }, [])
+    const h2 = core.commit({ b: 2, a: 1 }, [h1])
+
+    const c1 = core.getCommit(h1)
+    const c2 = core.getCommit(h2)
+    expect(c1.snapshotHash).toBe(c2.snapshotHash)
   })
 })
