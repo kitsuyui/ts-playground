@@ -53,17 +53,17 @@
     {
       "path": "packages/object-version-control/dist/core.cjs",
       "sizes": {
-        "raw": 2436,
-        "gzip": 864,
-        "brotli": 779
+        "raw": 2418,
+        "gzip": 860,
+        "brotli": 770
       }
     },
     {
       "path": "packages/object-version-control/dist/core.cjs.map",
       "sizes": {
-        "raw": 10683,
-        "gzip": 2968,
-        "brotli": 2643
+        "raw": 10671,
+        "gzip": 2973,
+        "brotli": 2664
       }
     },
     {
@@ -85,17 +85,17 @@
     {
       "path": "packages/object-version-control/dist/core.js",
       "sizes": {
-        "raw": 2351,
-        "gzip": 818,
-        "brotli": 745
+        "raw": 2338,
+        "gzip": 811,
+        "brotli": 741
       }
     },
     {
       "path": "packages/object-version-control/dist/core.js.map",
       "sizes": {
-        "raw": 10592,
-        "gzip": 2947,
-        "brotli": 2611
+        "raw": 10551,
+        "gzip": 2943,
+        "brotli": 2605
       }
     },
     {
@@ -189,9 +189,9 @@
     {
       "path": "packages/object-version-control/dist/ovc.cjs.map",
       "sizes": {
-        "raw": 11059,
-        "gzip": 2767,
-        "brotli": 2400
+        "raw": 11128,
+        "gzip": 2780,
+        "brotli": 2437
       }
     },
     {
@@ -221,9 +221,9 @@
     {
       "path": "packages/object-version-control/dist/ovc.js.map",
       "sizes": {
-        "raw": 11045,
-        "gzip": 2763,
-        "brotli": 2407
+        "raw": 11114,
+        "gzip": 2777,
+        "brotli": 2401
       }
     },
     {
@@ -301,55 +301,55 @@
     {
       "path": "packages/object-version-control/dist/utils.cjs",
       "sizes": {
-        "raw": 249,
-        "gzip": 214,
-        "brotli": 202
+        "raw": 463,
+        "gzip": 335,
+        "brotli": 291
       }
     },
     {
       "path": "packages/object-version-control/dist/utils.cjs.map",
       "sizes": {
-        "raw": 789,
-        "gzip": 488,
-        "brotli": 412
+        "raw": 1933,
+        "gzip": 983,
+        "brotli": 829
       }
     },
     {
       "path": "packages/object-version-control/dist/utils.d.cts",
       "sizes": {
-        "raw": 601,
-        "gzip": 377,
-        "brotli": 303
+        "raw": 1021,
+        "gzip": 560,
+        "brotli": 446
       }
     },
     {
       "path": "packages/object-version-control/dist/utils.d.ts",
       "sizes": {
-        "raw": 600,
-        "gzip": 375,
-        "brotli": 302
+        "raw": 1020,
+        "gzip": 558,
+        "brotli": 441
       }
     },
     {
       "path": "packages/object-version-control/dist/utils.js",
       "sizes": {
-        "raw": 149,
-        "gzip": 151,
-        "brotli": 131
+        "raw": 358,
+        "gzip": 280,
+        "brotli": 243
       }
     },
     {
       "path": "packages/object-version-control/dist/utils.js.map",
       "sizes": {
-        "raw": 778,
-        "gzip": 480,
-        "brotli": 392
+        "raw": 1922,
+        "gzip": 975,
+        "brotli": 823
       }
     }
   ],
   "totals": {
-    "raw": 115372,
-    "gzip": 37181,
-    "brotli": 32375
+    "raw": 118977,
+    "gzip": 38804,
+    "brotli": 33739
   }
 }

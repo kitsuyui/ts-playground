@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-09T17:25:01.372Z",
+  "generated_at": "2026-06-10T14:44:41.332Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "e18ebb9ec32543547fc3b92f56576cc4ecd422b1",
+  "base_reference": "b28e425607586c8f631cb1df4b2084b600eaa152",
   "head_label": "main",
-  "head_reference": "b28e425607586c8f631cb1df4b2084b600eaa152",
+  "head_reference": "1e427bf7cfc39666650cebfad9aef029426f5fd8",
   "targets": [
     {
       "id": "total",
@@ -181,54 +181,54 @@
         "packages/luxon-ext/dist/units/index.d.ts",
         "packages/luxon-ext/dist/units/index.js",
         "packages/luxon-ext/dist/units/index.js.map",
-        "packages/mymath/dist/array/index.cjs",
-        "packages/mymath/dist/array/index.cjs.map",
-        "packages/mymath/dist/array/index.d.cts",
-        "packages/mymath/dist/array/index.d.ts",
-        "packages/mymath/dist/array/index.js",
-        "packages/mymath/dist/array/index.js.map",
+        "packages/mymath/dist/array.cjs",
+        "packages/mymath/dist/array.cjs.map",
+        "packages/mymath/dist/array.d.cts",
+        "packages/mymath/dist/array.d.ts",
+        "packages/mymath/dist/array.js",
+        "packages/mymath/dist/array.js.map",
         "packages/mymath/dist/chunk-BwIEoMh7.cjs",
         "packages/mymath/dist/chunk-WfQuXRBF.js",
-        "packages/mymath/dist/clamp/index.cjs",
-        "packages/mymath/dist/clamp/index.cjs.map",
-        "packages/mymath/dist/clamp/index.d.cts",
-        "packages/mymath/dist/clamp/index.d.ts",
-        "packages/mymath/dist/clamp/index.js",
-        "packages/mymath/dist/clamp/index.js.map",
+        "packages/mymath/dist/clamp.cjs",
+        "packages/mymath/dist/clamp.cjs.map",
+        "packages/mymath/dist/clamp.d.cts",
+        "packages/mymath/dist/clamp.d.ts",
+        "packages/mymath/dist/clamp.js",
+        "packages/mymath/dist/clamp.js.map",
         "packages/mymath/dist/index.cjs",
         "packages/mymath/dist/index.d.cts",
         "packages/mymath/dist/index.d.ts",
         "packages/mymath/dist/index.js",
-        "packages/mymath/dist/intervalMapper/index.cjs",
-        "packages/mymath/dist/intervalMapper/index.cjs.map",
-        "packages/mymath/dist/intervalMapper/index.d.cts",
-        "packages/mymath/dist/intervalMapper/index.d.ts",
-        "packages/mymath/dist/intervalMapper/index.js",
-        "packages/mymath/dist/intervalMapper/index.js.map",
-        "packages/mymath/dist/log/index.cjs",
-        "packages/mymath/dist/log/index.cjs.map",
-        "packages/mymath/dist/log/index.d.cts",
-        "packages/mymath/dist/log/index.d.ts",
-        "packages/mymath/dist/log/index.js",
-        "packages/mymath/dist/log/index.js.map",
-        "packages/mymath/dist/polar/index.cjs",
-        "packages/mymath/dist/polar/index.cjs.map",
-        "packages/mymath/dist/polar/index.d.cts",
-        "packages/mymath/dist/polar/index.d.ts",
-        "packages/mymath/dist/polar/index.js",
-        "packages/mymath/dist/polar/index.js.map",
-        "packages/mymath/dist/sigmoid/index.cjs",
-        "packages/mymath/dist/sigmoid/index.cjs.map",
-        "packages/mymath/dist/sigmoid/index.d.cts",
-        "packages/mymath/dist/sigmoid/index.d.ts",
-        "packages/mymath/dist/sigmoid/index.js",
-        "packages/mymath/dist/sigmoid/index.js.map",
-        "packages/mymath/dist/softmax/index.cjs",
-        "packages/mymath/dist/softmax/index.cjs.map",
-        "packages/mymath/dist/softmax/index.d.cts",
-        "packages/mymath/dist/softmax/index.d.ts",
-        "packages/mymath/dist/softmax/index.js",
-        "packages/mymath/dist/softmax/index.js.map",
+        "packages/mymath/dist/intervalMapper.cjs",
+        "packages/mymath/dist/intervalMapper.cjs.map",
+        "packages/mymath/dist/intervalMapper.d.cts",
+        "packages/mymath/dist/intervalMapper.d.ts",
+        "packages/mymath/dist/intervalMapper.js",
+        "packages/mymath/dist/intervalMapper.js.map",
+        "packages/mymath/dist/log.cjs",
+        "packages/mymath/dist/log.cjs.map",
+        "packages/mymath/dist/log.d.cts",
+        "packages/mymath/dist/log.d.ts",
+        "packages/mymath/dist/log.js",
+        "packages/mymath/dist/log.js.map",
+        "packages/mymath/dist/polar.cjs",
+        "packages/mymath/dist/polar.cjs.map",
+        "packages/mymath/dist/polar.d.cts",
+        "packages/mymath/dist/polar.d.ts",
+        "packages/mymath/dist/polar.js",
+        "packages/mymath/dist/polar.js.map",
+        "packages/mymath/dist/sigmoid.cjs",
+        "packages/mymath/dist/sigmoid.cjs.map",
+        "packages/mymath/dist/sigmoid.d.cts",
+        "packages/mymath/dist/sigmoid.d.ts",
+        "packages/mymath/dist/sigmoid.js",
+        "packages/mymath/dist/sigmoid.js.map",
+        "packages/mymath/dist/softmax.cjs",
+        "packages/mymath/dist/softmax.cjs.map",
+        "packages/mymath/dist/softmax.d.cts",
+        "packages/mymath/dist/softmax.d.ts",
+        "packages/mymath/dist/softmax.js",
+        "packages/mymath/dist/softmax.js.map",
         "packages/number-time/dist/chunk-BwIEoMh7.cjs",
         "packages/number-time/dist/chunk-WfQuXRBF.js",
         "packages/number-time/dist/index.cjs",
@@ -284,34 +284,34 @@
         "packages/object-version-control/dist/utils.d.ts",
         "packages/object-version-control/dist/utils.js",
         "packages/object-version-control/dist/utils.js.map",
-        "packages/string/dist/capitalization/cases/index.cjs",
-        "packages/string/dist/capitalization/cases/index.cjs.map",
-        "packages/string/dist/capitalization/cases/index.d.cts",
-        "packages/string/dist/capitalization/cases/index.d.ts",
-        "packages/string/dist/capitalization/cases/index.js",
-        "packages/string/dist/capitalization/cases/index.js.map",
-        "packages/string/dist/capitalization/convert/index.cjs",
-        "packages/string/dist/capitalization/convert/index.cjs.map",
-        "packages/string/dist/capitalization/convert/index.d.cts",
-        "packages/string/dist/capitalization/convert/index.d.ts",
-        "packages/string/dist/capitalization/convert/index.js",
-        "packages/string/dist/capitalization/convert/index.js.map",
+        "packages/string/dist/capitalization/cases.cjs",
+        "packages/string/dist/capitalization/cases.cjs.map",
+        "packages/string/dist/capitalization/cases.d.cts",
+        "packages/string/dist/capitalization/cases.d.ts",
+        "packages/string/dist/capitalization/cases.js",
+        "packages/string/dist/capitalization/cases.js.map",
+        "packages/string/dist/capitalization/convert.cjs",
+        "packages/string/dist/capitalization/convert.cjs.map",
+        "packages/string/dist/capitalization/convert.d.cts",
+        "packages/string/dist/capitalization/convert.d.ts",
+        "packages/string/dist/capitalization/convert.js",
+        "packages/string/dist/capitalization/convert.js.map",
         "packages/string/dist/capitalization/index.cjs",
         "packages/string/dist/capitalization/index.d.cts",
         "packages/string/dist/capitalization/index.d.ts",
         "packages/string/dist/capitalization/index.js",
-        "packages/string/dist/capitalization/join/index.cjs",
-        "packages/string/dist/capitalization/join/index.cjs.map",
-        "packages/string/dist/capitalization/join/index.d.cts",
-        "packages/string/dist/capitalization/join/index.d.ts",
-        "packages/string/dist/capitalization/join/index.js",
-        "packages/string/dist/capitalization/join/index.js.map",
-        "packages/string/dist/capitalization/split/index.cjs",
-        "packages/string/dist/capitalization/split/index.cjs.map",
-        "packages/string/dist/capitalization/split/index.d.cts",
-        "packages/string/dist/capitalization/split/index.d.ts",
-        "packages/string/dist/capitalization/split/index.js",
-        "packages/string/dist/capitalization/split/index.js.map",
+        "packages/string/dist/capitalization/join.cjs",
+        "packages/string/dist/capitalization/join.cjs.map",
+        "packages/string/dist/capitalization/join.d.cts",
+        "packages/string/dist/capitalization/join.d.ts",
+        "packages/string/dist/capitalization/join.js",
+        "packages/string/dist/capitalization/join.js.map",
+        "packages/string/dist/capitalization/split.cjs",
+        "packages/string/dist/capitalization/split.cjs.map",
+        "packages/string/dist/capitalization/split.d.cts",
+        "packages/string/dist/capitalization/split.d.ts",
+        "packages/string/dist/capitalization/split.js",
+        "packages/string/dist/capitalization/split.js.map",
         "packages/string/dist/index.cjs",
         "packages/string/dist/index.d.cts",
         "packages/string/dist/index.d.ts",
@@ -352,19 +352,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 449853,
+          "current": 458557,
           "base": 449853,
-          "delta": 0
+          "delta": 8704
         },
         "gzip": {
-          "current": 170307,
+          "current": 173047,
           "base": 170307,
-          "delta": 0
+          "delta": 2740
         },
         "brotli": {
-          "current": 146198,
+          "current": 148612,
           "base": 146198,
-          "delta": 0
+          "delta": 2414
         }
       },
       "violations": [],
@@ -513,19 +513,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 21692,
+          "current": 22232,
           "base": 21692,
-          "delta": 0
+          "delta": 540
         },
         "gzip": {
-          "current": 8775,
+          "current": 8665,
           "base": 8775,
-          "delta": 0
+          "delta": -110
         },
         "brotli": {
-          "current": 7403,
+          "current": 7286,
           "base": 7403,
-          "delta": 0
+          "delta": -117
         }
       },
       "violations": [],
@@ -615,19 +615,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 26032,
+          "current": 26160,
           "base": 26032,
-          "delta": 0
+          "delta": 128
         },
         "gzip": {
-          "current": 12938,
+          "current": 13022,
           "base": 12938,
-          "delta": 0
+          "delta": 84
         },
         "brotli": {
-          "current": 11611,
+          "current": 11621,
           "base": 11611,
-          "delta": 0
+          "delta": 10
         }
       },
       "violations": [],
@@ -664,19 +664,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 14800,
+          "current": 18684,
           "base": 14800,
-          "delta": 0
+          "delta": 3884
         },
         "gzip": {
-          "current": 6632,
+          "current": 7689,
           "base": 6632,
-          "delta": 0
+          "delta": 1057
         },
         "brotli": {
-          "current": 5612,
+          "current": 6531,
           "base": 5612,
-          "delta": 0
+          "delta": 919
         }
       },
       "violations": [],
@@ -752,19 +752,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 33963,
+          "current": 35046,
           "base": 33963,
-          "delta": 0
+          "delta": 1083
         },
         "gzip": {
-          "current": 14205,
+          "current": 14652,
           "base": 14205,
-          "delta": 0
+          "delta": 447
         },
         "brotli": {
-          "current": 12327,
+          "current": 12785,
           "base": 12327,
-          "delta": 0
+          "delta": 458
         }
       },
       "violations": [],
@@ -775,73 +775,73 @@
       "id": "pkg-mymath",
       "label": "mymath",
       "files": [
-        "packages/mymath/dist/array/index.cjs",
-        "packages/mymath/dist/array/index.cjs.map",
-        "packages/mymath/dist/array/index.d.cts",
-        "packages/mymath/dist/array/index.d.ts",
-        "packages/mymath/dist/array/index.js",
-        "packages/mymath/dist/array/index.js.map",
+        "packages/mymath/dist/array.cjs",
+        "packages/mymath/dist/array.cjs.map",
+        "packages/mymath/dist/array.d.cts",
+        "packages/mymath/dist/array.d.ts",
+        "packages/mymath/dist/array.js",
+        "packages/mymath/dist/array.js.map",
         "packages/mymath/dist/chunk-BwIEoMh7.cjs",
         "packages/mymath/dist/chunk-WfQuXRBF.js",
-        "packages/mymath/dist/clamp/index.cjs",
-        "packages/mymath/dist/clamp/index.cjs.map",
-        "packages/mymath/dist/clamp/index.d.cts",
-        "packages/mymath/dist/clamp/index.d.ts",
-        "packages/mymath/dist/clamp/index.js",
-        "packages/mymath/dist/clamp/index.js.map",
+        "packages/mymath/dist/clamp.cjs",
+        "packages/mymath/dist/clamp.cjs.map",
+        "packages/mymath/dist/clamp.d.cts",
+        "packages/mymath/dist/clamp.d.ts",
+        "packages/mymath/dist/clamp.js",
+        "packages/mymath/dist/clamp.js.map",
         "packages/mymath/dist/index.cjs",
         "packages/mymath/dist/index.d.cts",
         "packages/mymath/dist/index.d.ts",
         "packages/mymath/dist/index.js",
-        "packages/mymath/dist/intervalMapper/index.cjs",
-        "packages/mymath/dist/intervalMapper/index.cjs.map",
-        "packages/mymath/dist/intervalMapper/index.d.cts",
-        "packages/mymath/dist/intervalMapper/index.d.ts",
-        "packages/mymath/dist/intervalMapper/index.js",
-        "packages/mymath/dist/intervalMapper/index.js.map",
-        "packages/mymath/dist/log/index.cjs",
-        "packages/mymath/dist/log/index.cjs.map",
-        "packages/mymath/dist/log/index.d.cts",
-        "packages/mymath/dist/log/index.d.ts",
-        "packages/mymath/dist/log/index.js",
-        "packages/mymath/dist/log/index.js.map",
-        "packages/mymath/dist/polar/index.cjs",
-        "packages/mymath/dist/polar/index.cjs.map",
-        "packages/mymath/dist/polar/index.d.cts",
-        "packages/mymath/dist/polar/index.d.ts",
-        "packages/mymath/dist/polar/index.js",
-        "packages/mymath/dist/polar/index.js.map",
-        "packages/mymath/dist/sigmoid/index.cjs",
-        "packages/mymath/dist/sigmoid/index.cjs.map",
-        "packages/mymath/dist/sigmoid/index.d.cts",
-        "packages/mymath/dist/sigmoid/index.d.ts",
-        "packages/mymath/dist/sigmoid/index.js",
-        "packages/mymath/dist/sigmoid/index.js.map",
-        "packages/mymath/dist/softmax/index.cjs",
-        "packages/mymath/dist/softmax/index.cjs.map",
-        "packages/mymath/dist/softmax/index.d.cts",
-        "packages/mymath/dist/softmax/index.d.ts",
-        "packages/mymath/dist/softmax/index.js",
-        "packages/mymath/dist/softmax/index.js.map"
+        "packages/mymath/dist/intervalMapper.cjs",
+        "packages/mymath/dist/intervalMapper.cjs.map",
+        "packages/mymath/dist/intervalMapper.d.cts",
+        "packages/mymath/dist/intervalMapper.d.ts",
+        "packages/mymath/dist/intervalMapper.js",
+        "packages/mymath/dist/intervalMapper.js.map",
+        "packages/mymath/dist/log.cjs",
+        "packages/mymath/dist/log.cjs.map",
+        "packages/mymath/dist/log.d.cts",
+        "packages/mymath/dist/log.d.ts",
+        "packages/mymath/dist/log.js",
+        "packages/mymath/dist/log.js.map",
+        "packages/mymath/dist/polar.cjs",
+        "packages/mymath/dist/polar.cjs.map",
+        "packages/mymath/dist/polar.d.cts",
+        "packages/mymath/dist/polar.d.ts",
+        "packages/mymath/dist/polar.js",
+        "packages/mymath/dist/polar.js.map",
+        "packages/mymath/dist/sigmoid.cjs",
+        "packages/mymath/dist/sigmoid.cjs.map",
+        "packages/mymath/dist/sigmoid.d.cts",
+        "packages/mymath/dist/sigmoid.d.ts",
+        "packages/mymath/dist/sigmoid.js",
+        "packages/mymath/dist/sigmoid.js.map",
+        "packages/mymath/dist/softmax.cjs",
+        "packages/mymath/dist/softmax.cjs.map",
+        "packages/mymath/dist/softmax.d.cts",
+        "packages/mymath/dist/softmax.d.ts",
+        "packages/mymath/dist/softmax.js",
+        "packages/mymath/dist/softmax.js.map"
       ],
       "touched_files": [],
       "baseline_missing": false,
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 85878,
+          "current": 85618,
           "base": 85878,
-          "delta": 0
+          "delta": -260
         },
         "gzip": {
-          "current": 29237,
+          "current": 29061,
           "base": 29237,
-          "delta": 0
+          "delta": -176
         },
         "brotli": {
-          "current": 25524,
+          "current": 25394,
           "base": 25524,
-          "delta": 0
+          "delta": -130
         }
       },
       "violations": [],
@@ -942,19 +942,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 115372,
+          "current": 118977,
           "base": 115372,
-          "delta": 0
+          "delta": 3605
         },
         "gzip": {
-          "current": 37181,
+          "current": 38804,
           "base": 37181,
-          "delta": 0
+          "delta": 1623
         },
         "brotli": {
-          "current": 32375,
+          "current": 33739,
           "base": 32375,
-          "delta": 0
+          "delta": 1364
         }
       },
       "violations": [],
@@ -965,34 +965,34 @@
       "id": "pkg-string",
       "label": "string",
       "files": [
-        "packages/string/dist/capitalization/cases/index.cjs",
-        "packages/string/dist/capitalization/cases/index.cjs.map",
-        "packages/string/dist/capitalization/cases/index.d.cts",
-        "packages/string/dist/capitalization/cases/index.d.ts",
-        "packages/string/dist/capitalization/cases/index.js",
-        "packages/string/dist/capitalization/cases/index.js.map",
-        "packages/string/dist/capitalization/convert/index.cjs",
-        "packages/string/dist/capitalization/convert/index.cjs.map",
-        "packages/string/dist/capitalization/convert/index.d.cts",
-        "packages/string/dist/capitalization/convert/index.d.ts",
-        "packages/string/dist/capitalization/convert/index.js",
-        "packages/string/dist/capitalization/convert/index.js.map",
+        "packages/string/dist/capitalization/cases.cjs",
+        "packages/string/dist/capitalization/cases.cjs.map",
+        "packages/string/dist/capitalization/cases.d.cts",
+        "packages/string/dist/capitalization/cases.d.ts",
+        "packages/string/dist/capitalization/cases.js",
+        "packages/string/dist/capitalization/cases.js.map",
+        "packages/string/dist/capitalization/convert.cjs",
+        "packages/string/dist/capitalization/convert.cjs.map",
+        "packages/string/dist/capitalization/convert.d.cts",
+        "packages/string/dist/capitalization/convert.d.ts",
+        "packages/string/dist/capitalization/convert.js",
+        "packages/string/dist/capitalization/convert.js.map",
         "packages/string/dist/capitalization/index.cjs",
         "packages/string/dist/capitalization/index.d.cts",
         "packages/string/dist/capitalization/index.d.ts",
         "packages/string/dist/capitalization/index.js",
-        "packages/string/dist/capitalization/join/index.cjs",
-        "packages/string/dist/capitalization/join/index.cjs.map",
-        "packages/string/dist/capitalization/join/index.d.cts",
-        "packages/string/dist/capitalization/join/index.d.ts",
-        "packages/string/dist/capitalization/join/index.js",
-        "packages/string/dist/capitalization/join/index.js.map",
-        "packages/string/dist/capitalization/split/index.cjs",
-        "packages/string/dist/capitalization/split/index.cjs.map",
-        "packages/string/dist/capitalization/split/index.d.cts",
-        "packages/string/dist/capitalization/split/index.d.ts",
-        "packages/string/dist/capitalization/split/index.js",
-        "packages/string/dist/capitalization/split/index.js.map",
+        "packages/string/dist/capitalization/join.cjs",
+        "packages/string/dist/capitalization/join.cjs.map",
+        "packages/string/dist/capitalization/join.d.cts",
+        "packages/string/dist/capitalization/join.d.ts",
+        "packages/string/dist/capitalization/join.js",
+        "packages/string/dist/capitalization/join.js.map",
+        "packages/string/dist/capitalization/split.cjs",
+        "packages/string/dist/capitalization/split.cjs.map",
+        "packages/string/dist/capitalization/split.d.cts",
+        "packages/string/dist/capitalization/split.d.ts",
+        "packages/string/dist/capitalization/split.js",
+        "packages/string/dist/capitalization/split.js.map",
         "packages/string/dist/index.cjs",
         "packages/string/dist/index.d.cts",
         "packages/string/dist/index.d.ts",
@@ -1003,19 +1003,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 37475,
+          "current": 37221,
           "base": 37475,
-          "delta": 0
+          "delta": -254
         },
         "gzip": {
-          "current": 13176,
+          "current": 13042,
           "base": 13176,
-          "delta": 0
+          "delta": -134
         },
         "brotli": {
-          "current": 11365,
+          "current": 11274,
           "base": 11365,
-          "delta": 0
+          "delta": -91
         }
       },
       "violations": [],
@@ -1050,19 +1050,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 9147,
+          "current": 9125,
           "base": 9147,
-          "delta": 0
+          "delta": -22
         },
         "gzip": {
-          "current": 5401,
+          "current": 5350,
           "base": 5401,
-          "delta": 0
+          "delta": -51
         },
         "brotli": {
-          "current": 4545,
+          "current": 4546,
           "base": 4545,
-          "delta": 0
+          "delta": 1
         }
       },
       "violations": [],

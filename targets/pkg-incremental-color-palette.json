@@ -5,17 +5,17 @@
     {
       "path": "packages/incremental-color-palette/dist/bitReversalPermutation.cjs",
       "sizes": {
-        "raw": 226,
-        "gzip": 204,
-        "brotli": 180
+        "raw": 245,
+        "gzip": 220,
+        "brotli": 168
       }
     },
     {
       "path": "packages/incremental-color-palette/dist/bitReversalPermutation.cjs.map",
       "sizes": {
-        "raw": 686,
-        "gzip": 398,
-        "brotli": 399
+        "raw": 731,
+        "gzip": 424,
+        "brotli": 422
       }
     },
     {
@@ -37,17 +37,17 @@
     {
       "path": "packages/incremental-color-palette/dist/bitReversalPermutation.js",
       "sizes": {
-        "raw": 161,
-        "gzip": 155,
-        "brotli": 154
+        "raw": 180,
+        "gzip": 170,
+        "brotli": 140
       }
     },
     {
       "path": "packages/incremental-color-palette/dist/bitReversalPermutation.js.map",
       "sizes": {
-        "raw": 684,
-        "gzip": 396,
-        "brotli": 369
+        "raw": 729,
+        "gzip": 423,
+        "brotli": 382
       }
     },
     {
@@ -308,8 +308,8 @@
     }
   ],
   "totals": {
-    "raw": 26032,
-    "gzip": 12938,
-    "brotli": 11611
+    "raw": 26160,
+    "gzip": 13022,
+    "brotli": 11621
   }
 }

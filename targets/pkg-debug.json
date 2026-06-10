@@ -53,17 +53,17 @@
     {
       "path": "packages/debug/dist/sameBehavior/errorFunctions/index.cjs",
       "sizes": {
-        "raw": 451,
-        "gzip": 290,
-        "brotli": 222
+        "raw": 527,
+        "gzip": 268,
+        "brotli": 223
       }
     },
     {
       "path": "packages/debug/dist/sameBehavior/errorFunctions/index.cjs.map",
       "sizes": {
-        "raw": 1212,
-        "gzip": 540,
-        "brotli": 455
+        "raw": 1406,
+        "gzip": 506,
+        "brotli": 419
       }
     },
     {
@@ -85,17 +85,17 @@
     {
       "path": "packages/debug/dist/sameBehavior/errorFunctions/index.js",
       "sizes": {
-        "raw": 381,
-        "gzip": 247,
-        "brotli": 218
+        "raw": 457,
+        "gzip": 226,
+        "brotli": 176
       }
     },
     {
       "path": "packages/debug/dist/sameBehavior/errorFunctions/index.js.map",
       "sizes": {
-        "raw": 1210,
-        "gzip": 537,
-        "brotli": 456
+        "raw": 1404,
+        "gzip": 504,
+        "brotli": 416
       }
     },
     {
@@ -196,8 +196,8 @@
     }
   ],
   "totals": {
-    "raw": 21692,
-    "gzip": 8775,
-    "brotli": 7403
+    "raw": 22232,
+    "gzip": 8665,
+    "brotli": 7286
   }
 }
