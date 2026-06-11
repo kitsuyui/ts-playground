@@ -1,37 +1,31 @@
-type HashValue = string
-type Timestamp = number // Unix timestamp
+export type HashValue = string
+export type Timestamp = number // Unix timestamp
 
-type Hasher = (data: string) => HashValue
+export type Hasher = (data: string) => HashValue
 
 // Define types for snapshot and commit
-interface Snapshot<T> {
+export interface Snapshot<T> {
   hash: HashValue
   data: T
 }
 
-interface CommitInfo {
+export interface CommitInfo {
   parents: HashValue[]
   snapshotHash: HashValue
   // message: Git has commit messages, but not used in this implementation
 }
 
-type Commit = {
+export type Commit = {
   hash: HashValue
   timestamp: Timestamp
 } & CommitInfo
 
-type CommitMap = Map<HashValue, Commit>
-type SnapshotMap<T> = Map<HashValue, Snapshot<T>>
+export type CommitMap = Map<HashValue, Commit>
+export type SnapshotMap<T> = Map<HashValue, Snapshot<T>>
 
-type MergeResolver<T> = (
-  ovc: ObjectVersionControl<T>,
-  targets: HashValue[],
-  base: HashValue | null
-) => T
+export type DataOnlyMergeResolver<T> = (targets: T[], base: T | null) => T
 
-type DataOnlyMergeResolver<T> = (targets: T[], base: T | null) => T
-
-interface SyncItems<T> {
+export interface SyncItems<T> {
   commits: Commit[]
   snapshots: Snapshot<T>[]
 }
@@ -43,7 +37,7 @@ declare const _syncHeadBrand: unique symbol
  * Valid SyncHead values are only produced by push(), pull(), fullClone(), and shallowClone().
  * The opaque brand prevents construction of arbitrary SyncHead literals.
  */
-interface SyncHead {
+export interface SyncHead {
   readonly [_syncHeadBrand]: undefined
   local: HashValue | null
   remote: HashValue | null

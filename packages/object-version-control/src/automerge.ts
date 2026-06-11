@@ -2,6 +2,7 @@ import { next as automerge } from '@automerge/automerge'
 import * as jsondiffpatch from 'jsondiffpatch'
 
 import type { ObjectVersionControl } from './ovc'
+import type { HashValue } from './types'
 import { deepCopy } from './utils'
 
 /**

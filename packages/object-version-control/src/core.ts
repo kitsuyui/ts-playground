@@ -1,4 +1,14 @@
 import { findAncestorsWithin } from './treeGraph'
+import type {
+  Commit,
+  CommitInfo,
+  CommitMap,
+  Hasher,
+  HashValue,
+  Snapshot,
+  SnapshotMap,
+  SyncItems,
+} from './types'
 import { canonicalStringify, deepCopy, generateHash } from './utils'
 
 /**
