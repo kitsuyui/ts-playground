@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-10T23:27:07.495Z",
+  "generated_at": "2026-06-11T11:28:18.611Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "15c3b61911d5a97a65ed304949d8278987c334a2",
+  "base_reference": "bf39297ee7b8efa8f3825b6a9c731c1248fb7376",
   "head_label": "main",
-  "head_reference": "bf39297ee7b8efa8f3825b6a9c731c1248fb7376",
+  "head_reference": "3c50a28a522ebbd8c954150c29edafebb2ef0387",
   "targets": [
     {
       "id": "total",
@@ -275,9 +275,10 @@
         "packages/object-version-control/dist/treeGraph.d.ts",
         "packages/object-version-control/dist/treeGraph.js",
         "packages/object-version-control/dist/treeGraph.js.map",
-        "packages/object-version-control/dist/types.d.cjs",
+        "packages/object-version-control/dist/types.cjs",
         "packages/object-version-control/dist/types.d.cts",
         "packages/object-version-control/dist/types.d.ts",
+        "packages/object-version-control/dist/types.js",
         "packages/object-version-control/dist/utils.cjs",
         "packages/object-version-control/dist/utils.cjs.map",
         "packages/object-version-control/dist/utils.d.cts",
@@ -352,19 +353,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 466195,
-          "base": 465005,
-          "delta": 1190
+          "current": 471022,
+          "base": 466195,
+          "delta": 4827
         },
         "gzip": {
-          "current": 175499,
-          "base": 174971,
-          "delta": 528
+          "current": 177336,
+          "base": 175499,
+          "delta": 1837
         },
         "brotli": {
-          "current": 150758,
-          "base": 150318,
-          "delta": 440
+          "current": 152231,
+          "base": 150758,
+          "delta": 1473
         }
       },
       "violations": [],
@@ -830,18 +831,18 @@
       "sizes": {
         "raw": {
           "current": 86692,
-          "base": 85502,
-          "delta": 1190
+          "base": 86692,
+          "delta": 0
         },
         "gzip": {
           "current": 29467,
-          "base": 28939,
-          "delta": 528
+          "base": 29467,
+          "delta": 0
         },
         "brotli": {
           "current": 25752,
-          "base": 25312,
-          "delta": 440
+          "base": 25752,
+          "delta": 0
         }
       },
       "violations": [],
@@ -927,9 +928,10 @@
         "packages/object-version-control/dist/treeGraph.d.ts",
         "packages/object-version-control/dist/treeGraph.js",
         "packages/object-version-control/dist/treeGraph.js.map",
-        "packages/object-version-control/dist/types.d.cjs",
+        "packages/object-version-control/dist/types.cjs",
         "packages/object-version-control/dist/types.d.cts",
         "packages/object-version-control/dist/types.d.ts",
+        "packages/object-version-control/dist/types.js",
         "packages/object-version-control/dist/utils.cjs",
         "packages/object-version-control/dist/utils.cjs.map",
         "packages/object-version-control/dist/utils.d.cts",
@@ -942,19 +944,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 125541,
+          "current": 130368,
           "base": 125541,
-          "delta": 0
+          "delta": 4827
         },
         "gzip": {
-          "current": 40850,
+          "current": 42687,
           "base": 40850,
-          "delta": 0
+          "delta": 1837
         },
         "brotli": {
-          "current": 35527,
+          "current": 37000,
           "base": 35527,
-          "delta": 0
+          "delta": 1473
         }
       },
       "violations": [],

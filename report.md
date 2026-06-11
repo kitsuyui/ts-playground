@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `bf39297ee7b8efa8f3825b6a9c731c1248fb7376`
-- Generated at: 2026-06-10T23:27:07.495Z
+- Head: `3c50a28a522ebbd8c954150c29edafebb2ef0387`
+- Generated at: 2026-06-11T11:28:18.612Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -235,42 +235,43 @@
 | `packages/number-time/dist/toText.js` | 354 B | 269 B | 241 B |
 | `packages/number-time/dist/toText.js.map` | 1,663 B | 627 B | 549 B |
 | `packages/object-version-control/dist/automerge.cjs` | 1,272 B | 714 B | 640 B |
-| `packages/object-version-control/dist/automerge.cjs.map` | 4,143 B | 1,437 B | 1,275 B |
-| `packages/object-version-control/dist/automerge.d.cts` | 793 B | 344 B | 276 B |
-| `packages/object-version-control/dist/automerge.d.ts` | 791 B | 343 B | 272 B |
+| `packages/object-version-control/dist/automerge.cjs.map` | 4,185 B | 1,446 B | 1,282 B |
+| `packages/object-version-control/dist/automerge.d.cts` | 834 B | 354 B | 285 B |
+| `packages/object-version-control/dist/automerge.d.ts` | 831 B | 351 B | 283 B |
 | `packages/object-version-control/dist/automerge.js` | 694 B | 429 B | 388 B |
-| `packages/object-version-control/dist/automerge.js.map` | 4,099 B | 1,419 B | 1,260 B |
-| `packages/object-version-control/dist/core.cjs` | 2,997 B | 1,061 B | 945 B |
-| `packages/object-version-control/dist/core.cjs.map` | 12,986 B | 3,667 B | 3,263 B |
-| `packages/object-version-control/dist/core.d.cts` | 4,112 B | 1,229 B | 1,046 B |
-| `packages/object-version-control/dist/core.d.ts` | 4,111 B | 1,227 B | 1,047 B |
-| `packages/object-version-control/dist/core.js` | 2,917 B | 1,011 B | 911 B |
-| `packages/object-version-control/dist/core.js.map` | 12,866 B | 3,636 B | 3,220 B |
+| `packages/object-version-control/dist/automerge.js.map` | 4,141 B | 1,429 B | 1,269 B |
+| `packages/object-version-control/dist/core.cjs` | 3,167 B | 1,108 B | 978 B |
+| `packages/object-version-control/dist/core.cjs.map` | 13,446 B | 3,797 B | 3,365 B |
+| `packages/object-version-control/dist/core.d.cts` | 4,183 B | 1,262 B | 1,072 B |
+| `packages/object-version-control/dist/core.d.ts` | 4,181 B | 1,260 B | 1,073 B |
+| `packages/object-version-control/dist/core.js` | 3,087 B | 1,057 B | 947 B |
+| `packages/object-version-control/dist/core.js.map` | 13,326 B | 3,765 B | 3,327 B |
 | `packages/object-version-control/dist/index.cjs` | 213 B | 158 B | 117 B |
 | `packages/object-version-control/dist/index.d.cts` | 144 B | 101 B | 87 B |
 | `packages/object-version-control/dist/index.d.ts` | 142 B | 100 B | 86 B |
 | `packages/object-version-control/dist/index.js` | 146 B | 111 B | 85 B |
 | `packages/object-version-control/dist/merge.cjs` | 325 B | 264 B | 215 B |
-| `packages/object-version-control/dist/merge.cjs.map` | 1,073 B | 614 B | 531 B |
-| `packages/object-version-control/dist/merge.d.cts` | 281 B | 216 B | 188 B |
-| `packages/object-version-control/dist/merge.d.ts` | 279 B | 213 B | 192 B |
+| `packages/object-version-control/dist/merge.cjs.map` | 1,115 B | 625 B | 544 B |
+| `packages/object-version-control/dist/merge.d.cts` | 322 B | 227 B | 187 B |
+| `packages/object-version-control/dist/merge.d.ts` | 319 B | 225 B | 175 B |
 | `packages/object-version-control/dist/merge.js` | 260 B | 217 B | 184 B |
-| `packages/object-version-control/dist/merge.js.map` | 1,071 B | 612 B | 525 B |
+| `packages/object-version-control/dist/merge.js.map` | 1,113 B | 624 B | 548 B |
 | `packages/object-version-control/dist/ovc.cjs` | 2,364 B | 780 B | 680 B |
-| `packages/object-version-control/dist/ovc.cjs.map` | 11,128 B | 2,780 B | 2,437 B |
-| `packages/object-version-control/dist/ovc.d.cts` | 5,053 B | 1,351 B | 1,125 B |
-| `packages/object-version-control/dist/ovc.d.ts` | 5,052 B | 1,348 B | 1,125 B |
+| `packages/object-version-control/dist/ovc.cjs.map` | 11,330 B | 2,831 B | 2,457 B |
+| `packages/object-version-control/dist/ovc.d.cts` | 5,241 B | 1,415 B | 1,180 B |
+| `packages/object-version-control/dist/ovc.d.ts` | 5,239 B | 1,412 B | 1,179 B |
 | `packages/object-version-control/dist/ovc.js` | 2,297 B | 737 B | 682 B |
-| `packages/object-version-control/dist/ovc.js.map` | 11,114 B | 2,777 B | 2,401 B |
+| `packages/object-version-control/dist/ovc.js.map` | 11,316 B | 2,828 B | 2,452 B |
 | `packages/object-version-control/dist/treeGraph.cjs` | 1,567 B | 743 B | 669 B |
 | `packages/object-version-control/dist/treeGraph.cjs.map` | 9,727 B | 2,718 B | 2,411 B |
 | `packages/object-version-control/dist/treeGraph.d.cts` | 1,787 B | 657 B | 546 B |
 | `packages/object-version-control/dist/treeGraph.d.ts` | 1,786 B | 655 B | 542 B |
 | `packages/object-version-control/dist/treeGraph.js` | 1,487 B | 692 B | 641 B |
 | `packages/object-version-control/dist/treeGraph.js.map` | 9,725 B | 2,716 B | 2,411 B |
-| `packages/object-version-control/dist/types.d.cjs` | 0 B | 20 B | 1 B |
-| `packages/object-version-control/dist/types.d.cts` | 11 B | 31 B | 15 B |
-| `packages/object-version-control/dist/types.d.ts` | 11 B | 31 B | 15 B |
+| `packages/object-version-control/dist/types.cjs` | 0 B | 20 B | 1 B |
+| `packages/object-version-control/dist/types.d.cts` | 1,170 B | 575 B | 470 B |
+| `packages/object-version-control/dist/types.d.ts` | 1,169 B | 573 B | 468 B |
+| `packages/object-version-control/dist/types.js` | 0 B | 20 B | 1 B |
 | `packages/object-version-control/dist/utils.cjs` | 463 B | 335 B | 291 B |
 | `packages/object-version-control/dist/utils.cjs.map` | 1,933 B | 983 B | 829 B |
 | `packages/object-version-control/dist/utils.d.cts` | 1,021 B | 560 B | 446 B |
