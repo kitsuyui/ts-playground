@@ -42,6 +42,23 @@ describe('uintToRGB', () => {
     )
     expect(colors).toHaveLength(256)
   })
+
+  it('applies saturation and brightness parameters independently', () => {
+    const saturationParameter = {
+      range: [0.5, 0.5],
+      frequency: 1,
+      phase: 0,
+    } as WaveParameter
+    const brightnessParameter = {
+      range: [0.25, 0.25],
+      frequency: 1,
+      phase: 0,
+    } as WaveParameter
+
+    expect(uintToRGB(0, saturationParameter, brightnessParameter)).toEqual([
+      64, 32, 32,
+    ])
+  })
 })
 
 describe('waveInRange', () => {

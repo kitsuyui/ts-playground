@@ -27,8 +27,8 @@ export const uintToHSV = (
   brightnessParameter: WaveParameter
 ): HSV0to1 => {
   const hue = uintToHue(n)
-  const saturation = uintToSaturation(n, saturationParameter)
-  const brightness = uintToBrightness(n, brightnessParameter)
+  const saturation = uintToWaveComponent(n, saturationParameter)
+  const brightness = uintToWaveComponent(n, brightnessParameter)
   return [hue, saturation, brightness]
 }
 
@@ -39,21 +39,7 @@ const uintToHue = (n: uint0toInf): number => {
   return a_n(n)
 }
 
-/**
- * Convert a given number to a saturation value in this color palette.
- */
-export const uintToSaturation = (
-  n: uint0toInf,
-  parameter: WaveParameter
-): number0to1 => {
-  const rad = uintToRadians(n)
-  return waveInRange(rad, parameter)
-}
-
-/**
- * Convert a given number to a brightness value in this color palette.
- */
-export const uintToBrightness = (
+const uintToWaveComponent = (
   n: uint0toInf,
   parameter: WaveParameter
 ): number0to1 => {
