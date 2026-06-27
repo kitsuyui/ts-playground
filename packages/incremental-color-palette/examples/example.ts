@@ -1,4 +1,5 @@
-import { writeFileSync } from 'node:fs'
+import { mkdtempSync, renameSync, rmSync, writeFileSync } from 'node:fs'
+import { basename, dirname, join } from 'node:path'
 import { uintToRGB, type WaveParameter } from '../src/'
 
 const main = () => {
@@ -17,7 +18,7 @@ const main = () => {
   )
   const html = colorsToHtml(colors)
 
-  writeFileSync('example.html', html)
+  writeFileAtomically('example.html', html)
 }
 
 const colorsToHtml = (colors: [number, number, number][]) => {
@@ -26,6 +27,20 @@ const colorsToHtml = (colors: [number, number, number][]) => {
       return `<div style="background-color: rgb(${r}, ${g}, ${b}); width: 100px; height: 100px; display: inline-block;"></div>`
     })
     .join('')
+}
+
+const writeFileAtomically = (targetPath: string, content: string) => {
+  const targetDir = dirname(targetPath)
+  const targetBase = basename(targetPath)
+  const tempDir = mkdtempSync(join(targetDir, `.${targetBase}.tmp-`))
+  const tempPath = join(tempDir, targetBase)
+
+  try {
+    writeFileSync(tempPath, content)
+    renameSync(tempPath, targetPath)
+  } finally {
+    rmSync(tempDir, { recursive: true, force: true })
+  }
 }
 
 main()
