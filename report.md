@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `f7689db94fb8591bb0584db6ca01aef8c276f832`
-- Generated at: 2026-06-27T09:51:40.792Z
+- Head: `4ef824f4b81e51c38a4c1e287d05bc90bbecef71`
+- Generated at: 2026-06-30T16:37:04.829Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -98,12 +98,12 @@
 | `packages/incremental-color-palette/dist/circularPut.d.ts` | 499 B | 281 B | 235 B |
 | `packages/incremental-color-palette/dist/circularPut.js` | 371 B | 284 B | 257 B |
 | `packages/incremental-color-palette/dist/circularPut.js.map` | 1,335 B | 646 B | 589 B |
-| `packages/incremental-color-palette/dist/colorPalette.cjs` | 551 B | 355 B | 310 B |
-| `packages/incremental-color-palette/dist/colorPalette.cjs.map` | 2,806 B | 966 B | 872 B |
-| `packages/incremental-color-palette/dist/colorPalette.d.cts` | 1,173 B | 440 B | 393 B |
-| `packages/incremental-color-palette/dist/colorPalette.d.ts` | 1,171 B | 438 B | 384 B |
-| `packages/incremental-color-palette/dist/colorPalette.js` | 465 B | 317 B | 299 B |
-| `packages/incremental-color-palette/dist/colorPalette.js.map` | 2,750 B | 943 B | 847 B |
+| `packages/incremental-color-palette/dist/colorPalette.cjs` | 464 B | 331 B | 302 B |
+| `packages/incremental-color-palette/dist/colorPalette.cjs.map` | 2,415 B | 940 B | 857 B |
+| `packages/incremental-color-palette/dist/colorPalette.d.cts` | 789 B | 375 B | 325 B |
+| `packages/incremental-color-palette/dist/colorPalette.d.ts` | 787 B | 373 B | 326 B |
+| `packages/incremental-color-palette/dist/colorPalette.js` | 402 B | 293 B | 264 B |
+| `packages/incremental-color-palette/dist/colorPalette.js.map` | 2,366 B | 920 B | 829 B |
 | `packages/incremental-color-palette/dist/grayCode.cjs` | 227 B | 198 B | 162 B |
 | `packages/incremental-color-palette/dist/grayCode.cjs.map` | 720 B | 393 B | 361 B |
 | `packages/incremental-color-palette/dist/grayCode.d.cts` | 436 B | 242 B | 223 B |
