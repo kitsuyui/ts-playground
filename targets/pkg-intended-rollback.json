@@ -5,17 +5,17 @@
     {
       "path": "packages/intended-rollback/dist/base.cjs",
       "sizes": {
-        "raw": 901,
-        "gzip": 484,
-        "brotli": 420
+        "raw": 813,
+        "gzip": 430,
+        "brotli": 364
       }
     },
     {
       "path": "packages/intended-rollback/dist/base.cjs.map",
       "sizes": {
-        "raw": 5014,
-        "gzip": 1644,
-        "brotli": 1420
+        "raw": 4658,
+        "gzip": 1487,
+        "brotli": 1298
       }
     },
     {
@@ -37,65 +37,65 @@
     {
       "path": "packages/intended-rollback/dist/base.js",
       "sizes": {
-        "raw": 828,
-        "gzip": 434,
-        "brotli": 391
+        "raw": 735,
+        "gzip": 386,
+        "brotli": 348
       }
     },
     {
       "path": "packages/intended-rollback/dist/base.js.map",
       "sizes": {
-        "raw": 4963,
-        "gzip": 1625,
-        "brotli": 1405
+        "raw": 4628,
+        "gzip": 1477,
+        "brotli": 1283
       }
     },
     {
       "path": "packages/intended-rollback/dist/errors.cjs",
       "sizes": {
-        "raw": 287,
-        "gzip": 209,
-        "brotli": 153
+        "raw": 303,
+        "gzip": 217,
+        "brotli": 179
       }
     },
     {
       "path": "packages/intended-rollback/dist/errors.cjs.map",
       "sizes": {
-        "raw": 574,
-        "gzip": 335,
-        "brotli": 286
+        "raw": 628,
+        "gzip": 366,
+        "brotli": 302
       }
     },
     {
       "path": "packages/intended-rollback/dist/errors.d.cts",
       "sizes": {
-        "raw": 375,
-        "gzip": 225,
-        "brotli": 179
+        "raw": 420,
+        "gzip": 245,
+        "brotli": 198
       }
     },
     {
       "path": "packages/intended-rollback/dist/errors.d.ts",
       "sizes": {
-        "raw": 374,
-        "gzip": 224,
-        "brotli": 178
+        "raw": 419,
+        "gzip": 243,
+        "brotli": 196
       }
     },
     {
       "path": "packages/intended-rollback/dist/errors.js",
       "sizes": {
-        "raw": 217,
-        "gzip": 161,
-        "brotli": 125
+        "raw": 233,
+        "gzip": 169,
+        "brotli": 152
       }
     },
     {
       "path": "packages/intended-rollback/dist/errors.js.map",
       "sizes": {
-        "raw": 572,
-        "gzip": 333,
-        "brotli": 291
+        "raw": 626,
+        "gzip": 365,
+        "brotli": 300
       }
     },
     {
@@ -164,8 +164,8 @@
     }
   ],
   "totals": {
-    "raw": 18684,
-    "gzip": 7689,
-    "brotli": 6531
+    "raw": 18042,
+    "gzip": 7400,
+    "brotli": 6303
   }
 }

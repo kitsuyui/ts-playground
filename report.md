@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `03e79b25cbbd09f83aa81b182c4260d3488c4c0a`
-- Generated at: 2026-07-05T11:21:53.527Z
+- Head: `9cc8af3ecca4799338ec07acd9c88583bc454461`
+- Generated at: 2026-07-09T10:30:37.206Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -124,18 +124,18 @@
 | `packages/incremental-color-palette/dist/types.d.cts` | 544 B | 250 B | 207 B |
 | `packages/incremental-color-palette/dist/types.d.ts` | 543 B | 247 B | 201 B |
 | `packages/incremental-color-palette/dist/types.js` | 0 B | 20 B | 1 B |
-| `packages/intended-rollback/dist/base.cjs` | 901 B | 484 B | 420 B |
-| `packages/intended-rollback/dist/base.cjs.map` | 5,014 B | 1,644 B | 1,420 B |
+| `packages/intended-rollback/dist/base.cjs` | 813 B | 430 B | 364 B |
+| `packages/intended-rollback/dist/base.cjs.map` | 4,658 B | 1,487 B | 1,298 B |
 | `packages/intended-rollback/dist/base.d.cts` | 670 B | 345 B | 277 B |
 | `packages/intended-rollback/dist/base.d.ts` | 668 B | 342 B | 294 B |
-| `packages/intended-rollback/dist/base.js` | 828 B | 434 B | 391 B |
-| `packages/intended-rollback/dist/base.js.map` | 4,963 B | 1,625 B | 1,405 B |
-| `packages/intended-rollback/dist/errors.cjs` | 287 B | 209 B | 153 B |
-| `packages/intended-rollback/dist/errors.cjs.map` | 574 B | 335 B | 286 B |
-| `packages/intended-rollback/dist/errors.d.cts` | 375 B | 225 B | 179 B |
-| `packages/intended-rollback/dist/errors.d.ts` | 374 B | 224 B | 178 B |
-| `packages/intended-rollback/dist/errors.js` | 217 B | 161 B | 125 B |
-| `packages/intended-rollback/dist/errors.js.map` | 572 B | 333 B | 291 B |
+| `packages/intended-rollback/dist/base.js` | 735 B | 386 B | 348 B |
+| `packages/intended-rollback/dist/base.js.map` | 4,628 B | 1,477 B | 1,283 B |
+| `packages/intended-rollback/dist/errors.cjs` | 303 B | 217 B | 179 B |
+| `packages/intended-rollback/dist/errors.cjs.map` | 628 B | 366 B | 302 B |
+| `packages/intended-rollback/dist/errors.d.cts` | 420 B | 245 B | 198 B |
+| `packages/intended-rollback/dist/errors.d.ts` | 419 B | 243 B | 196 B |
+| `packages/intended-rollback/dist/errors.js` | 233 B | 169 B | 152 B |
+| `packages/intended-rollback/dist/errors.js.map` | 626 B | 365 B | 300 B |
 | `packages/intended-rollback/dist/index.cjs` | 245 B | 169 B | 139 B |
 | `packages/intended-rollback/dist/index.d.cts` | 219 B | 133 B | 112 B |
 | `packages/intended-rollback/dist/index.d.ts` | 216 B | 132 B | 118 B |
