@@ -3,7 +3,7 @@
  * Error is needed for jumping to the catch block
  */
 export class IntendedRollback extends Error {
-  constructor() {
+  constructor(public readonly content: unknown) {
     super('Intended Rollback')
   }
 }
