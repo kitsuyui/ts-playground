@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `9cc8af3ecca4799338ec07acd9c88583bc454461`
-- Generated at: 2026-07-09T10:30:37.206Z
+- Head: `6a8725d4e8db79c521e8e2058a130eacaf00f53c`
+- Generated at: 2026-07-13T01:33:18.673Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -256,12 +256,12 @@
 | `packages/object-version-control/dist/merge.d.ts` | 319 B | 225 B | 175 B |
 | `packages/object-version-control/dist/merge.js` | 260 B | 217 B | 184 B |
 | `packages/object-version-control/dist/merge.js.map` | 1,113 B | 624 B | 548 B |
-| `packages/object-version-control/dist/ovc.cjs` | 2,364 B | 780 B | 680 B |
-| `packages/object-version-control/dist/ovc.cjs.map` | 11,330 B | 2,831 B | 2,457 B |
-| `packages/object-version-control/dist/ovc.d.cts` | 5,241 B | 1,415 B | 1,180 B |
-| `packages/object-version-control/dist/ovc.d.ts` | 5,239 B | 1,412 B | 1,179 B |
-| `packages/object-version-control/dist/ovc.js` | 2,297 B | 737 B | 682 B |
-| `packages/object-version-control/dist/ovc.js.map` | 11,316 B | 2,828 B | 2,452 B |
+| `packages/object-version-control/dist/ovc.cjs` | 2,666 B | 920 B | 793 B |
+| `packages/object-version-control/dist/ovc.cjs.map` | 12,238 B | 3,154 B | 2,747 B |
+| `packages/object-version-control/dist/ovc.d.cts` | 5,362 B | 1,464 B | 1,217 B |
+| `packages/object-version-control/dist/ovc.d.ts` | 5,360 B | 1,463 B | 1,215 B |
+| `packages/object-version-control/dist/ovc.js` | 2,599 B | 876 B | 769 B |
+| `packages/object-version-control/dist/ovc.js.map` | 12,224 B | 3,150 B | 2,757 B |
 | `packages/object-version-control/dist/treeGraph.cjs` | 1,567 B | 743 B | 669 B |
 | `packages/object-version-control/dist/treeGraph.cjs.map` | 9,727 B | 2,718 B | 2,411 B |
 | `packages/object-version-control/dist/treeGraph.d.cts` | 1,787 B | 657 B | 546 B |

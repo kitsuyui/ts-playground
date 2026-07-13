@@ -181,49 +181,49 @@
     {
       "path": "packages/object-version-control/dist/ovc.cjs",
       "sizes": {
-        "raw": 2364,
-        "gzip": 780,
-        "brotli": 680
+        "raw": 2666,
+        "gzip": 920,
+        "brotli": 793
       }
     },
     {
       "path": "packages/object-version-control/dist/ovc.cjs.map",
       "sizes": {
-        "raw": 11330,
-        "gzip": 2831,
-        "brotli": 2457
+        "raw": 12238,
+        "gzip": 3154,
+        "brotli": 2747
       }
     },
     {
       "path": "packages/object-version-control/dist/ovc.d.cts",
       "sizes": {
-        "raw": 5241,
-        "gzip": 1415,
-        "brotli": 1180
+        "raw": 5362,
+        "gzip": 1464,
+        "brotli": 1217
       }
     },
     {
       "path": "packages/object-version-control/dist/ovc.d.ts",
       "sizes": {
-        "raw": 5239,
-        "gzip": 1412,
-        "brotli": 1179
+        "raw": 5360,
+        "gzip": 1463,
+        "brotli": 1215
       }
     },
     {
       "path": "packages/object-version-control/dist/ovc.js",
       "sizes": {
-        "raw": 2297,
-        "gzip": 737,
-        "brotli": 682
+        "raw": 2599,
+        "gzip": 876,
+        "brotli": 769
       }
     },
     {
       "path": "packages/object-version-control/dist/ovc.js.map",
       "sizes": {
-        "raw": 11316,
-        "gzip": 2828,
-        "brotli": 2452
+        "raw": 12224,
+        "gzip": 3150,
+        "brotli": 2757
       }
     },
     {
@@ -356,8 +356,8 @@
     }
   ],
   "totals": {
-    "raw": 130368,
-    "gzip": 42687,
-    "brotli": 37000
+    "raw": 133030,
+    "gzip": 43711,
+    "brotli": 37868
   }
 }
