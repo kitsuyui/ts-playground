@@ -148,6 +148,34 @@ describe('ObjectVersionControl', () => {
     })
   })
 
+  it('should reject push when the remote head diverged after the last sync', () => {
+    const ovc1 = ObjectVersionControl.create()
+    ovc1.commit({ key: 'base' })
+    const [ovc2, syncState] = ovc1.fullClone()
+
+    ovc1.commit({ key: 'local change' })
+    ovc2.commit({ key: 'remote change' })
+
+    expect(() => ovc1.push(ovc2, syncState)).toThrow(
+      /Cannot push: remote HEAD changed since last sync/
+    )
+    expect(ovc2.getCurrentData()).toEqual({ key: 'remote change' })
+  })
+
+  it('should reject pull when the local head diverged after the last sync', () => {
+    const ovc1 = ObjectVersionControl.create()
+    ovc1.commit({ key: 'base' })
+    const [ovc2, syncState] = ovc1.fullClone()
+
+    ovc1.commit({ key: 'remote change' })
+    ovc2.commit({ key: 'local change' })
+
+    expect(() => ovc2.pull(ovc1, syncState)).toThrow(
+      /Cannot pull: local HEAD changed since last sync/
+    )
+    expect(ovc2.getCurrentData()).toEqual({ key: 'local change' })
+  })
+
   it('should throw an error when checking out a non-existent commit', () => {
     const ovc = ObjectVersionControl.create()
     expect(() => ovc.checkout('non-existent')).toThrow()

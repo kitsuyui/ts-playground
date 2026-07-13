@@ -8,6 +8,7 @@ type MergeResolver<T> = (
 ) => T
 
 type CloneResult<T> = [ObjectVersionControl<T>, SyncHead]
+type SyncDirection = 'push' | 'pull'
 
 /**
  * ObjectVersionControl class
@@ -227,12 +228,26 @@ export class ObjectVersionControl<T> {
     return this.base.getSyncItemsBetween(target, base)
   }
 
+  private assertExpectedHead(
+    direction: SyncDirection,
+    role: 'local' | 'remote',
+    actual: HashValue | null,
+    expected: HashValue | null
+  ): void {
+    if (actual === expected) return
+    throw new Error(
+      `Cannot ${direction}: ${role} HEAD changed since last sync (expected ${expected ?? 'null'}, got ${actual ?? 'null'}). Refresh sync state or merge before retrying.`
+    )
+  }
+
   /**
-   * Push commits and snapshots to another repository by last known commit hash
+   * Push commits and snapshots to another repository when the remote HEAD still
+   * matches the last synchronized position.
    * @param remoteOvc Another ObjectVersionControl instance
    * @param syncHead The last known commit hash
    */
   push(remoteOvc: ObjectVersionControl<T>, syncHead: SyncHead): SyncHead {
+    this.assertExpectedHead('push', 'remote', remoteOvc.head, syncHead.remote)
     const syncItems = this.getAfterKnownHeadSyncItems(syncHead.remote)
     return this.pushSyncItems(remoteOvc, syncItems)
   }
@@ -259,11 +274,13 @@ export class ObjectVersionControl<T> {
   }
 
   /**
-   * Pull commits and snapshots from another repository by last known commit hash
+   * Pull commits and snapshots from another repository when the local HEAD still
+   * matches the last synchronized position.
    * @param remoteOvc Another ObjectVersionControl instance
    * @param syncHead
    */
   pull(remoteOvc: ObjectVersionControl<T>, syncHead: SyncHead): SyncHead {
+    this.assertExpectedHead('pull', 'local', this.head, syncHead.local)
     const syncItems = remoteOvc.getAfterKnownHeadSyncItems(syncHead.local)
     return this.pullSyncItems(remoteOvc, syncItems)
   }
