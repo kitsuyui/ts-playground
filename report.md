@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `6a8725d4e8db79c521e8e2058a130eacaf00f53c`
-- Generated at: 2026-07-13T01:33:18.673Z
+- Head: `1d414391f617bd92224f403e9611fe1a3eb93ce1`
+- Generated at: 2026-07-16T12:31:18.254Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -250,12 +250,12 @@
 | `packages/object-version-control/dist/index.d.cts` | 144 B | 101 B | 87 B |
 | `packages/object-version-control/dist/index.d.ts` | 142 B | 100 B | 86 B |
 | `packages/object-version-control/dist/index.js` | 146 B | 111 B | 85 B |
-| `packages/object-version-control/dist/merge.cjs` | 325 B | 264 B | 215 B |
-| `packages/object-version-control/dist/merge.cjs.map` | 1,115 B | 625 B | 544 B |
+| `packages/object-version-control/dist/merge.cjs` | 381 B | 293 B | 241 B |
+| `packages/object-version-control/dist/merge.cjs.map` | 1,615 B | 820 B | 700 B |
 | `packages/object-version-control/dist/merge.d.cts` | 322 B | 227 B | 187 B |
 | `packages/object-version-control/dist/merge.d.ts` | 319 B | 225 B | 175 B |
-| `packages/object-version-control/dist/merge.js` | 260 B | 217 B | 184 B |
-| `packages/object-version-control/dist/merge.js.map` | 1,113 B | 624 B | 548 B |
+| `packages/object-version-control/dist/merge.js` | 316 B | 246 B | 209 B |
+| `packages/object-version-control/dist/merge.js.map` | 1,613 B | 819 B | 701 B |
 | `packages/object-version-control/dist/ovc.cjs` | 2,666 B | 920 B | 793 B |
 | `packages/object-version-control/dist/ovc.cjs.map` | 12,238 B | 3,154 B | 2,747 B |
 | `packages/object-version-control/dist/ovc.d.cts` | 5,362 B | 1,464 B | 1,217 B |

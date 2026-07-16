@@ -133,17 +133,17 @@
     {
       "path": "packages/object-version-control/dist/merge.cjs",
       "sizes": {
-        "raw": 325,
-        "gzip": 264,
-        "brotli": 215
+        "raw": 381,
+        "gzip": 293,
+        "brotli": 241
       }
     },
     {
       "path": "packages/object-version-control/dist/merge.cjs.map",
       "sizes": {
-        "raw": 1115,
-        "gzip": 625,
-        "brotli": 544
+        "raw": 1615,
+        "gzip": 820,
+        "brotli": 700
       }
     },
     {
@@ -165,17 +165,17 @@
     {
       "path": "packages/object-version-control/dist/merge.js",
       "sizes": {
-        "raw": 260,
-        "gzip": 217,
-        "brotli": 184
+        "raw": 316,
+        "gzip": 246,
+        "brotli": 209
       }
     },
     {
       "path": "packages/object-version-control/dist/merge.js.map",
       "sizes": {
-        "raw": 1113,
-        "gzip": 624,
-        "brotli": 548
+        "raw": 1613,
+        "gzip": 819,
+        "brotli": 701
       }
     },
     {
@@ -356,8 +356,8 @@
     }
   ],
   "totals": {
-    "raw": 133030,
-    "gzip": 43711,
-    "brotli": 37868
+    "raw": 134142,
+    "gzip": 44159,
+    "brotli": 38228
   }
 }
