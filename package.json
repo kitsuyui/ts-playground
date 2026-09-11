@@ -23,7 +23,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.5.2",
     "@swc/core": "^1.15.43",
-    "@vitest/coverage-v8": "4.1.9",
+    "@vitest/coverage-v8": "4.1.11",
     "ts-module-isolation": "^1.0.2",
     "tsdown": "^0.20.3",
     "typedoc": "^0.28.19",
