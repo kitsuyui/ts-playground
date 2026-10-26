@@ -32,6 +32,11 @@ jobs:
           # https://nodejs.org/en/about/previous-releases
           node-version: '24.x'
           registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+
+      - name: Check npm version for Trusted Publishing
+        run: |
+          node -e 'const [major, minor, patch] = process.argv[1].split(".").map(Number); if (major < 11 || (major === 11 && (minor < 5 || (minor === 5 && patch < 1)))) process.exit(1)' "$(npm --version)"
 
       - name: install and build
         run: |
@@ -60,6 +65,28 @@ jobs:
           done
           bun run format
 
+      - name: Resolve workspace dependencies for npm publishing
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const dirs = fs.readdirSync('packages').map(name => path.join('packages', name));
+          const manifests = dirs.map(dir => ({file: path.join(dir, 'package.json'), pkg: JSON.parse(fs.readFileSync(path.join(dir, 'package.json'), 'utf8'))}));
+          const versions = new Map(manifests.map(({pkg}) => [pkg.name, pkg.version]));
+          for (const {file, pkg} of manifests) {
+            for (const field of ['dependencies', 'devDependencies', 'optionalDependencies', 'peerDependencies']) {
+              for (const [name, spec] of Object.entries(pkg[field] || {})) {
+                if (!spec.startsWith('workspace:')) continue;
+                if (!versions.has(name)) throw new Error(`Unknown workspace dependency: ${name}`);
+                const suffix = spec.slice('workspace:'.length);
+                if (!['*', '^', '~'].includes(suffix)) throw new Error(`Unsupported workspace range: ${spec}`);
+                pkg[field][name] = suffix === '*' ? versions.get(name) : suffix + versions.get(name);
+              }
+            }
+            fs.writeFileSync(file, JSON.stringify(pkg, null, 2) + '\n');
+          }
+          NODE
+
       - name: deploy
         # https://docs.npmjs.com/generating-provenance-statements
         run: |
@@ -68,11 +95,9 @@ jobs:
             if grep -q '"private": true' "$dir/package.json"; then
               continue
             fi
-            (cd "$dir" && NPM_CONFIG_PROVENANCE=true bun publish --access public)
+            (cd "$dir" && npm publish --access public)
           done
         if: github.event_name == 'release' && !github.event.release.prerelease
-        env:
-          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: deploy (dry-run)
         run: |
@@ -81,8 +106,6 @@ jobs:
             if grep -q '"private": true' "$dir/package.json"; then
               continue
             fi
-            (cd "$dir" && NPM_CONFIG_PROVENANCE=true bun publish --access public --dry-run)
+            (cd "$dir" && npm publish --access public --dry-run --tag next)
           done
         if: github.event_name != 'release' || github.event.release.prerelease
-        env:
-          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
