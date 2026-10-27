@@ -2,6 +2,11 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      packages:
+        description: "Comma-separated public package directories to publish from this tag"
+        required: true
+        type: string
   pull_request:
     types: [opened, synchronize, reopened]
   release:
@@ -44,8 +49,15 @@ jobs:
           bun run build
           bun run validate
 
+      - name: Validate tagged publish request
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          test "${GITHUB_REF_TYPE}" = tag
+          printf '%s' "${GITHUB_REF_NAME}" | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$'
+          test -n "${{ inputs.packages }}"
+
       - name: Set tag rc
-        if: github.event_name != 'release'
+        if: github.event_name == 'pull_request'
         run: |
           git config user.email "dummy@dummy"
           git config user.name "dummy"
@@ -57,13 +69,34 @@ jobs:
           git config user.email "dummy@dummy"
           git config user.name "dummy"
           VERSION="${GITHUB_REF_NAME#v}"
-          if [ "${GITHUB_EVENT_NAME}" != "release" ]; then
+          if [ "${GITHUB_EVENT_NAME}" = "pull_request" ]; then
             VERSION="0.0.0-rc.${GITHUB_RUN_NUMBER}"
           fi
           for dir in . packages/*; do
             (cd "$dir" && bun pm pkg set version="$VERSION")
           done
           bun run format
+
+      - name: Select packages and validate workspace dependencies
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          REQUESTED_PACKAGES: ${{ inputs.packages }}
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const allowed = fs.readdirSync('packages').filter(dir => !JSON.parse(fs.readFileSync(path.join('packages', dir, 'package.json'))).private);
+          const selected = process.env.REQUESTED_PACKAGES.split(',').map(value => value.trim()).filter(Boolean);
+          if (!selected.length || new Set(selected).size !== selected.length || selected.some(dir => !allowed.includes(dir))) throw new Error('packages must be a unique, non-private package directory allowlist');
+          const selectedNames = new Set(selected.map(dir => JSON.parse(fs.readFileSync(path.join('packages', dir, 'package.json'))).name));
+          for (const dir of selected) {
+            const pkg = JSON.parse(fs.readFileSync(path.join('packages', dir, 'package.json')));
+            for (const field of ['dependencies', 'optionalDependencies', 'peerDependencies']) for (const [name, spec] of Object.entries(pkg[field] || {})) {
+              if (spec.startsWith('workspace:') && !selectedNames.has(name)) throw new Error(`${pkg.name} requires selected workspace dependency ${name}`);
+            }
+          }
+          fs.writeFileSync(process.env.RUNNER_TEMP + '/publish-packages', selected.map(dir => `packages/${dir}`).join('\n') + '\n');
+          NODE
 
       - name: Resolve workspace dependencies for npm publishing
         run: |
@@ -87,17 +120,28 @@ jobs:
           }
           NODE
 
-      - name: deploy
+      - name: Verify versions are not already published
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          set -eu
+          VERSION="${GITHUB_REF_NAME#v}"
+          while IFS= read -r dir; do
+            name="$(node -p "require('./' + process.argv[1] + '/package.json').name" "$dir")"
+            if npm view "$name@$VERSION" version dist.integrity dist.tarball --json >/tmp/npm-version.json 2>/dev/null; then
+              cat /tmp/npm-version.json
+              echo "Refusing to treat an existing version as trusted: verify its provenance against this tag and workflow before any retry." >&2
+              exit 1
+            fi
+          done < "$RUNNER_TEMP/publish-packages"
+
+      - name: deploy selected packages
         # https://docs.npmjs.com/generating-provenance-statements
         run: |
           set -eu
-          for dir in packages/*; do
-            if grep -q '"private": true' "$dir/package.json"; then
-              continue
-            fi
+          while IFS= read -r dir; do
             (cd "$dir" && npm publish --access public)
-          done
-        if: github.event_name == 'release' && !github.event.release.prerelease
+          done < "$RUNNER_TEMP/publish-packages"
+        if: github.event_name == 'workflow_dispatch'
 
       - name: deploy (dry-run)
         run: |
@@ -108,4 +152,4 @@ jobs:
             fi
             (cd "$dir" && npm publish --access public --dry-run --tag next)
           done
-        if: github.event_name != 'release' || github.event.release.prerelease
+        if: github.event_name != 'workflow_dispatch'
