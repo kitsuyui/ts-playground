@@ -36,6 +36,52 @@ describe('calculateTypingCost', () => {
     )
   })
 
+  it('compares familiar English words across layouts', () => {
+    for (const layout of [qwertyLayout, dvorakLayout]) {
+      expect(calculateTypingCost('apple', layout)).toMatchObject({
+        keypresses: 5,
+        repeatedKeyTransitions: 1,
+        sameFingerTransitions: 0,
+        cost: 5,
+        skippedCharacters: 0,
+      })
+    }
+    expect(calculateTypingCost('strawberry', qwertyLayout)).toMatchObject({
+      keypresses: 10,
+      repeatedKeyTransitions: 1,
+      sameFingerTransitions: 1,
+      cost: 11,
+      skippedCharacters: 0,
+    })
+    expect(calculateTypingCost('strawberry', dvorakLayout)).toMatchObject({
+      keypresses: 10,
+      repeatedKeyTransitions: 1,
+      sameFingerTransitions: 0,
+      cost: 10,
+      skippedCharacters: 0,
+    })
+  })
+
+  it('compares a sentence with capitalization, spaces, and punctuation', () => {
+    const text = 'The quick brown fox jumps over the lazy dog.'
+    const qwerty = calculateTypingCost(text, qwertyLayout)
+    const dvorak = calculateTypingCost(text, dvorakLayout)
+    expect(qwerty).toMatchObject({
+      keypresses: 45,
+      shiftPresses: 1,
+      sameFingerTransitions: 4,
+      skippedCharacters: 0,
+    })
+    expect(qwerty.cost).toBeCloseTo(51.2360679775)
+    expect(dvorak).toMatchObject({
+      keypresses: 45,
+      shiftPresses: 1,
+      sameFingerTransitions: 1,
+      cost: 46,
+      skippedCharacters: 0,
+    })
+  })
+
   it('uses conventional finger assignments for the number row', () => {
     expect(qwertyLayout['1']?.finger).toBe('left-pinky')
     expect(qwertyLayout['2']?.finger).toBe('left-ring')
