@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-09T16:17:15.627Z",
+  "generated_at": "2026-11-11T15:05:20.876Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
   "base_label": "main",
-  "base_reference": "8bb300826ff0787589c923102617dbd9abe414cf",
+  "base_reference": "052a9addeac1a2084399e5cba6b119357e7161a7",
   "head_label": "main",
-  "head_reference": "052a9addeac1a2084399e5cba6b119357e7161a7",
+  "head_reference": "cfbb28403eeb3272b76489e77eca443c7428508d",
   "targets": [
     {
       "id": "total",
@@ -317,6 +317,12 @@
         "packages/string/dist/index.d.cts",
         "packages/string/dist/index.d.ts",
         "packages/string/dist/index.js",
+        "packages/string/dist/typing-cost.cjs",
+        "packages/string/dist/typing-cost.cjs.map",
+        "packages/string/dist/typing-cost.d.cts",
+        "packages/string/dist/typing-cost.d.ts",
+        "packages/string/dist/typing-cost.js",
+        "packages/string/dist/typing-cost.js.map",
         "packages/symbolic-prototype/dist/extend.cjs",
         "packages/symbolic-prototype/dist/extend.cjs.map",
         "packages/symbolic-prototype/dist/extend.d.cts",
@@ -353,19 +359,19 @@
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 472461,
+          "current": 491675,
           "base": 472461,
-          "delta": 0
+          "delta": 19214
         },
         "gzip": {
-          "current": 178292,
+          "current": 186257,
           "base": 178292,
-          "delta": 0
+          "delta": 7965
         },
         "brotli": {
-          "current": 153029,
+          "current": 159876,
           "base": 153029,
-          "delta": 0
+          "delta": 6847
         }
       },
       "violations": [],
@@ -998,26 +1004,32 @@
         "packages/string/dist/index.cjs",
         "packages/string/dist/index.d.cts",
         "packages/string/dist/index.d.ts",
-        "packages/string/dist/index.js"
+        "packages/string/dist/index.js",
+        "packages/string/dist/typing-cost.cjs",
+        "packages/string/dist/typing-cost.cjs.map",
+        "packages/string/dist/typing-cost.d.cts",
+        "packages/string/dist/typing-cost.d.ts",
+        "packages/string/dist/typing-cost.js",
+        "packages/string/dist/typing-cost.js.map"
       ],
       "touched_files": [],
       "baseline_missing": false,
       "commentable": true,
       "sizes": {
         "raw": {
-          "current": 37221,
+          "current": 56435,
           "base": 37221,
-          "delta": 0
+          "delta": 19214
         },
         "gzip": {
-          "current": 13042,
+          "current": 21007,
           "base": 13042,
-          "delta": 0
+          "delta": 7965
         },
         "brotli": {
-          "current": 11274,
+          "current": 18121,
           "base": 11274,
-          "delta": 0
+          "delta": 6847
         }
       },
       "violations": [],

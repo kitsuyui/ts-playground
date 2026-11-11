@@ -1,8 +1,8 @@
 # gh-build-size report
 
 - Repository: **kitsuyui/ts-playground**
-- Head: `052a9addeac1a2084399e5cba6b119357e7161a7`
-- Generated at: 2026-11-09T16:17:15.632Z
+- Head: `cfbb28403eeb3272b76489e77eca443c7428508d`
+- Generated at: 2026-11-11T15:05:20.876Z
 
 | File | Raw | Gzip | Brotli |
 | --- | ---: | ---: | ---: |
@@ -306,10 +306,16 @@
 | `packages/string/dist/capitalization/split.d.ts` | 754 B | 315 B | 269 B |
 | `packages/string/dist/capitalization/split.js` | 225 B | 188 B | 165 B |
 | `packages/string/dist/capitalization/split.js.map` | 1,347 B | 591 B | 520 B |
-| `packages/string/dist/index.cjs` | 149 B | 140 B | 95 B |
-| `packages/string/dist/index.d.cts` | 83 B | 80 B | 68 B |
-| `packages/string/dist/index.d.ts` | 82 B | 79 B | 67 B |
-| `packages/string/dist/index.js` | 83 B | 83 B | 61 B |
+| `packages/string/dist/index.cjs` | 302 B | 193 B | 152 B |
+| `packages/string/dist/index.d.cts` | 365 B | 182 B | 152 B |
+| `packages/string/dist/index.d.ts` | 363 B | 181 B | 152 B |
+| `packages/string/dist/index.js` | 235 B | 152 B | 126 B |
+| `packages/string/dist/typing-cost.cjs` | 1,458 B | 864 B | 766 B |
+| `packages/string/dist/typing-cost.cjs.map` | 6,033 B | 2,270 B | 1,962 B |
+| `packages/string/dist/typing-cost.d.cts` | 1,721 B | 706 B | 556 B |
+| `packages/string/dist/typing-cost.d.ts` | 1,720 B | 704 B | 552 B |
+| `packages/string/dist/typing-cost.js` | 1,383 B | 827 B | 739 B |
+| `packages/string/dist/typing-cost.js.map` | 6,031 B | 2,268 B | 1,981 B |
 | `packages/symbolic-prototype/dist/extend.cjs` | 306 B | 233 B | 183 B |
 | `packages/symbolic-prototype/dist/extend.cjs.map` | 1,227 B | 614 B | 537 B |
 | `packages/symbolic-prototype/dist/extend.d.cts` | 746 B | 383 B | 306 B |

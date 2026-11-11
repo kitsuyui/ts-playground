@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-09T16:17:15.632Z",
+  "generated_at": "2026-11-11T15:05:20.876Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
-  "head_reference": "052a9addeac1a2084399e5cba6b119357e7161a7",
+  "head_reference": "cfbb28403eeb3272b76489e77eca443c7428508d",
   "files": [
     {
       "path": "packages/bits128/dist/bits.cjs",
@@ -2409,33 +2409,81 @@
     {
       "path": "packages/string/dist/index.cjs",
       "sizes": {
-        "raw": 149,
-        "gzip": 140,
-        "brotli": 95
+        "raw": 302,
+        "gzip": 193,
+        "brotli": 152
       }
     },
     {
       "path": "packages/string/dist/index.d.cts",
       "sizes": {
-        "raw": 83,
-        "gzip": 80,
-        "brotli": 68
+        "raw": 365,
+        "gzip": 182,
+        "brotli": 152
       }
     },
     {
       "path": "packages/string/dist/index.d.ts",
       "sizes": {
-        "raw": 82,
-        "gzip": 79,
-        "brotli": 67
+        "raw": 363,
+        "gzip": 181,
+        "brotli": 152
       }
     },
     {
       "path": "packages/string/dist/index.js",
       "sizes": {
-        "raw": 83,
-        "gzip": 83,
-        "brotli": 61
+        "raw": 235,
+        "gzip": 152,
+        "brotli": 126
+      }
+    },
+    {
+      "path": "packages/string/dist/typing-cost.cjs",
+      "sizes": {
+        "raw": 1458,
+        "gzip": 864,
+        "brotli": 766
+      }
+    },
+    {
+      "path": "packages/string/dist/typing-cost.cjs.map",
+      "sizes": {
+        "raw": 6033,
+        "gzip": 2270,
+        "brotli": 1962
+      }
+    },
+    {
+      "path": "packages/string/dist/typing-cost.d.cts",
+      "sizes": {
+        "raw": 1721,
+        "gzip": 706,
+        "brotli": 556
+      }
+    },
+    {
+      "path": "packages/string/dist/typing-cost.d.ts",
+      "sizes": {
+        "raw": 1720,
+        "gzip": 704,
+        "brotli": 552
+      }
+    },
+    {
+      "path": "packages/string/dist/typing-cost.js",
+      "sizes": {
+        "raw": 1383,
+        "gzip": 827,
+        "brotli": 739
+      }
+    },
+    {
+      "path": "packages/string/dist/typing-cost.js.map",
+      "sizes": {
+        "raw": 6031,
+        "gzip": 2268,
+        "brotli": 1981
       }
     },
     {
