@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-11T15:05:20.876Z",
+  "generated_at": "2026-11-15T09:31:08.463Z",
   "repository": "kitsuyui/ts-playground",
   "default_branch": "main",
   "publish_branch": "gh-build-size-assets",
   "event_name": "push",
-  "head_reference": "cfbb28403eeb3272b76489e77eca443c7428508d",
+  "head_reference": "b34ddb81eec6fb888714276f90e30b6c1e3617ee",
   "files": [
     {
       "path": "packages/bits128/dist/bits.cjs",
